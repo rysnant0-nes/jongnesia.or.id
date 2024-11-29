@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+
+<link rel="stylesheet" href="http://localhost:1313//style.css" />
+<link
+  rel="shortcut icon"
+  href="http://localhost:1313/static/favicon.png"
+  type="image/x-icon"
+/>
+<meta property="og:description" name="description" content="Cara menyembunyikan tag profile kita dari GetContact" />
+<meta property="og:title" name="description" content="Hide Profile Getcontact" />
+<meta property="og:image" name="description" content="http://localhost:1313//ilustration/getcon.webp" />
+<title>Hide Profile Getcontact</title>
+<script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+  crossorigin="anonymous"
+></script>
+
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Poppins&display=swap");
+  body {
+    overflow-y: scroll;
+    width: 100%;
+    padding: 10px;
+  }
+  p {
+    font-family: "Poppins", sans-serif;
+  }
+  h1 {
+    color:black;
+    font-weight: bold;
+  }
+  pre code {
+  font-size: 16px;
+  border: 3px dashed black !important;
+  border-radius:10px ;
+  font-family: "Source Code Pro", monospace;
+  color: rgb(107, 223, 198);
+  padding: 5px;
+  display: block;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  }
+  li{
+    margin-left: 0px !important;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  a.nav-link  {
+    margin-left: 0px !important;
+    padding-top: 10px;
+    font-size: 25px;
+    padding-left: 20px !important;
+  }
+  li.footer {
+    display: inline;
+    margin: 0;
+  }
+  ol {
+     
+    margin-top: -20px;
+  }
+
+  ul a {
+    text-decoration: none;
+  }
+  div.card {
+    background-color: #f4d9ae !important;
+    border: 5px dashed black;
+    border-bottom-left-radius: 5px solid black;
+    font-size: 15px !important;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .penulis {
+    font-size: 10px;
+  }
+  iframe {
+    width: 760px;
+    height: 515px;
+    border-radius: 15px;
+    border: 5px solid #20c997;
+    border-style: dashed;
+  }
+  div.container.custome {
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    img.profile {
+      width: 300px;
+    }
+    .footer p {
+      text-align: center;
+  
+    }
+    .footer ol {
+      margin-left: 18px !important;
+   
+    }
+    .footer ol a {
+      font-size: 15px !important;
+    }
+    .div-custome {
+      text-align: left;
+    }
+    iframe {
+      width: 340px;
+      height: 200px;
+      border-radius: 15px;
+      border: 5px solid #20c997;
+      border-style: dashed;
+    }
+  }
+  @media (min-width: 1011px) {
+    img.profile {
+      width: 300px;
+    }
+    .div-custome {
+      text-align: left;
+    }
+    iframe {
+      width: 500px;
+      height: 300px;
+      border-radius: 15px;
+      border: 5px solid #20c997;
+      border-style: dashed;
+    }
+  }
+  
+</style>
+
+  </head>
+  <body><nav class="navbar navbar-expand-lg navbar-light bg-custome fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">JONGNESIA</a>
+    <button
+      style="border: none"
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span><img src="http://localhost:1313//menu.webp" width="30px" alt=""></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/post">post</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/koding">Koding</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/admin">Login</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="content">
+<div class="container" style="margin-top: 120px">
+  <div class="row">
+    <div class="col-lg-8">
+      <h2 style="font-weight: bold">Hide Profile Getcontact</h2>
+      <p class="penulis">
+        Ditulis oleh Rysnanto<span
+          ><img loading="lazy" src="http://localhost:1313//verified.png" width="12px" alt=""
+        /></span>
+        , Pada 05-09-2023
+      </p>
+      <div class="scrap-artikel">
+        
+      
+        <div class="container custome">
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+            crossorigin="anonymous"
+          ></script>
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-gw+2+12-5g+83"
+            data-ad-client="ca-pub-5490482637087802"
+            data-ad-slot="6933891977"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <p><p><img src="https://jongnesia.com/getcon.webp" alt="Ilustrasi GetContact"></p>
+<p>GetContact adalah sebuah aplikasi yang dapat membantu pengguna untuk mencari informasi kontak dari orang-orang yang tidak mereka kenal, seperti nomor telepon, alamat email, dan akun media sosial. Namun, aplikasi ini sering menuai kontroversi karena fitur &ldquo;Hide Profile&rdquo; yang dimilikinya.</p>
+<p>Fitur &ldquo;Hide Profile&rdquo; pada GetContact memungkinkan pengguna untuk menyembunyikan profil mereka dari orang lain yang mencari informasi di aplikasi ini. Dengan fitur ini, pengguna dapat menghindari tindakan spam atau penyalahgunaan informasi pribadi mereka.</p>
+<p>Namun, banyak yang mengkritik fitur ini karena dapat memudahkan tindakan yang tidak etis, seperti penipuan atau stalking. Beberapa pengguna juga merasa tidak nyaman dengan fakta bahwa profil mereka dapat disembunyikan dari orang lain, sehingga mereka tidak dapat memastikan bahwa informasi pribadi mereka aman.</p>
+<p>Selain itu, banyak yang menganggap bahwa aplikasi seperti GetContact mengancam privasi pengguna. Pengguna mungkin tidak ingin informasi pribadi mereka tersebar luas di internet, atau diakses oleh orang yang tidak mereka kenal.</p>
+<p>Untuk menghindari risiko tersebut, ada beberapa tindakan yang dapat dilakukan oleh pengguna GetContact. Pertama, pastikan bahwa Anda hanya membagikan informasi pribadi dengan orang-orang yang Anda percayai. Jangan menambahkan nomor telepon atau alamat email yang tidak dikenal ke dalam kontak Anda.</p>
+<p>Kedua, gunakan fitur &ldquo;Hide Profile&rdquo; dengan bijak. Jika Anda merasa khawatir tentang privasi Anda, Anda dapat menyembunyikan profil Anda dari orang-orang yang tidak Anda kenal. Namun, pastikan bahwa Anda tidak memanfaatkannya untuk melakukan tindakan yang tidak etis.</p>
+<p>Ketiga, gunakan aplikasi pengamanan atau antivirus pada perangkat Anda. Ini dapat membantu melindungi informasi pribadi Anda dari ancaman keamanan siber.</p>
+<p>Keempat, pastikan bahwa Anda membaca dan memahami syarat dan ketentuan GetContact sebelum menggunakan aplikasi ini. Ini dapat membantu Anda memahami bagaimana informasi Anda digunakan dan dilindungi oleh aplikasi ini.</p>
+<p>Dalam kesimpulan, GetContact menyediakan fitur &ldquo;Hide Profile&rdquo; yang dapat membantu pengguna melindungi informasi pribadi mereka dari penyalahgunaan. Namun, pengguna harus tetap berhati-hati dan bijak dalam menggunakan fitur ini, serta memperhatikan risiko privasi dan keamanan yang mungkin timbul.</p>
+<p>Untuk menyembunyikan profil Anda di GetContact, Anda perlu mengikuti beberapa langkah berikut ini:</p>
+<ul>
+<li>
+<p>Buka aplikasi GetContact dan masuk ke akun Anda.</p>
+</li>
+<li>
+<p>Klik ikon profil di bagian bawah layar.</p>
+</li>
+<li>
+<p>Pilih opsi &ldquo;Settings&rdquo; di bagian atas layar.</p>
+</li>
+<li>
+<p>Gulir ke bawah hingga Anda menemukan opsi &ldquo;Hide My Profile&rdquo; dan klik opsi ini.</p>
+</li>
+</ul>
+<p>Aktifkan tombol &ldquo;Hide My Profile&rdquo; untuk menyembunyikan profil Anda dari orang lain yang menggunakan aplikasi GetContact.</p>
+<p>Jika Anda ingin kembali menampilkan profil Anda, cukup matikan tombol &ldquo;Hide My Profile&rdquo;.</p>
+<p>Setelah Anda menyembunyikan profil Anda, orang lain tidak akan dapat menemukan informasi kontak Anda atau melihat profil Anda di GetContact. Namun, Anda masih dapat mencari informasi kontak orang lain di aplikasi ini.</p>
+<p>Penting untuk diingat bahwa meskipun fitur &ldquo;Hide Profile&rdquo; dapat membantu melindungi privasi Anda, ini tidak dapat menjamin bahwa informasi pribadi Anda sepenuhnya aman. Oleh karena itu, selalu perhatikan keamanan dan privasi Anda ketika menggunakan aplikasi seperti GetContact atau aplikasi lainnya.</p>
+</p>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+          crossorigin="anonymous"
+        ></script>
+        <ins
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-5490482637087802"
+          data-ad-slot="1295440535"
+        ></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+    <div class="col-lg-4" style="margin-top: 80px">
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+        crossorigin="anonymous"
+      ></script>
+      
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-5490482637087802"
+        data-ad-slot="4985551332"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      
+      <div class="card mb-4 mt-4">
+         
+        <h3 style="font-weight: bold; padding-left: 10px">Cuitan New</h3>
+        <ul>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/wordpress-atau-blogspot/"
+              >Kamu pilih Wordpress Atau Blogspot?</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/meta-tag-seo/"
+              >Cara memunculkan Tag Meta website ketika di Whatsapp</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/bot-whatsapp-sticker/"
+              >Membuat Bot Whatsapp Sticker</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/chat-element-matix/"
+              >Keamanan Chat dengan Element Matrix: Sayangi Privasi Anda</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/deploy-web-github-ke-hosting/"
+              >Membuat Script Auto Deploy Dari Git ke Hosting</a
+            >
+          </li>
+          
+        </ul>
+        
+      </div>
+       
+      <div id="disqus_thread"></div>
+      <script>
+        (function () {
+          
+          var d = document,
+            s = d.createElement("script");
+          s.src = "https://jongnesia-com-1.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript
+        >Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript"
+          >comments powered by Disqus.</a
+        ></noscript
+      >
+    </div>
+  </div>
+</div>
+</div>
+<div class="container" style="margin-top: 80px">
+  
+</div> 
+
+<footer class="footer ">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="/privacy">Privacy Policy</a> |
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+      <div class="col-md-12">
+        <p>&copy; 2023 Jongnesia. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>

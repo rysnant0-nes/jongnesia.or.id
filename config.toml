@@ -1,0 +1,53 @@
+baseURL = "https://jongnesia.or.id/"
+title = "Jongnesia"
+theme = "jongtheme"
+paginate = 6
+
+[params]
+quote = "KAMI BANGGA MENJADI WARGA NEGARA REPUBLIK INDONESIA"
+about = "Jongnesia adalah forum OBROLAN | TEKNOLOGI | DLL di mana Anda dapat berdiskusi dan berbagi pengalaman seputar pemrograman , binsik dll . Filosofi Jongnesia didasarkan pada makna kata 'JONG' yang berasal dari Bahasa Belanda, yang berarti pemuda, sementara 'NESIA' merujuk kepada Indonesia. Dengan demikian, Jongnesia dapat diartikan sebagai pemuda Indonesia."
+footer = "Develop By JongNesia ♥"
+description = "Pemuda Indonesia Berkarya , tempat sharing mengenai koding"
+favicon= "static/favicon.png"
+
+[[params.link]]
+name = "Whatsapp"
+url = ""
+[[params.link]]
+name = "Telegram"
+url = "https://t.me/@jongnesia"
+[[params.link]]
+name = "Github"
+url = "https://github.com/rysnant0-nes"
+
+
+
+[[menus.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menus.main]]
+name = "post"
+url = "/post"
+weight = 2
+
+[[menus.main]]
+name = "Koding"
+url = "/koding"
+weight = 3
+
+[[menus.main]]
+name = "Login"
+url = "/admin"
+weight = 3
+
+
+
+[taxonomies]
+  html = "html"
+  css = "css"
+  js = "js"
+
+
+

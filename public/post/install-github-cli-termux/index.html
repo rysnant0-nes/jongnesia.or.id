@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+
+<link rel="stylesheet" href="http://localhost:1313//style.css" />
+<link
+  rel="shortcut icon"
+  href="http://localhost:1313/static/favicon.png"
+  type="image/x-icon"
+/>
+<meta property="og:description" name="description" content="Menginstall Github CLI di android lewat Termux" />
+<meta property="og:title" name="description" content="Install Github CLI di Termux" />
+<meta property="og:image" name="description" content="http://localhost:1313//ilustration/cli-termux.webp" />
+<title>Install Github CLI di Termux</title>
+<script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+  crossorigin="anonymous"
+></script>
+
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Poppins&display=swap");
+  body {
+    overflow-y: scroll;
+    width: 100%;
+    padding: 10px;
+  }
+  p {
+    font-family: "Poppins", sans-serif;
+  }
+  h1 {
+    color:black;
+    font-weight: bold;
+  }
+  pre code {
+  font-size: 16px;
+  border: 3px dashed black !important;
+  border-radius:10px ;
+  font-family: "Source Code Pro", monospace;
+  color: rgb(107, 223, 198);
+  padding: 5px;
+  display: block;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  }
+  li{
+    margin-left: 0px !important;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  a.nav-link  {
+    margin-left: 0px !important;
+    padding-top: 10px;
+    font-size: 25px;
+    padding-left: 20px !important;
+  }
+  li.footer {
+    display: inline;
+    margin: 0;
+  }
+  ol {
+     
+    margin-top: -20px;
+  }
+
+  ul a {
+    text-decoration: none;
+  }
+  div.card {
+    background-color: #f4d9ae !important;
+    border: 5px dashed black;
+    border-bottom-left-radius: 5px solid black;
+    font-size: 15px !important;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .penulis {
+    font-size: 10px;
+  }
+  iframe {
+    width: 760px;
+    height: 515px;
+    border-radius: 15px;
+    border: 5px solid #20c997;
+    border-style: dashed;
+  }
+  div.container.custome {
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    img.profile {
+      width: 300px;
+    }
+    .footer p {
+      text-align: center;
+  
+    }
+    .footer ol {
+      margin-left: 18px !important;
+   
+    }
+    .footer ol a {
+      font-size: 15px !important;
+    }
+    .div-custome {
+      text-align: left;
+    }
+    iframe {
+      width: 340px;
+      height: 200px;
+      border-radius: 15px;
+      border: 5px solid #20c997;
+      border-style: dashed;
+    }
+  }
+  @media (min-width: 1011px) {
+    img.profile {
+      width: 300px;
+    }
+    .div-custome {
+      text-align: left;
+    }
+    iframe {
+      width: 500px;
+      height: 300px;
+      border-radius: 15px;
+      border: 5px solid #20c997;
+      border-style: dashed;
+    }
+  }
+  
+</style>
+
+  </head>
+  <body><nav class="navbar navbar-expand-lg navbar-light bg-custome fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">JONGNESIA</a>
+    <button
+      style="border: none"
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span><img src="http://localhost:1313//menu.webp" width="30px" alt=""></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/post">post</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/koding">Koding</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/admin">Login</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="content">
+<div class="container" style="margin-top: 120px">
+  <div class="row">
+    <div class="col-lg-8">
+      <h2 style="font-weight: bold">Install Github CLI di Termux</h2>
+      <p class="penulis">
+        Ditulis oleh Rysnanto<span
+          ><img loading="lazy" src="http://localhost:1313//verified.png" width="12px" alt=""
+        /></span>
+        , Pada 06-06-2023
+      </p>
+      <div class="scrap-artikel">
+        
+        <div class="plyr__video-embed" id="player">
+        <iframe 
+          src="https://www.youtube.com/embed/HpJqoPsZE94?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+          frameborder="0"
+          allowfullscreen
+          allowtransparency
+          allow="autoplay"
+        ></iframe>
+      </div>
+        <br>
+         
+         <span class="likebtn-wrapper" data-i18n_like="Suka" data-ef_voting="wobble" data-identifier="item_1"></span>
+         <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+         
+        
+      
+        <div class="container custome">
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+            crossorigin="anonymous"
+          ></script>
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-gw+2+12-5g+83"
+            data-ad-client="ca-pub-5490482637087802"
+            data-ad-slot="6933891977"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <p><h1 id="pengertian-dan-definisi">Pengertian Dan Definisi</h1>
+<p>Github CLI itu - CLI sendiri merupakan pengertian Command Line Interface yang bisa kita simpulkan bahwa github CLI merupakan fitur yang biasa kita gunakan di website github namun kita juga bisa gunakan fitur tersebut melalui Command Line.</p>
+<p>Termux sendiri merupakan terminal emulator layak nya cmd saat kita menggunakan windows. Saya yakin teman teman juga sudah menggunakan aplikasi ini itu berbagai hal. Nah pada artikel ini kita akan install Github CLI di Termux ini agar kita dapat melakukan interaksi dengan github di terminal android kita yaitu Termux.</p>
+<h3 id="instalasi">Instalasi</h3>
+<p>Teman - Teman download terlebih dahulu aplikasi Termux ini di playstore atau pun di google, terserah.Pokoknya harus install aplikasi ini dulu agar dapat mengikuti apa yang saya tulis.</p>
+<p>Setelah berhasil meng-install aplikasi Termux silahkan di buka dan ketikkan perintah di bawah ini untuk menginstall github CLI nya.</p>
+<p><code>pkg install git</code></p>
+<p>Aku harap dlsetelah menuliskan perintah tersebut maka github CLI sudah terinstall, cara cek nya tinggal kita ketikan</p>
+<p><code>git --version</code></p>
+<h3 id="masalah-error">Masalah Error</h3>
+<p>Namun apabila teman teman menemui kendala seperti saya ini , berikut gambar error nya :</p>
+<p>Jangan panik terlebih dahulu , setelah saya cari cari penyebab nya akhir nya saya menemukan jawaban nya di stackoverflow <a href="https://stackoverflow.com/questions/67647518/termux-repository-is-under-maintenance-or-down?rq=1">https://stackoverflow.com/questions/67647518/termux-repository-is-under-maintenance-or-down?rq=1</a></p>
+<p>Teman-Teman bisa ketikkan perintah perintah di bawah ini untuk mengatasi error tersebut.</p>
+<p><code>pkg remove game-repo pkg remove science-repo</code></p>
+<p>Jika ada peringatan (Y/N) ketik aja Y saja hingga akhir proses, jika sudah bagian akhir kita ketikkan lagi</p>
+<p><code>pkg update</code></p>
+<p>Maka akan ada proses update atau apa saya kurang paham yang sedang berjalan , jika ada peringatan lagi (Y/N) ketik saja Y hingga akhir proses berakhir. Dan ya semoga berhasil, sekarang tinggal kita ulangi lagi perintah untuk menginstall github CLI nya.</p>
+<p><code>pkg install git</code></p>
+<p>Nah itu dia bagaimana cara install Github CLI di Termux android , semoga berhasil bila mana ada kesulitan atau kendala sebaiknya tanya di komentar ataupun bisa mencari masalahnya di stackoverflow. Sekian terimakasih _^</p>
+</p>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+          crossorigin="anonymous"
+        ></script>
+        <ins
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-5490482637087802"
+          data-ad-slot="1295440535"
+        ></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+    <div class="col-lg-4" style="margin-top: 80px">
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+        crossorigin="anonymous"
+      ></script>
+      
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-5490482637087802"
+        data-ad-slot="4985551332"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      
+      <div class="card mb-4 mt-4">
+         
+        <h3 style="font-weight: bold; padding-left: 10px">Cuitan New</h3>
+        <ul>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/wordpress-atau-blogspot/"
+              >Kamu pilih Wordpress Atau Blogspot?</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/meta-tag-seo/"
+              >Cara memunculkan Tag Meta website ketika di Whatsapp</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/bot-whatsapp-sticker/"
+              >Membuat Bot Whatsapp Sticker</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/chat-element-matix/"
+              >Keamanan Chat dengan Element Matrix: Sayangi Privasi Anda</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/deploy-web-github-ke-hosting/"
+              >Membuat Script Auto Deploy Dari Git ke Hosting</a
+            >
+          </li>
+          
+        </ul>
+        
+      </div>
+       
+      <div id="disqus_thread"></div>
+      <script>
+        (function () {
+          
+          var d = document,
+            s = d.createElement("script");
+          s.src = "https://jongnesia-com-1.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript
+        >Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript"
+          >comments powered by Disqus.</a
+        ></noscript
+      >
+    </div>
+  </div>
+</div>
+</div>
+<div class="container" style="margin-top: 80px">
+  
+</div> 
+
+<footer class="footer ">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="/privacy">Privacy Policy</a> |
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+      <div class="col-md-12">
+        <p>&copy; 2023 Jongnesia. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>

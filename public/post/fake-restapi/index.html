@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+
+<link rel="stylesheet" href="http://localhost:1313//style.css" />
+<link
+  rel="shortcut icon"
+  href="http://localhost:1313/static/favicon.png"
+  type="image/x-icon"
+/>
+<meta property="og:description" name="description" content="Berikut beberapa kumpulan Fake RestAPI terpopuler hanya di Jongnesia.com" />
+<meta property="og:title" name="description" content="Mengenal API Fake: Solusi Praktis untuk Pengembangan Aplikasi" />
+<meta property="og:image" name="description" content="http://localhost:1313//ilustration/rest.webp" />
+<title>Mengenal API Fake: Solusi Praktis untuk Pengembangan Aplikasi</title>
+<script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+  crossorigin="anonymous"
+></script>
+
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Poppins&display=swap");
+  body {
+    overflow-y: scroll;
+    width: 100%;
+    padding: 10px;
+  }
+  p {
+    font-family: "Poppins", sans-serif;
+  }
+  h1 {
+    color:black;
+    font-weight: bold;
+  }
+  pre code {
+  font-size: 16px;
+  border: 3px dashed black !important;
+  border-radius:10px ;
+  font-family: "Source Code Pro", monospace;
+  color: rgb(107, 223, 198);
+  padding: 5px;
+  display: block;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  }
+  li{
+    margin-left: 0px !important;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  a.nav-link  {
+    margin-left: 0px !important;
+    padding-top: 10px;
+    font-size: 25px;
+    padding-left: 20px !important;
+  }
+  li.footer {
+    display: inline;
+    margin: 0;
+  }
+  ol {
+     
+    margin-top: -20px;
+  }
+
+  ul a {
+    text-decoration: none;
+  }
+  div.card {
+    background-color: #f4d9ae !important;
+    border: 5px dashed black;
+    border-bottom-left-radius: 5px solid black;
+    font-size: 15px !important;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .penulis {
+    font-size: 10px;
+  }
+  iframe {
+    width: 760px;
+    height: 515px;
+    border-radius: 15px;
+    border: 5px solid #20c997;
+    border-style: dashed;
+  }
+  div.container.custome {
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    img.profile {
+      width: 300px;
+    }
+    .footer p {
+      text-align: center;
+  
+    }
+    .footer ol {
+      margin-left: 18px !important;
+   
+    }
+    .footer ol a {
+      font-size: 15px !important;
+    }
+    .div-custome {
+      text-align: left;
+    }
+    iframe {
+      width: 340px;
+      height: 200px;
+      border-radius: 15px;
+      border: 5px solid #20c997;
+      border-style: dashed;
+    }
+  }
+  @media (min-width: 1011px) {
+    img.profile {
+      width: 300px;
+    }
+    .div-custome {
+      text-align: left;
+    }
+    iframe {
+      width: 500px;
+      height: 300px;
+      border-radius: 15px;
+      border: 5px solid #20c997;
+      border-style: dashed;
+    }
+  }
+  
+</style>
+
+  </head>
+  <body><nav class="navbar navbar-expand-lg navbar-light bg-custome fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">JONGNESIA</a>
+    <button
+      style="border: none"
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span><img src="http://localhost:1313//menu.webp" width="30px" alt=""></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/post">post</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/koding">Koding</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/admin">Login</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="content">
+<div class="container" style="margin-top: 120px">
+  <div class="row">
+    <div class="col-lg-8">
+      <h2 style="font-weight: bold">Mengenal API Fake: Solusi Praktis untuk Pengembangan Aplikasi</h2>
+      <p class="penulis">
+        Ditulis oleh April<span
+          ><img loading="lazy" src="http://localhost:1313//verified.png" width="12px" alt=""
+        /></span>
+        , Pada 05-17-2023
+      </p>
+      <div class="scrap-artikel">
+        
+      
+        <div class="container custome">
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+            crossorigin="anonymous"
+          ></script>
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-gw+2+12-5g+83"
+            data-ad-client="ca-pub-5490482637087802"
+            data-ad-slot="6933891977"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <p><p>Dalam dunia pengembangan aplikasi, akses ke data sungguhan merupakan hal penting untuk menguji dan mengembangkan fitur-fitur baru. Namun, terkadang sulit untuk mengakses data sungguhan dalam tahap awal pengembangan atau ketika tidak memiliki akses ke server produksi. Inilah saatnya API fake atau mock API hadir sebagai solusi yang praktis. API fake adalah layanan yang menyediakan data palsu atau simulasi data dari sumber daya yang sebenarnya. Dalam artikel ini, kita akan menjelajahi beberapa layanan yang menyediakan API fake, yang dapat sangat membantu dalam meningkatkan pengembangan aplikasi.</p>
+<p>Salah satu layanan API fake yang paling populer adalah <strong>JSONPlaceholde</strong>r. JSONPlaceholder menyediakan berbagai endpoint untuk berbagai jenis sumber daya seperti pengguna (users), pos (posts), komentar (comments), dan lainnya. Data palsu disimpan dalam format JSON dan dapat diakses melalui endpoint-endpoint yang disediakan. Misalnya, jika kamu ingin mengambil daftar pengguna, cukup gunakan URL <a href="https://jsonplaceholder.typicode.com/users">https://jsonplaceholder.typicode.com/users</a>. JSONPlaceholder sangat berguna dalam tahap awal pengembangan ketika kamu perlu menguji interaksi dengan API dan melihat bagaimana aplikasi berperilaku dengan berbagai data.</p>
+<p>Layanan lain yang dapat kamu manfaatkan adalah <strong>ReqRes</strong>. ReqRes menyediakan layanan API fake yang mudah digunakan dengan berbagai endpoint yang mencakup fitur seperti pendaftaran (register), login, pengambilan profil pengguna, dan lainnya. kamu dapat mengirim permintaan ke endpoint-endpoint ini untuk berinteraksi dengan data palsu. URL <a href="https://reqres.in/api/register">https://reqres.in/api/register</a> dapat digunakan sebagai contoh untuk melakukan pendaftaran. Layanan ini juga menyediakan respon yang realistis dengan format JSON, memungkinkan kamu menguji logika aplikasi dengan lebih baik.</p>
+<p>Apabila kamu menginginkan kebebasan lebih dalam menentukan data palsu dan respon yang diinginkan, <strong>Mocky</strong> adalah pilihan yang tepat. Platform ini memungkinkan kamu membuat API palsu sesuai dengan kebutuhan kamu. kamu dapat membuat endpoint kustom dengan data yang kamu tentukan sendiri. Mocky juga memberikan fleksibilitas dalam menentukan respon yang diharapkan, termasuk status kode, headers, dan body respons. Dengan Mocky, kamu dapat dengan mudah mensimulasikan berbagai skenario dan menguji bagaimana aplikasi kamu merespons terhadap respons yang berbeda.</p>
+<p>Selain itu, ada juga <strong>Beeceptor</strong>, layanan API mock yang sangat berguna dalam pengujian dan debugging aplikasi. kamu dapat membuat endpoint kustom dengan respons palsu dan memodifikasi respons secara dinamis menggunakan skrip JavaScript. Beeceptor memungkinkan kamu mensimulasikan kesalahan jaringan, menguji respons yang berbeda, atau bahkan menggantikan respons asli dengan data palsu saat kamu mengembangkan atau memecahkan masalah di aplikasi.</p>
+<p>Terakhir, kita juga memiliki <strong>MockAPI</strong>, layanan API fake yang memberikan fleksibilitas dalam membuat endpoint-endpoint kustom dan menentukan respons yang diharapkan. Layanan ini memungkinkan kamu menentukan struktur data, jenis respons, status kode, bahkan penjadwalan respons sesuai kebutuhan pengembangan kamu. MockAPI juga mendukung fitur-fitur seperti autentikasi, pembatasan akses, dan validasi permintaan. Keunggulan MockAPI terletak pada kemudahan penggunaan dan antarmuka yang intuitif, sehingga kamu dapat dengan cepat membuat API fake yang realistis dan menguji aplikasi kamu dengan respons yang dapat diatur sesuai kebutuhan.</p>
+<h2 id="kesimpulan">Kesimpulan</h2>
+<p>Dalam artikel ini, saya telah menjelajahi beberapa layanan yang menyediakan API fake untuk membantu meningkatkan pengembangan aplikasi. Selain layanan-layanan yang telah disebutkan sebelumnya seperti JSONPlaceholder, ReqRes, Mocky, Beeceptor, dan MockAPI, terdapat juga beberapa pilihan lain seperti Mockable, Postman Mock Server, dan WireMock. Dengan menggunakan layanan-layanan ini, kamu dapat mempercepat pengembangan aplikasi, mengisolasi pengembangan antara front-end dan back-end, serta menguji berbagai skenario dan respons yang berbeda.</p>
+</p>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+          crossorigin="anonymous"
+        ></script>
+        <ins
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-5490482637087802"
+          data-ad-slot="1295440535"
+        ></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+    <div class="col-lg-4" style="margin-top: 80px">
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+        crossorigin="anonymous"
+      ></script>
+      
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-5490482637087802"
+        data-ad-slot="4985551332"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      
+      <div class="card mb-4 mt-4">
+         
+        <h3 style="font-weight: bold; padding-left: 10px">Cuitan New</h3>
+        <ul>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/wordpress-atau-blogspot/"
+              >Kamu pilih Wordpress Atau Blogspot?</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/meta-tag-seo/"
+              >Cara memunculkan Tag Meta website ketika di Whatsapp</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/bot-whatsapp-sticker/"
+              >Membuat Bot Whatsapp Sticker</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/chat-element-matix/"
+              >Keamanan Chat dengan Element Matrix: Sayangi Privasi Anda</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/deploy-web-github-ke-hosting/"
+              >Membuat Script Auto Deploy Dari Git ke Hosting</a
+            >
+          </li>
+          
+        </ul>
+        
+      </div>
+       
+      <div id="disqus_thread"></div>
+      <script>
+        (function () {
+          
+          var d = document,
+            s = d.createElement("script");
+          s.src = "https://jongnesia-com-1.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript
+        >Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript"
+          >comments powered by Disqus.</a
+        ></noscript
+      >
+    </div>
+  </div>
+</div>
+</div>
+<div class="container" style="margin-top: 80px">
+  
+</div> 
+
+<footer class="footer ">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="/privacy">Privacy Policy</a> |
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+      <div class="col-md-12">
+        <p>&copy; 2023 Jongnesia. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>

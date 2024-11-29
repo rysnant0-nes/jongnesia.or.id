@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "glob": "^10.2.2",
+    "glob-parent": "^6.0.2",
+    "tinacms": "^1.5.3"
+  },
+  "scripts": {
+    "dev": "tinacms dev -c \"hugo server -D\"",
+    "build": "tinacms build && hugo"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.5.16"
+  }
+}

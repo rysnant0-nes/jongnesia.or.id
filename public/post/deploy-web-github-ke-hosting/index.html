@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+
+<link rel="stylesheet" href="http://localhost:1313//style.css" />
+<link
+  rel="shortcut icon"
+  href="http://localhost:1313/static/favicon.png"
+  type="image/x-icon"
+/>
+<meta property="og:description" name="description" content="Berikut ini cara untuk mengunggah project yang berada di gihtub kita menuju ke Hosting menggunakan FTP" />
+<meta property="og:title" name="description" content="Membuat Script Auto Deploy Dari Git ke Hosting" />
+<meta property="og:image" name="description" content="http://localhost:1313//ilustration/ftp.webp" />
+<title>Membuat Script Auto Deploy Dari Git ke Hosting</title>
+<script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+  crossorigin="anonymous"
+></script>
+
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Poppins&display=swap");
+  body {
+    overflow-y: scroll;
+    width: 100%;
+    padding: 10px;
+  }
+  p {
+    font-family: "Poppins", sans-serif;
+  }
+  h1 {
+    color:black;
+    font-weight: bold;
+  }
+  pre code {
+  font-size: 16px;
+  border: 3px dashed black !important;
+  border-radius:10px ;
+  font-family: "Source Code Pro", monospace;
+  color: rgb(107, 223, 198);
+  padding: 5px;
+  display: block;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  }
+  li{
+    margin-left: 0px !important;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  a.nav-link  {
+    margin-left: 0px !important;
+    padding-top: 10px;
+    font-size: 25px;
+    padding-left: 20px !important;
+  }
+  li.footer {
+    display: inline;
+    margin: 0;
+  }
+  ol {
+     
+    margin-top: -20px;
+  }
+
+  ul a {
+    text-decoration: none;
+  }
+  div.card {
+    background-color: #f4d9ae !important;
+    border: 5px dashed black;
+    border-bottom-left-radius: 5px solid black;
+    font-size: 15px !important;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .penulis {
+    font-size: 10px;
+  }
+  iframe {
+    width: 760px;
+    height: 515px;
+    border-radius: 15px;
+    border: 5px solid #20c997;
+    border-style: dashed;
+  }
+  div.container.custome {
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    img.profile {
+      width: 300px;
+    }
+    .footer p {
+      text-align: center;
+  
+    }
+    .footer ol {
+      margin-left: 18px !important;
+   
+    }
+    .footer ol a {
+      font-size: 15px !important;
+    }
+    .div-custome {
+      text-align: left;
+    }
+    iframe {
+      width: 340px;
+      height: 200px;
+      border-radius: 15px;
+      border: 5px solid #20c997;
+      border-style: dashed;
+    }
+  }
+  @media (min-width: 1011px) {
+    img.profile {
+      width: 300px;
+    }
+    .div-custome {
+      text-align: left;
+    }
+    iframe {
+      width: 500px;
+      height: 300px;
+      border-radius: 15px;
+      border: 5px solid #20c997;
+      border-style: dashed;
+    }
+  }
+  
+</style>
+
+  </head>
+  <body><nav class="navbar navbar-expand-lg navbar-light bg-custome fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">JONGNESIA</a>
+    <button
+      style="border: none"
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span><img src="http://localhost:1313//menu.webp" width="30px" alt=""></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/post">post</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/koding">Koding</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/admin">Login</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="content">
+<div class="container" style="margin-top: 120px">
+  <div class="row">
+    <div class="col-lg-8">
+      <h2 style="font-weight: bold">Membuat Script Auto Deploy Dari Git ke Hosting</h2>
+      <p class="penulis">
+        Ditulis oleh Rysnanto<span
+          ><img loading="lazy" src="http://localhost:1313//verified.png" width="12px" alt=""
+        /></span>
+        , Pada 06-22-2023
+      </p>
+      <div class="scrap-artikel">
+        
+      
+        <div class="container custome">
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+            crossorigin="anonymous"
+          ></script>
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-gw+2+12-5g+83"
+            data-ad-client="ca-pub-5490482637087802"
+            data-ad-slot="6933891977"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <p><p>Hai sobat jongnesia , sebelumnya saya mengucapkan terimakasih telah menemani website ini dari 2 tahun lalu. Pada artikel ini saya mau sharing bagaimana untuk menghubungkan dari github ke Hosting , yang nantinya project yang kita taruh ke dalam github akan secara otomatis terupload ke dalam Hosting. Sebelumnya apabila kita ingin mengupload project yang ada di local kita harus manual compres dulu project nya ke dalam .zip lalu kita upload ke hosting file manager namun sekarang kita tidak akan melakukan tersebut nantinya github lah yang akan menghandle semua itu dengan menggunakan fitur FTP. Apasih ftp itu min?</p>
+<h1 id="pengertian-ftp">Pengertian FTP</h1>
+<p><strong>FTP (File Transfer Protocol)</strong> adalah internet service yang dirancang untuk membuat sambungan ke server internet tertentu atau komputer, sehingga user dapat mengirimkan file ke komputer (download) atau mengirimkan file ke server (upload). FTP server adalah hal yang saat ini banyak digunakan untuk melakukan pertukaran data, karena lebih mudah daripada menggunakan perangkat kabel atau fisik.</p>
+<p><strong>Sumber</strong> :
+<a href="https://www.niagahoster.co.id/blog/apa-itu-ftp/">https://www.niagahoster.co.id/blog/apa-itu-ftp/</a></p>
+<h1 id="membuat-akun-ftp-di-cpanel">Membuat akun FTP di cpanel</h1>
+<p>Setelah teman - teman mengenal ftp alangkah baiknya kita sekarang membuat sebuah akun ftp baru di cpanel , siapkan hosting nya. saya menggunakan arenhost untuk hosting percobaan harganya murah banget bisa di coba sendiri.</p>
+<p><img src="/tutorial/create-ftp.png" alt="Create FTP Accounts"></p>
+<p>Setelah muncul form seperti gambar di bawah ini , isikan Login sesuai keinginan mu disini saya isi dengan &ldquo;admin&rdquo; jadi nanti nya ketika login ftp menjadi &ldquo;<a href="mailto:admin@pramukaufa.or.id">admin@pramukaufa.or.id</a>&rdquo;. Paswword jangan sampai lupa , buat password dengan kombinasi yang sempurna dan rumit. Lalu untuk directory saya langsung menuju ke root halaman domain saya , nantinya perubahan akan masuk ke directory root tersebut, jadi nanti file nya masuk ke &ldquo;/home/pramukaufa/public_html&rdquo; di gambar kurang public_html maaf hehe. jika teman - teman ingin ke folder lain silahkan sesuaikan dengan lokasi folder yang ingin di akses FTP</p>
+<p><img src="/tutorial/create-ftp2.png" alt="Create FTP Accounts"></p>
+<h1 id="membuat-repository-di-github">Membuat Repository di Github</h1>
+<p>Sekarang kita akan membuat sebuah repo yang akan menampung file project kita , jadi nanti kita akan push project ke repo ini nantinya github akan mengupload project ini ke dalam hosting yang sudah kita konfigurasi tadi FTP nya. Sampai sini paham kan? . Saya anggap teman teman sudah paham tentang buat repository. sekarang yang kita akan lakukan push ke github. Baca git cheatsheet yang saya buat untuk belajar push ke github <a href="https://jongnesia.com/post/git-cheatsheet-langkah-mudah-menggunakan-git/">https://jongnesia.com/post/git-cheatsheet-langkah-mudah-menggunakan-git/</a></p>
+<p><img src="/tutorial/crate-repo.png" alt="Create FTP Accounts"></p>
+<p>Saya anggap teman - teman sudah berhasil untuk push file project ke github. Sekarang yang kita akan lakukan yaitu</p>
+<h1 id="konfigurasi-ftp-ke-github">Konfigurasi FTP ke Github</h1>
+<p>ya , kita akan konfigurasi ftp akun yang kita buat ke dalam github repository kita tadi , caranya teman - teman masuk ke repository project teman - teman lalu pilih setting. Setelah itu cari bagian menu yang bernama &ldquo;Screate &amp; Variabels&rdquo; lalu pilih submenu bernama &ldquo;Action&rdquo; lalu klick tombol &ldquo;New repository screts&rdquo; . Setelah itu buat 3 scret baru yaitu USERNAME_FTP , PASSWORD_FTP dan SERVER_FTP seperti gambar di bawah ini</p>
+<p><img src="/tutorial/conf-ftp.png" alt="Configurasi ftp github"></p>
+<p><img src="/tutorial/conf-ftp2.png" alt="Configurasi ftp github"></p>
+<h3 id="keterangan-"><strong>Keterangan</strong> :</h3>
+<p><strong>USERNAME_FTP :</strong> isi dengan username ftp yang kita buat tadi</p>
+<p><strong>SERVER_FTP :</strong> ftp.namadomain.com</p>
+<p><strong>PASSWORD_FTP :</strong> isi dengan password yang kamu buat tadi</p>
+<p>Setelah membuat 3 Screts , kita buka menu actions di repo kita. setelah itu teman - teman klick <strong>&ldquo;this and set up a workflow yourself&rdquo;</strong>. cari app yang bernama &ldquo;FTP ACTION&rdquo; seperti gambar di bawah ini</p>
+<p><img src="/tutorial/conf-ftp3.png" alt="Configurasi ftp github"></p>
+<p><img src="/tutorial/conf-ftp4.png" alt="Configurasi ftp github"></p>
+<p>di dalam code editor github , copy paste kode yang saya berikan di bawah ini nanti hasil nya akan seperti ini :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>on: push
+</span></span><span style="display:flex;"><span>name: 🚀 Deploy website on push
+</span></span><span style="display:flex;"><span>jobs:
+</span></span><span style="display:flex;"><span>  web-deploy:
+</span></span><span style="display:flex;"><span>    name: 🎉 Deploy
+</span></span><span style="display:flex;"><span>    runs-on: ubuntu-latest
+</span></span><span style="display:flex;"><span>    steps:
+</span></span><span style="display:flex;"><span>    - name: 🚚 Get latest code
+</span></span><span style="display:flex;"><span>      uses: actions/checkout@v3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - name: 📂 Sync files
+</span></span><span style="display:flex;"><span>      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+</span></span><span style="display:flex;"><span>      with:
+</span></span><span style="display:flex;"><span>        server: <span style="color:#e6db74">${</span>{ secrets.SERVER_FTP <span style="color:#e6db74">}</span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        username: <span style="color:#e6db74">${</span>{ secrets.USERNAME_FTP <span style="color:#e6db74">}</span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        password: <span style="color:#e6db74">${</span>{ secrets.PASSWORD_FTP <span style="color:#e6db74">}</span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p><img src="/tutorial/conf-ftp5.png" alt="Configurasi ftp github"></p>
+<p>Setelah configurasi selesai lalu klick commit changes dan klick commit changes lagi. lalu setelah itu kita coba buka menu actions lagi maka akan ada yang berjalan yaitu github sedang push kodingan atau project kita ke hosting kita. pastikan username password dan server benar agar menghindari kesalahan.</p>
+</p>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+          crossorigin="anonymous"
+        ></script>
+        <ins
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-5490482637087802"
+          data-ad-slot="1295440535"
+        ></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+    <div class="col-lg-4" style="margin-top: 80px">
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+        crossorigin="anonymous"
+      ></script>
+      
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-5490482637087802"
+        data-ad-slot="4985551332"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      
+      <div class="card mb-4 mt-4">
+         
+        <h3 style="font-weight: bold; padding-left: 10px">Cuitan New</h3>
+        <ul>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/wordpress-atau-blogspot/"
+              >Kamu pilih Wordpress Atau Blogspot?</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/meta-tag-seo/"
+              >Cara memunculkan Tag Meta website ketika di Whatsapp</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/bot-whatsapp-sticker/"
+              >Membuat Bot Whatsapp Sticker</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/chat-element-matix/"
+              >Keamanan Chat dengan Element Matrix: Sayangi Privasi Anda</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/deploy-web-github-ke-hosting/"
+              >Membuat Script Auto Deploy Dari Git ke Hosting</a
+            >
+          </li>
+          
+        </ul>
+        
+      </div>
+       
+      <div id="disqus_thread"></div>
+      <script>
+        (function () {
+          
+          var d = document,
+            s = d.createElement("script");
+          s.src = "https://jongnesia-com-1.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript
+        >Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript"
+          >comments powered by Disqus.</a
+        ></noscript
+      >
+    </div>
+  </div>
+</div>
+</div>
+<div class="container" style="margin-top: 80px">
+  
+</div> 
+
+<footer class="footer ">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="/privacy">Privacy Policy</a> |
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+      <div class="col-md-12">
+        <p>&copy; 2023 Jongnesia. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>

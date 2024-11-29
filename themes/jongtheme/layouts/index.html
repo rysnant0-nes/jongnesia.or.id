@@ -1,0 +1,116 @@
+{{- define "main" }}
+<!-- navbar -->
+<!-- end navbar -->
+<!-- hero section -->
+<div class="fullscreen-background">
+  <div class="content">
+    <button class="centered-button" onclick="scrollToTop()">
+      <p>PEMUDA INDONESIA</p>
+    </button>
+    <p id="quote">{{.Site.Params.quote}}</p>
+  </div>
+</div>
+
+<!-- <div class="image-list d-flex justify-content-center" style="margin: 0; display: inline-block; padding: 10px; margin-top: 80px;">
+  <img src="/tech/netlify.svg" class="tech" alt="Gambar 2" title="Website ini di-hosting di netlify.com" loading="lazy" />
+  <img src="/tech/hugo.svg" class="tech" alt="Gambar 1" title="Kami menggunakan SSG Hugo untuk membuat artikel" loading="lazy" />
+  <img src="/tech/bootstrap.png" width="50px" alt="Gambar 3" title="Website kami dibuat dengan menggunakan framework css Bootstrap" loading="lazy" />
+  <img src="/tech/github.png" class="tech" alt="" title="Semua resource di jongnesia ini ditaruh di dalam Github" loading="lazy" height="50px" />
+</div> -->
+
+<!-- end hero -->
+<!-- about us -->
+<div class="container div-custome" style="margin-top: 80px;">
+  <h2 class="section-title">TENTANG KAMI</h2>
+  <p class="section-description">{{.Site.Params.about}}</p>
+</div>
+<!-- about us end -->
+<!-- FAQ -->
+<div class="container" style="margin-top: 50px;">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <details>
+        <summary>PROJECT</summary>
+        <p>Ada beberapa project yang kami kerjakan, bisa dilihat di github.com/@j0ngd3v.</p>
+      </details>
+      <details>
+        <summary>PENDIRI</summary>
+        <p>Kami didirikan oleh Rysnanto selaku admin utama di forum jongnesia.</p>
+      </details>
+      <details>
+        <summary>Group</summary>
+        <p>Whatsapp : <a href="https://chat.whatsapp.com/Kb4t20PEQOb8XiYaWjlGVu">Klik Saya</a></p>
+      </details>
+      <!-- <details>
+        <summary>Kolaborasi</summary>
+        <p>Berikut beberapa partner JongNesia: <br />
+          <img src="partner/eazo.webp" width="40px" alt="" loading="lazy" /> - EAZO PROGRAMER TEAM <br />
+          <img src="partner/zero.webp" width="40px" alt="" loading="lazy" /> - ZERO CYBER TEAM <br/>
+          <img src="partner/surabayax.png" width="60px" alt="" loading="lazy" /> - SURABAYA XPLOIT
+        </p>
+      </details> -->
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-5">
+      <p class="section-description about2" style="margin-top: 0px !important;">
+        <img class="profile" src="static/kon.webp" loading="lazy" alt="" /><br />
+        Jl. Raya Semarang Surabaya Kab. Rembang Lok SMK UMAR FATAH
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Gambar SVG Responsif -->
+<div class="container" style="margin-top: 80px;">
+  <div class="row justify-content-center">
+    <div class="col-md-12 text-center">
+      <h2 class="section-title" style="color:white !important;margin-bottom: 15px;">STRUKTUR ORGANISASI</h2>
+    </div>
+    <div class="col-md-12 text-center">
+      <img src="/static/organisasi.svg" class="img-fluid" alt="Organisasi JongNesia" loading="lazy" oncontextmenu="return false;">
+    </div>
+  </div>
+</div>
+
+<!-- Gambar SVG Responsif -->
+<div class="container" style="margin-top: 80px;">
+  <div class="row justify-content-center">
+    <div class="col-md-12 text-center">
+      <h2 class="section-title" style="color:white !important;margin-bottom: 15px;">Ngiklan Dulu</h2>
+    </div>
+    <div class="col-md-12 text-center">
+      <img width="80%" src="/static/iklan.png" class="img-fluid" alt="Organisasi JongNesia" loading="lazy" oncontextmenu="return false;">
+      <span class="tooltip-text">EAZO PROGRAMER TEAM</span>
+    </div>
+  </div>
+</div>
+
+<!-- Media Partner -->
+<div class="container" style="margin-top: 80px;">
+  <div class="row justify-content-center">
+    <div class="col-md-12 text-center">
+      <h2 class="section-title" style="color:white !important; margin-bottom: 30px;">Team Partner</h2>
+    </div>
+    <div class="col-md-12 text-center">
+      <div class="media-partners">
+        <div class="media-item">
+          <img src="/partner/eazo.webp" class="media-logo" alt="EAZO PROGRAMER TEAM"  loading="lazy" />
+          <span class="tooltip-text">EAZO PROGRAMER TEAM</span>
+        </div>
+        <div class="media-item">
+          <img src="/partner/zero.webp" class="media-logo" alt="ZERO CYBER TEAM"  loading="lazy" />
+          <span class="tooltip-text">|ZERO CYBER TEAM|  Komunitas Teknologi CyberSec</span>
+        </div>
+        <div class="media-item">
+          <img src="/partner/surabayax.png" class="media-logo" alt="SURABAYA XPLOIT"  loading="lazy" />
+          <span class="tooltip-text">|SURABAYA XPLOIT| Komunitas CyberSec di Surabaya</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- end FAQ -->
+
+{{- end }}

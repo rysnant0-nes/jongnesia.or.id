@@ -1,0 +1,31 @@
+---
+label: Blog
+hide_body: false
+fields:
+  - type: text
+    name: penulis
+    label: penulis
+  - type: text
+    name: ilustration
+    label: ilustration
+  - type: datetime
+    name: date
+    label: date
+  - type: text
+    name: description
+    label: description
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: youtube_id
+    label: youtube_id
+  - name: slug
+    type: text
+    config:
+      required: false
+    label: slug
+pages:
+  - content/post/menampilkan-jumlah-view-di-judul-vidio-youtube-secara-real-time.md
+  - content/post/nostalgia-bermain-750-games-java-di-android-mediafire.md
+  - content/post/scan-malware-di-os-windows-dan-beserta-pencegahan.md

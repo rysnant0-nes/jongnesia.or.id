@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coretan Tangan on Jongnesia</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Coretan Tangan on Jongnesia</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Dec 2023 12:20:59 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kamu pilih Wordpress Atau Blogspot?</title>
+      <link>http://localhost:1313/post/wordpress-atau-blogspot/</link>
+      <pubDate>Sat, 30 Dec 2023 12:20:59 +0700</pubDate>
+      <guid>http://localhost:1313/post/wordpress-atau-blogspot/</guid>
+      <description>&lt;p&gt;Dalam dunia blogging, dua platform yang paling populer dan banyak digunakan adalah WordPress dan Blogger. Kedua platform ini memiliki pendekatan yang berbeda dalam menyediakan layanan blogging, dan pemilihan antara keduanya seringkali tergantung pada kebutuhan dan preferensi pengguna.Dulu saya sendiri menggunakan blogspot karena gratis dan mudah,Dalam artikel ini, kita akan menjelajahi perbedaan antara WordPress dan Blogger serta keunggulan masing-masing.&lt;/p&gt;&#xA;&lt;h2 id=&#34;wordpress-kontrol-dan-fleksibilitas&#34;&gt;WordPress: Kontrol dan Fleksibilitas&lt;/h2&gt;&#xA;&lt;p&gt;WordPress merupakan platform open-source yang memberikan pengguna kebebasan untuk mengelola dan mengontrol setiap aspek dari situs web atau blog mereka. Berikut adalah beberapa keunggulan WordPress:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cara memunculkan Tag Meta website ketika di Whatsapp</title>
+      <link>http://localhost:1313/post/meta-tag-seo/</link>
+      <pubDate>Wed, 30 Aug 2023 11:37:35 +0700</pubDate>
+      <guid>http://localhost:1313/post/meta-tag-seo/</guid>
+      <description>&lt;p&gt;Saat berbagi tautan di WhatsApp, seringkali kita ingin tautan tersebut tampil menarik dengan gambar, judul, dan deskripsi yang sesuai. Hal ini dapat dilakukan dengan menggunakan meta tag pada halaman web Anda. Meta tag adalah potongan kode HTML yang memberikan informasi tentang halaman web kepada mesin pencari dan platform media sosial.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Meta Tag untuk Gambar (og:image):&lt;/strong&gt;&#xA;Meta tag ini memungkinkan Anda menentukan gambar yang akan ditampilkan saat tautan dibagikan. Gunakan tag &lt;!-- raw HTML omitted --&gt; di bagian &lt;!-- raw HTML omitted --&gt; halaman HTML Anda. Pastikan gambar yang Anda pilih memiliki ukuran yang sesuai dan menarik.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Membuat Bot Whatsapp Sticker</title>
+      <link>http://localhost:1313/post/bot-whatsapp-sticker/</link>
+      <pubDate>Wed, 12 Jul 2023 04:22:48 +0700</pubDate>
+      <guid>http://localhost:1313/post/bot-whatsapp-sticker/</guid>
+      <description>&lt;p&gt;WhatsApp telah menjadi platform komunikasi yang sangat populer di seluruh dunia. Dengan menggunakan WhatsApp, pengguna dapat mengirim pesan, berbagi gambar, video, dan bahkan stiker. Dalam artikel ini, kita akan menjelajahi cara membuat bot WhatsApp Sticker menggunakan Node.js dan library whatsapp-web.js. Tujuan kita adalah menjelaskan langkah-langkah secara rinci dan memberikan penjelasan untuk setiap fungsi yang digunakan.&lt;/p&gt;&#xA;&lt;h1 id=&#34;pendahuluan&#34;&gt;Pendahuluan&lt;/h1&gt;&#xA;&lt;p&gt;WhatsApp memiliki fitur stiker yang memungkinkan pengguna untuk mengirim stiker yang lucu dan kreatif dalam percakapan mereka. Meskipun WhatsApp belum menyediakan antarmuka resmi untuk membuat dan mengelola stiker, kita dapat menggunakan library whatsapp-web.js. Library ini memungkinkan kita untuk berinteraksi dengan WhatsApp menggunakan Node.js.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Keamanan Chat dengan Element Matrix: Sayangi Privasi Anda</title>
+      <link>http://localhost:1313/post/chat-element-matix/</link>
+      <pubDate>Tue, 27 Jun 2023 20:53:02 +0700</pubDate>
+      <guid>http://localhost:1313/post/chat-element-matix/</guid>
+      <description>&lt;p&gt;Zaman sekarang, hampir semua aktivitas kita adanya di dunia maya. Mulai dari bisnis, pertemanan, hingga ke kehidupan pribadi kita. Tentunya, semakin kita aktif di dunia maya, semakin kita butuh rasa aman terutama dalam hal komunikasi. Oleh karena itu, sangat penting mengetahui cara berkomunikasi dengan aman, menghindari penyadapan, dan menjaga privasi kita. Salah satu solusi yang mungkin Anda butuhkan adalah Element Matrix, aplikasi chat yang menjamin keamanan data kita.&lt;/p&gt;&#xA;&lt;h2 id=&#34;apa-itu-element-matrix&#34;&gt;👉Apa itu Element Matrix?&lt;/h2&gt;&#xA;&lt;p&gt;Element Matrix merupakan aplikasi chat yang menggunakan protokol Matrix, sebuah protokol terbuka dan terdesentralisasi yang memungkinkan pengguna untuk berkomunikasi secara aman dan terenkripsi. Aplikasi ini menawarkan beberapa fitur yang memastikan keamanan dan privasi komunikasi pengguna, diantaranya enkripsi end-to-end dan server yang terdesentralisasi. Dengan kemampuan inilah, Anda bisa berbicara seputar politik atau hal yang bersifat sensitif tanpa takut keamanan Anda terancam.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Membuat Script Auto Deploy Dari Git ke Hosting</title>
+      <link>http://localhost:1313/post/deploy-web-github-ke-hosting/</link>
+      <pubDate>Thu, 22 Jun 2023 13:54:11 +0700</pubDate>
+      <guid>http://localhost:1313/post/deploy-web-github-ke-hosting/</guid>
+      <description>&lt;p&gt;Hai sobat jongnesia , sebelumnya saya mengucapkan terimakasih telah menemani website ini dari 2 tahun lalu. Pada artikel ini saya mau sharing bagaimana untuk menghubungkan dari github ke Hosting , yang nantinya project yang kita taruh ke dalam github akan secara otomatis terupload ke dalam Hosting. Sebelumnya apabila kita ingin mengupload project yang ada di local kita harus manual compres dulu project nya ke dalam .zip lalu kita upload ke hosting file manager namun sekarang kita tidak akan melakukan tersebut nantinya github lah yang akan menghandle semua itu dengan menggunakan fitur FTP. Apasih ftp itu min?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bikin Artikel Lewat Code Editor</title>
+      <link>http://localhost:1313/post/bikin-artikel-lewat-code-editor/</link>
+      <pubDate>Sat, 10 Jun 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/bikin-artikel-lewat-code-editor/</guid>
+      <description>&lt;p&gt;Hai perkenalkan nama saya Rysnanto , Dulunya saya saat membuat suatu blog memakai cms yang namanya Blogger. Karena memang dulunya blogger lah yang booming saat semua makhluk hidup membuat tulisan, ada juga yang menggunakan wordprees namun kurang familiar dan perlu hosting juga agar CMS Wordpress berjalan,beda halnya dengan CMS Blogger yang dapat terbuat secara mudah dan mendapatkan subdomain untuk domain kita.&lt;/p&gt;&#xA;&lt;p&gt;Menururt saya memang CMS Blogger lah yang sangat bagus di bandingkan Wordpress , ini menurut pribadi aku ya&amp;hellip;. , Setelah beberapa abad saya menggunakan Blogger akhirnya saya pindah haluan menggunakan SSG , yang belum ngerti apa itu SSG bisa baca artikel saya. Saya terinspirasi dari petanikode.com , SekolahKoding.com yang dimana pemilik nya membahas seputar SSG yaitu HUGO. Disitulah saya mulai tertarik menggunakan SSG Hugo , Mulai belajar Hugo dan mengalami kebingungan karena ini pertama kali saya mengenal SSG&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cara memulihkan kontak terhapus</title>
+      <link>http://localhost:1313/post/memulihkan-kontak-terhapus/</link>
+      <pubDate>Tue, 06 Jun 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/memulihkan-kontak-terhapus/</guid>
+      <description>&lt;p&gt;Disclaimer : Syarat agar bisa mengikuti tutorial ini adalah kontak yang tersimpan di gmail teman-teman, jadi kontak yang di simpan di perangkat tidak bisa mengikuti tutorial pada seri ini.&lt;/p&gt;&#xA;&lt;p&gt;Menyimpan kontak ke email google kita sebenernya banyak manfaat nya loh, salah satu contohnya saat kita menghapus seluruh kontak tapi kita masih bisa mengembalikan nya atau memulihkan. Selain bisa memulihkan kontak hilang, Kita juga dapat mendownload semua kontak tersebut atau istilahnya membackup.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install Github CLI di Termux</title>
+      <link>http://localhost:1313/post/install-github-cli-termux/</link>
+      <pubDate>Tue, 06 Jun 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/install-github-cli-termux/</guid>
+      <description>&lt;h1 id=&#34;pengertian-dan-definisi&#34;&gt;Pengertian Dan Definisi&lt;/h1&gt;&#xA;&lt;p&gt;Github CLI itu - CLI sendiri merupakan pengertian Command Line Interface yang bisa kita simpulkan bahwa github CLI merupakan fitur yang biasa kita gunakan di website github namun kita juga bisa gunakan fitur tersebut melalui Command Line.&lt;/p&gt;&#xA;&lt;p&gt;Termux sendiri merupakan terminal emulator layak nya cmd saat kita menggunakan windows. Saya yakin teman teman juga sudah menggunakan aplikasi ini itu berbagai hal. Nah pada artikel ini kita akan install Github CLI di Termux ini agar kita dapat melakukan interaksi dengan github di terminal android kita yaitu Termux.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vps Dan Hosting Gratis 2023</title>
+      <link>http://localhost:1313/post/vps-dan-hosting-gratis/</link>
+      <pubDate>Sun, 21 May 2023 11:37:35 +0700</pubDate>
+      <guid>http://localhost:1313/post/vps-dan-hosting-gratis/</guid>
+      <description>&lt;p&gt;Sebelum masuk ke website untuk registrasi vps dan hosting gratis kamu perlu mengetahu apa itu VPS dan Hosting. jadi &lt;em&gt;VPS&lt;/em&gt; merupakan lepanjangan dari Virtual Private Server yaitu seperti menyewa ruang di server komputer besar. Server ini dibagi menjadi beberapa bagian kecil yang masing-masing berfungsi seperti komputer sendiri. Setiap bagian ini memiliki sistem operasi dan pengaturan sendiri.&lt;/p&gt;&#xA;&lt;p&gt;Jadi, dengan menggunakan VPS, Anda dapat memiliki sebagian dari server itu untuk digunakan sendiri. Anda bisa menyimpan situs web, menjalankan aplikasi, atau melakukan hal lain yang membutuhkan server. Anda memiliki kontrol penuh atas bagian VPS Anda, seperti memiliki komputer sendiri.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mengenal API Fake: Solusi Praktis untuk Pengembangan Aplikasi</title>
+      <link>http://localhost:1313/post/fake-restapi/</link>
+      <pubDate>Wed, 17 May 2023 21:10:07 +0700</pubDate>
+      <guid>http://localhost:1313/post/fake-restapi/</guid>
+      <description>&lt;p&gt;Dalam dunia pengembangan aplikasi, akses ke data sungguhan merupakan hal penting untuk menguji dan mengembangkan fitur-fitur baru. Namun, terkadang sulit untuk mengakses data sungguhan dalam tahap awal pengembangan atau ketika tidak memiliki akses ke server produksi. Inilah saatnya API fake atau mock API hadir sebagai solusi yang praktis. API fake adalah layanan yang menyediakan data palsu atau simulasi data dari sumber daya yang sebenarnya. Dalam artikel ini, kita akan menjelajahi beberapa layanan yang menyediakan API fake, yang dapat sangat membantu dalam meningkatkan pengembangan aplikasi.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bacotan People Theme by Jongnesia</title>
+      <link>http://localhost:1313/post/theme-bacotan-people-hugo/</link>
+      <pubDate>Thu, 11 May 2023 21:55:51 +0700</pubDate>
+      <guid>http://localhost:1313/post/theme-bacotan-people-hugo/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jongnesia.com/bacotan-people.png&#34; alt=&#34;Ilustrasi Bacotan People Theme&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;tema-bacotan-peopple&#34;&gt;Tema Bacotan Peopple&lt;/h1&gt;&#xA;&lt;p&gt;Tema Bacotan Peopple adalah tema Hugo yang modern dan menarik yang dirancang untuk membangun situs web atau blog. Tema ini dilengkapi dengan fitur-fitur seperti pagination, sidebar, dan tata letak yang responsif.&lt;/p&gt;&#xA;&lt;h2 id=&#34;fitur&#34;&gt;Fitur&lt;/h2&gt;&#xA;&lt;p&gt;Beberapa fitur yang terdapat dalam tema Bacotan Peopple antara lain:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Pagination: Memudahkan pengguna untuk menavigasi halaman-halaman situs.&lt;/li&gt;&#xA;&lt;li&gt;Sidebar: Menampilkan informasi tambahan seperti tautan ke akun media sosial dan informasi tentang situs.&lt;/li&gt;&#xA;&lt;li&gt;Tata letak responsif: Tema ini dirancang untuk menyesuaikan tampilan dengan perangkat pengguna, seperti desktop dan perangkat seluler.&lt;/li&gt;&#xA;&lt;li&gt;Kustomisasi warna: Tema ini menggunakan warna-warna cerah dan kontras yang dapat dikustomisasi sesuai dengan preferensi pengguna.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;instalasi&#34;&gt;Instalasi&lt;/h2&gt;&#xA;&lt;p&gt;Untuk menginstal tema Bacotan Peopple, Anda dapat melakukan langkah-langkah berikut:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hide Profile Getcontact</title>
+      <link>http://localhost:1313/post/hide-profile-getcontact/</link>
+      <pubDate>Tue, 09 May 2023 20:26:11 +0700</pubDate>
+      <guid>http://localhost:1313/post/hide-profile-getcontact/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jongnesia.com/getcon.webp&#34; alt=&#34;Ilustrasi GetContact&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;GetContact adalah sebuah aplikasi yang dapat membantu pengguna untuk mencari informasi kontak dari orang-orang yang tidak mereka kenal, seperti nomor telepon, alamat email, dan akun media sosial. Namun, aplikasi ini sering menuai kontroversi karena fitur &amp;ldquo;Hide Profile&amp;rdquo; yang dimilikinya.&lt;/p&gt;&#xA;&lt;p&gt;Fitur &amp;ldquo;Hide Profile&amp;rdquo; pada GetContact memungkinkan pengguna untuk menyembunyikan profil mereka dari orang lain yang mencari informasi di aplikasi ini. Dengan fitur ini, pengguna dapat menghindari tindakan spam atau penyalahgunaan informasi pribadi mereka.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mengoptimalkan Kecepatan Website dengan Implementasi Cache Browser</title>
+      <link>http://localhost:1313/post/implementasi-cache-browser/</link>
+      <pubDate>Wed, 03 May 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/implementasi-cache-browser/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jongnesia.com/cache.png&#34; alt=&#34;Ilustrasi cache&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Salah satu cara paling mudah untuk meningkatkan kecepatan website adalah dengan mengaktifkan cache browser. Cache browser memungkinkan file-file seperti gambar, CSS, dan JavaScript disimpan pada cache pengguna sehingga waktu akses berikutnya akan lebih cepat. Dengan cache browser, teman-teman dapat mengurangi waktu muat halaman dan meningkatkan kecepatan website secara keseluruhan.&lt;/p&gt;&#xA;&lt;h3 id=&#34;bagaimana-cache-browser-bekerja&#34;&gt;Bagaimana Cache Browser Bekerja&lt;/h3&gt;&#xA;&lt;p&gt;Ketika pengguna mengunjungi website, browser akan mengunduh file-file yang diperlukan untuk menampilkan halaman website. Setelah file-file tersebut diunduh, browser akan menyimpannya pada cache. Ketika pengguna kembali mengunjungi halaman yang sama, browser akan memeriksa cache terlebih dahulu sebelum mengunduh file-file tersebut kembali. Jika file-file tersebut masih ada di cache, maka browser akan menggunakan file tersebut untuk menampilkan halaman website, sehingga waktu muat halaman menjadi lebih cepat.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cara Install Winfetch di Windows</title>
+      <link>http://localhost:1313/post/cara-install-winfetch-windows/</link>
+      <pubDate>Sun, 30 Apr 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/cara-install-winfetch-windows/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://jongnesia.com/fetch.png&#34; alt=&#34;Ilustrasi Winfetch&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;langkah-1-persiapan&#34;&gt;Langkah 1: Persiapan&lt;/h2&gt;&#xA;&lt;p&gt;Pastikan terlebih dahulu bahwa kamu telah mempersiapkan beberapa hal berikut:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Komputer atau laptop dengan sistem operasi Windows&lt;/li&gt;&#xA;&lt;li&gt;Terkoneksi ke internet&lt;/li&gt;&#xA;&lt;li&gt;Sudah menginstall Git di komputer atau laptop kamu.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Jika belum memiliki Git, kamu dapat mengunduhnya terlebih dahulu melalui situs resminya atau menggunakan package manager seperti Chocolatey.&lt;/p&gt;&#xA;&lt;h2 id=&#34;langkah-2-unduh-file-binary-winfetch&#34;&gt;Langkah 2: Unduh File Binary Winfetch&lt;/h2&gt;&#xA;&lt;p&gt;Kunjungi &lt;a href=&#34;https://github.com/Microsoft/winget-cli/releases&#34;&gt;halaman Winfetch di GitHub&lt;/a&gt; dan unduh file binary Winfetch yang sesuai dengan sistem operasi dan arsitektur komputer atau laptop kamu. Pilih versi terbaru dan sesuaikan dengan sistem operasi Windows yang kamu gunakan.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Custom Tampilan Error Pages 404 di cPanel</title>
+      <link>http://localhost:1313/post/custome-erorr-page-404/</link>
+      <pubDate>Sat, 29 Apr 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/custome-erorr-page-404/</guid>
+      <description>&lt;p&gt;Error page atau halaman kesalahan adalah halaman yang muncul ketika teman-teman mencoba mengakses halaman yang tidak tersedia atau tidak ditemukan pada situs web. Standar error page yang disediakan oleh server web dapat terlihat membosankan dan tidak informatif bagi pengguna. Oleh karena itu, teman-teman dapat meningkatkan tampilan situs web dengan membuat custom error pages di cPanel.&lt;/p&gt;&#xA;&lt;p&gt;Berikut adalah langkah-langkah mudah untuk membuat custom error pages di cPanel:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Login ke akun cPanel teman-teman.&lt;/li&gt;&#xA;&lt;li&gt;Pada halaman utama cPanel, teman-teman dapat mencari dan klik ikon &amp;ldquo;Error Pages&amp;rdquo; atau masuk ke kategori &amp;ldquo;Advanced&amp;rdquo; dan klik &amp;ldquo;Error Pages&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;Pada halaman &amp;ldquo;Error Pages&amp;rdquo;, teman-teman akan melihat daftar error pages yang dapat disesuaikan. Pilih salah satu error page yang ingin diubah.&lt;/li&gt;&#xA;&lt;li&gt;Setelah memilih error page, teman-teman akan melihat tampilan halaman kesalahan standar di sisi kanan layar dan formulir di sisi kiri layar.&lt;/li&gt;&#xA;&lt;li&gt;Pada formulir, teman-teman dapat mengedit pesan kesalahan, judul halaman, dan pesan kustom sesuai dengan kebutuhan.&lt;/li&gt;&#xA;&lt;li&gt;Klik tombol &amp;ldquo;Save&amp;rdquo; untuk menyimpan perubahan.&lt;/li&gt;&#xA;&lt;li&gt;Uji halaman kesalahan dengan mencoba mengakses URL yang tidak tersedia pada situs web teman-teman.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Dengan membuat custom error pages di cPanel, teman-teman dapat meningkatkan tampilan situs web dan memberikan informasi yang lebih jelas dan berguna bagi pengguna.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cara Membuat Website Responsif dengan Media Queries dan Meta Viewport</title>
+      <link>http://localhost:1313/post/cara-membuat-website-responsif-media-queries-meta-viewport/</link>
+      <pubDate>Thu, 27 Apr 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/cara-membuat-website-responsif-media-queries-meta-viewport/</guid>
+      <description>&lt;h1 id=&#34;panduan-lengkap-membuat-website-responsive-dengan-media-queries-dan-meta-viewport&#34;&gt;Panduan Lengkap Membuat Website Responsive dengan Media Queries dan Meta Viewport&lt;/h1&gt;&#xA;&lt;p&gt;Membuat website yang responsif adalah hal yang penting dalam pengembangan website. Dengan meningkatnya penggunaan perangkat mobile, website yang responsif dapat memberikan pengalaman yang lebih baik untuk pengguna, sehingga meningkatkan konversi dan mengurangi bounce rate.&lt;/p&gt;&#xA;&lt;p&gt;Dalam artikel ini, kami akan memberikan panduan lengkap tentang cara membuat website yang responsif dengan menggunakan media queries dan meta viewport.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Apa itu Media Queries?&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Media queries adalah teknik CSS yang memungkinkan Anda mengubah tampilan website sesuai dengan ukuran layar pengguna. Dengan media queries, Anda dapat menentukan aturan CSS yang hanya akan diterapkan pada perangkat dengan ukuran layar tertentu.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cara Sederhana Melakukan Steganografi Menggunakan Steghide</title>
+      <link>http://localhost:1313/post/steganografi-menggunakan-steghide/</link>
+      <pubDate>Thu, 27 Apr 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/steganografi-menggunakan-steghide/</guid>
+      <description>&lt;p&gt;Steganografi adalah seni menyembunyikan pesan rahasia di dalam file lain seperti gambar, audio, atau video. Tujuannya adalah untuk menyembunyikan keberadaan pesan sehingga tidak terlihat oleh orang yang tidak berwenang.&lt;/p&gt;&#xA;&lt;p&gt;Salah satu cara untuk melakukan steganografi adalah dengan menggunakan perangkat lunak Steghide. Steghide adalah alat steganografi open-source yang dapat menyembunyikan pesan dalam berbagai jenis file, termasuk gambar dan audio.&lt;/p&gt;&#xA;&lt;h2 id=&#34;langkah-1-install-steghide&#34;&gt;Langkah 1: Install Steghide&lt;/h2&gt;&#xA;&lt;p&gt;Langkah pertama adalah menginstal Steghide di sistem Anda. Untuk melakukannya, buka terminal dan jalankan perintah berikut:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Git Cheatsheet</title>
+      <link>http://localhost:1313/post/git-cheatsheet/</link>
+      <pubDate>Thu, 27 Apr 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/git-cheatsheet/</guid>
+      <description>&lt;p&gt;Git adalah salah satu sistem kontrol versi paling populer yang digunakan dalam pengembangan perangkat lunak. Dengan menggunakan Git, pengembang dapat melacak perubahan pada kode sumber dan memudahkan kolaborasi dalam pengembangan proyek.&lt;/p&gt;&#xA;&lt;p&gt;Berikut adalah beberapa langkah mudah dalam menggunakan Git:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Inisialisasi Repositori&#xA;Untuk memulai penggunaan Git, teman-teman harus menginisialisasi repositori terlebih dahulu dengan perintah &amp;ldquo;git init&amp;rdquo; pada terminal. Hal ini akan membuat direktori proyek menjadi repositori Git.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Menambahkan File&#xA;Ketika ingin menambahkan file ke dalam repositori Git, teman-teman harus melakukan perintah &amp;ldquo;git add namafilenya&amp;rdquo; pada terminal. Hal ini akan menambahkan file ke dalam staging area.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Menampilkan jumlah  view di judul vidio youtube secara real time</title>
+      <link>http://localhost:1313/post/menampilkan-jumlah-like-realtime/</link>
+      <pubDate>Wed, 19 Apr 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/menampilkan-jumlah-like-realtime/</guid>
+      <description>&lt;p&gt;API merupakan kepanjangan dari Application Programing Interface , yang fungsi nya atau kegunaan API ini adalah sebagai perantara bagi beberapa aplikasi atau klien dan server pada satu platform yang sama atau lintas platform agar saling terhubung atau berkomunikasi.Jadi API ini yang berkomunikasi adalah mesin dengan mesin, contoh penggunaan api dalam lingkup kita sehari-hari , semisal pesan tiket kereta di traveloka , nah aplikasi traveloka ini agar dapat mendapatkan jadwal data dari KAI misalnya, harus terhubung dengan api yang disediakan oleh KAI.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nostalgia Bermain 750&#43; games java di android (Mediafire)</title>
+      <link>http://localhost:1313/post/750-games-java-mediafire/</link>
+      <pubDate>Tue, 18 Apr 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/750-games-java-mediafire/</guid>
+      <description>&lt;p&gt;Sebelum game mobile menyerang dan belum adanya Android dan IOS, kita dulu pasti pernah bermain game di hp nokia (Misalnya) yang berbasis java. Namun seiring teknologi yang berkembang secara masif ( Besar - Besaran ) kini game java sudah di lupakan namun beberapa orang juga masih bermain game ini. Keunggulan dari game java sendiri menurut saya atau opini saya yaitu grafik yang minimalis namun untuk segi gameplay di jaman dulu itu sudah bagus, mungkin game java ini juga bisa termasuk salah satu pelopor terciptanya game mobile (bisa jadi).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Scan Malware di os Windows dan beserta pencegahan</title>
+      <link>http://localhost:1313/post/scan-malware-di-os-windows-dan-beserta-pencegahan/</link>
+      <pubDate>Tue, 18 Apr 2023 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/scan-malware-di-os-windows-dan-beserta-pencegahan/</guid>
+      <description>&lt;p&gt;Hai para pemuda Indonesia yang berbahagia , Malware sendiri merupakan software yang tidak aman yang dapat mencuri info pribadi atau membahayakan perangkat anda , sebuah bisa terinfeksi virus ini biasanya kebanyakan mengunduh software ilegal atau bajakan misalkan game dan lain sebaginya. ada berbagai jenis malware antara lain,&lt;/p&gt;&#xA;&lt;h1 id=&#34;macam-macam-malware&#34;&gt;Macam macam Malware&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Worms&lt;/li&gt;&#xA;&lt;li&gt;Keylogger&lt;/li&gt;&#xA;&lt;li&gt;Trojan&lt;/li&gt;&#xA;&lt;li&gt;Ransomware&lt;/li&gt;&#xA;&lt;li&gt;Spyware&lt;/li&gt;&#xA;&lt;li&gt;Backdoor&lt;/li&gt;&#xA;&lt;li&gt;Dan lain sebagainya&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;efek-terkena-virus&#34;&gt;Efek Terkena Virus&lt;/h1&gt;&#xA;&lt;p&gt;Apasih efek akibat terkena virus diatas? Banyak efek samping yang dapat diakibatkan oleh virus, efek samping ini dapat mempengaruhi program maupun sistem komputer. Beberapa keluhan yang umum terjadi akibat infeksi virus komputer antara lain adalah Memory harddisk yang tiba-tiba menjadi sangat penuh , File atau program yang corrupt,File tiba-tiba hilang atau hidden, Sistem mudah restart dan mati dengan sendirinya, Muncul beberapa file atau program baru di komputer tanpa diinstal.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
