@@ -6,8 +6,15 @@
     <description>Recent content in Coretan Tangan on Jongnesia</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Dec 2023 12:20:59 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jul 2024 19:42:50 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mencari Bug Sqli</title>
+      <link>http://localhost:1313/post/mencari-bug-sqli/</link>
+      <pubDate>Sat, 20 Jul 2024 19:42:50 +0700</pubDate>
+      <guid>http://localhost:1313/post/mencari-bug-sqli/</guid>
+      <description>&lt;p&gt;SQL Injection (SQLi) adalah teknik injeksi kode yang dapat digunakan oleh penyerang untuk memasukkan pernyataan SQL jahat ke dalam bidang input untuk dieksekusi oleh database yang ada di bawahnya. Artikel ini akan memandu kamu melalui uji penetrasi SQL Injection yang komprehensif menggunakan SQLMap, alat uji penetrasi open-source populer.&lt;/p&gt;&#xA;&lt;p&gt;Prasyarat&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Pengetahuan dasar tentang SQL dan keamanan aplikasi web.&lt;/li&gt;&#xA;&lt;li&gt;Akses ke target web aplikasi dan izin untuk uji.&lt;/li&gt;&#xA;&lt;li&gt;SQLMap terinstal di mesin uji kamu. kamu dapat menginstalnya menggunakan pip. atau bisa teman teman clone repository SQLMAP nya. dan jangan lupa install PYTHON.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install sqlmap&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;1-kumpulin-informasi&#34;&gt;1. Kumpulin Informasi&lt;/h2&gt;&#xA;&lt;p&gt;Sebelum memulai, koleksi informasi tentang target:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Kamu pilih Wordpress Atau Blogspot?</title>
       <link>http://localhost:1313/post/wordpress-atau-blogspot/</link>

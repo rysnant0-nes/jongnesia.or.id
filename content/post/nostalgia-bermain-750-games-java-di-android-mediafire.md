@@ -7,6 +7,7 @@ title = "Nostalgia Bermain 750+ games java di android (Mediafire)"
 _template = "blog"
 +++
 
+
 Sebelum game mobile menyerang dan belum adanya Android dan IOS, kita dulu pasti pernah bermain game di hp nokia (Misalnya) yang berbasis java. Namun seiring teknologi yang berkembang secara masif ( Besar - Besaran ) kini game java sudah di lupakan namun beberapa orang juga masih bermain game ini. Keunggulan dari game java sendiri menurut saya atau opini saya yaitu grafik yang minimalis namun untuk segi gameplay di jaman dulu itu sudah bagus, mungkin game java ini juga bisa termasuk salah satu pelopor terciptanya game mobile (bisa jadi).
 
 Apakah masih bisa kita bermain game java di android? Bisa kok , disini saya akan membagikan 750+ game java yang sudah saya sediakan linknya untuk kalian unduh. ukuran nya cuman 400mb. Lumayan untuk menghibur kita disaat kita tidak mempunyai paket internet.

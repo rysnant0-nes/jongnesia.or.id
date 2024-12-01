@@ -9,6 +9,7 @@
     "build": "tinacms build && hugo"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.5.16"
+    "@tinacms/cli": "^1.5.16",
+    "@types/node": "^22.10.1"
   }
 }

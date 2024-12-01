@@ -7,6 +7,7 @@ title = "Menampilkan jumlah  view di judul vidio youtube secara real time"
 _template = "blog"
 +++
 
+
 API merupakan kepanjangan dari Application Programing Interface , yang fungsi nya atau kegunaan API ini adalah sebagai perantara bagi beberapa aplikasi atau klien dan server pada satu platform yang sama atau lintas platform agar saling terhubung atau berkomunikasi.Jadi API ini yang berkomunikasi adalah mesin dengan mesin, contoh penggunaan api dalam lingkup kita sehari-hari , semisal pesan tiket kereta di traveloka , nah aplikasi traveloka ini agar dapat mendapatkan jadwal data dari KAI misalnya, harus terhubung dengan api yang disediakan oleh KAI.
 
 Kembali ke topik utama , Dinisi kita akan meminta data youtube atau API youtube untuk mengetahui berapa subcriber , viewer , like , comment dan masih banyak lagi sebenernya untuk kita tampilkan ke judul vidio kita seperti yang lagi viral belakangan ini. Script untuk memanggil data API nya saya sudah sediakan di bawah ini tinggal copy saja :
