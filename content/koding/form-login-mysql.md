@@ -100,7 +100,7 @@ define('namadb','ganti dengan nama database kamu');
 $config = mysqli_connect(hostdb,userdb,passdb,namadb);
 ```
 
-query untuk melakukan koneksi yaitu mysqli\_connect lalu diikuti dengan konfigurasi nya. silahkan di copas lalu di tempel ke file config.php.
+query untuk melakukan koneksi yaitu mysqli\_connect lalu diikuti dengan konfigurasi nya. silahkan di copas laluu di tempel ke file config.php.
 
 Sekarang teman-teman buat file baru lagi dengan nama login.php , lalu isi dengan code di bawah ini
 
