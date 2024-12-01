@@ -6,7 +6,7 @@ description = "Pengalaman pribadi saya saat ngeblog pakai SSG HUGO"
 title = "Bikin Artikel Lewat Code Editor"
 +++
 
-Hai perkenalkan nama saya Rysnanto , Dulunya saya saat membuat suatu blog memakai cms yang namanya Blogger. Karena memang dulunya blogger lah yang booming saat semua makhluk hidup membuat tulisan, ada juga yang menggunakan wordprees namun kurang familiar dan perlu hosting juga agar CMS Wordpress berjalan,beda halnya dengan CMS Blogger yang dapat terbuat secara mudah dan mendapatkan subdomain untuk domain kita.
+Hai perkenalkan nama saya Rysnantoo , Dulunya saya saat membuat suatu blog memakai cms yang namanya Blogger. Karena memang dulunya blogger lah yang booming saat semua makhluk hidup membuat tulisan, ada juga yang menggunakan wordprees namun kurang familiar dan perlu hosting juga agar CMS Wordpress berjalan,beda halnya dengan CMS Blogger yang dapat terbuat secara mudah dan mendapatkan subdomain untuk domain kita.
 
 Menururt saya memang CMS Blogger lah yang sangat bagus di bandingkan Wordpress , ini menurut pribadi aku ya.... , Setelah beberapa abad saya menggunakan Blogger akhirnya saya pindah haluan menggunakan SSG , yang belum ngerti apa itu SSG bisa baca artikel saya. Saya terinspirasi dari petanikode.com , SekolahKoding.com yang dimana pemilik nya membahas seputar SSG yaitu HUGO. Disitulah saya mulai tertarik menggunakan SSG Hugo , Mulai belajar Hugo dan mengalami kebingungan karena ini pertama kali saya mengenal SSG
 
