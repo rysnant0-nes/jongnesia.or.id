@@ -20,7 +20,7 @@ Setelah teman - teman memilih akun , silahkan klick Upgrade seperti gambar di ba
 
 ![](</tutorial/Group 169.png>)
 
-Jika sudah maka muncullah beberapa list biaya langganan untuk setiap kategori , disini kita pilih yang bagian 
+Jika sudah maka muncullah beberapa list biaya langganan untuk setiap kategori , disini kita pilih yang bagian **AI Premium**
 
 ![](</tutorial/Group 170.png>)
 
