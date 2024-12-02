@@ -38,3 +38,7 @@ Pada halaman berikutnya, kamu akan melihat beberapa pilihan paket yang tersedia.
 Setelah itu, kamu akan diminta untuk memilih metode pembayaran yang ingin digunakan, meskipun kamu hanya sedang menguji coba fitur premium. Pilih salah satu metode pembayaran yang tersedia, misalnya kartu kredit atau pembayaran melalui dompet digital , disini saya contohkan saya memakai Gopay. Jangan khawatir, karena kamu tidak akan dikenakan biaya selama masa uji coba biasanya 7 hari. Jadi sebelum masuk ke 7 hari tersebut maka cepat - cepatlah membatalkan langganan tersebut agar kedepannya tidak mendapat tagihan  tersebut
 
 ![](</tutorial/WhatsApp Image 2024-12-02 at 18.58.07_51d49039.png>)
+
+### Kesimpulan
+
+Jadi kalian bisa menikmati fitur premium secara gratis dalam waktu 7 hari , lalu bagaimana kalau pengen jadi premium lagi? silahkan membuat akun gmail baru lalu lakukan hal yang sama dan damn dapatkan fitur premium secara gratis. dan jangan lupa sebelum berakhir langganan nya alangkah baiknya batalkan terlebih dahulu.
