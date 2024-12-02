@@ -10,5 +10,8 @@ Sebagai mahasiswa, kita pasti sering menggunakan platform video conference seper
 
 Langkah pertama yang perlu kamu lakukan adalah mengunduh aplikasi One Google. Caranya, buka Google Play Store atau App Store, lalu ketik "One Google" di kolom pencarian dan tekan install. Setelah aplikasi terpasang, kamu bisa langsung melanjutkan ke langkah berikutnya.
 
+#### Masuk App One Google
 
+Setelah kamu menginstall aplikasi One Google , selanjutnya yaitu kamu buka aplikasi tersebut lalu lihat bagian pojok kanan atas , teman teman klick terlebih dahulu untuk memilih akun yang akan di jadikan premium
 
+![](</tutorial/Group 168.svg>)
