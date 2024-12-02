@@ -19,3 +19,9 @@ Setelah kamu menginstall aplikasi One Google , selanjutnya yaitu kamu buka aplik
 Setelah teman - teman memilih akun , silahkan klick Upgrade seperti gambar di bawah ini.
 
 ![](</tutorial/Group 169.png>)
+
+Jika sudah maka muncullah beberapa list biaya langganan untuk setiap kategori , disini kita pilih yang bagian 
+
+![](</tutorial/Group 170.png>)
+
+![](</tutorial/Group 171.png>)
