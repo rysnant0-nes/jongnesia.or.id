@@ -12,16 +12,23 @@ Langkah pertama yang perlu kamu lakukan adalah mengunduh aplikasi One Google. Ca
 
 #### Masuk App One Google
 
-Setelah kamu menginstall aplikasi One Google , selanjutnya yaitu kamu buka aplikasi tersebut lalu lihat bagian pojok kanan atas , teman teman klick terlebih dahulu untuk memilih akun yang akan di jadikan premium
+Setelah kamu menginstall aplikasi One Google , selanjutnya yaitu kamu buka aplikasi tersebut lalu lihat bagian pojok kanan atas , kamu akan melihat beberapa akun Google yang terhubung dengan perangkatmu. Pilih salah satu akun yang ingin kamu jadikan premium. Pastikan kamu memilih akun yang biasa kamu gunakan untuk Google Meet, karena akun inilah yang akan mendapatkan akses ke fitur premium.
 
 ![](</tutorial/Group 168.png>)
 
-Setelah teman - teman memilih akun , silahkan klick Upgrade seperti gambar di bawah ini.
+Klik Tombol Upgrade
+Setelah memilih akun yang tepat, kamu akan diarahkan ke halaman utama aplikasi One Google. Di halaman ini, cari dan klik tombol "Upgrade" yang biasanya terletak di bagian tengah atau atas layar. Tombol ini akan membawa kamu ke halaman selanjutnya untuk memulai proses upgrade akun.
+
 
 ![](</tutorial/Group 169.png>)
 
-Jika sudah maka muncullah beberapa list biaya langganan untuk setiap kategori , disini kita pilih yang bagian **AI Premium**
+Gulir ke Bawah dan Pilih AI Premium
+Pada halaman berikutnya, kamu akan melihat beberapa pilihan paket yang tersedia. Untuk melanjutkan, gulir ke bawah hingga kamu menemukan opsi "AI Premium". Opsi ini memungkinkan kamu untuk mendapatkan akses fitur premium di Google Meet, termasuk waktu pertemuan yang lebih panjang dan fitur lainnya. Setelah memilih AI Premium, klik opsi "Uji Coba" yang biasanya tersedia untuk pengguna baru. Dengan memilih uji coba ini, kamu bisa menikmati fitur premium secara gratis dalam jangka waktu tertentu, sebelum akhirnya memutuskan untuk melanjutkan ke langganan berbayar.
 
 ![](</tutorial/Group 170.png>)
 
 ![](</tutorial/Group 171.png>)
+
+Pilih Metode Pembayaran
+Setelah itu, kamu akan diminta untuk memilih metode pembayaran yang ingin digunakan, meskipun kamu hanya sedang menguji coba fitur premium. Pilih salah satu metode pembayaran yang tersedia, misalnya kartu kredit atau pembayaran melalui dompet digital , disini saya contohkan saya memakai Gopay. Jangan khawatir, karena kamu tidak akan dikenakan biaya selama masa uji coba biasanya 7 hari. Jadi sebelum masuk ke 7 hari tersebut maka cepat - cepatlah membatalkan langganan tersebut agar kedepannya tidak mendapat tagihan  tersebut
+
