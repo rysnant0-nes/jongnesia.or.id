@@ -14,8 +14,8 @@ Langkah pertama yang perlu kamu lakukan adalah mengunduh aplikasi One Google. Ca
 
 Setelah kamu menginstall aplikasi One Google , selanjutnya yaitu kamu buka aplikasi tersebut lalu lihat bagian pojok kanan atas , teman teman klick terlebih dahulu untuk memilih akun yang akan di jadikan premium
 
-![](</tutorial/Group 168.svg>)
+![](</tutorial/Group 168.png>)
 
 Setelah teman - teman memilih akun , silahkan klick Upgrade seperti gambar di bawah ini.
 
-![](</tutorial/Group 169.svg>)
+![](</tutorial/Group 169.png>)
