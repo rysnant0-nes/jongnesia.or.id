@@ -1,5 +1,6 @@
 +++
 penulis = "Rysnanto"
+ilustration = "https://assets.tina.io/c0d66a0c-56da-4506-85d7-c2a9b6ad3b0c/ilustration/Group 174.png"
 date = 2024-12-01T17:00:00.000Z
 title = "Cara Licik Agar Google Meet Jadi Premium"
 +++
