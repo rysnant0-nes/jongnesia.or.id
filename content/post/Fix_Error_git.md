@@ -1,10 +1,11 @@
 +++
 penulis = "Nuriskha Ainun Fahmi "
-ilustration = "https://assets.tina.io/c0d66a0c-56da-4506-85d7-c2a9b6ad3b0c/ilustration/Yellow Black Bold Attention Message Instagram Post.png"
+ilustration = "https://assets.tina.io/c0d66a0c-56da-4506-85d7-c2a9b6ad3b0c/ilustration//Group 191.png"
 date = 2025-02-17T17:00:00.000Z
 description = 'Cara Memperbaiki Error "Non-Fast-Forward" pada git saat push project'
 title = "Solusi Ampuh Mengatasi Error Non-Fast-Forward saat Push ke GitHub"
 youtube_id = ""
+slug = "non-fast-forward"
 +++
 
 # **Fix Error Saat Push Project di GitHub (Non-Fast-Forward)**
@@ -45,7 +46,7 @@ Jika kamu benar-benar yakin bahwa perubahan di lokal lebih penting dan ingin men
 
 `git push -f -u origin main `
 
-atau 
+atau
 
 `git push --force -u origin main`
 
