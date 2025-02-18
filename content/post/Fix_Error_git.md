@@ -1,6 +1,6 @@
 +++
 penulis = "Nuriskha Ainun Fahmi "
-ilustration = "https://assets.tina.io/c0d66a0c-56da-4506-85d7-c2a9b6ad3b0c/ilustration//Group 191.png"
+ilustration = "https://assets.tina.io/c0d66a0c-56da-4506-85d7-c2a9b6ad3b0c/ilustration/Group 20191.png"
 date = 2025-02-17T17:00:00.000Z
 description = 'Cara Memperbaiki Error "Non-Fast-Forward" pada git saat push project'
 title = "Solusi Ampuh Mengatasi Error Non-Fast-Forward saat Push ke GitHub"
