@@ -43,7 +43,11 @@ Namun, jika ada konflik, Git akan meminta kamu untuk menyelesaikannya terlebih d
 
 Jika kamu benar-benar yakin bahwa perubahan di lokal lebih penting dan ingin mengabaikan perubahan di remote, kamu bisa menggunakan force push:
 
-git push -f -u origin mainatau git push --force -u origin main
+`git push -f -u origin main `
+
+atau 
+
+`git push --force -u origin main`
 
 ⚠️ Peringatan: Perintah ini akan menimpa perubahan yang ada di remote. Jika ada rekan kerja yang telah mengupdate kode di remote, perubahan mereka akan hilang! Oleh karena itu, gunakan perintah ini dengan hati-hati.
 
