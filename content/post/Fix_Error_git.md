@@ -1,10 +1,10 @@
 +++
-penulis = "Nuriskha Ainun Fahmi"
+penulis = "Nuriskha Ainun Fahmi "
 ilustration = "https://assets.tina.io/c0d66a0c-56da-4506-85d7-c2a9b6ad3b0c/ilustration/Yellow Black Bold Attention Message Instagram Post.png"
 date = 2025-02-17T17:00:00.000Z
 description = 'Cara Memperbaiki Error "Non-Fast-Forward" pada git saat push project'
 title = "Error Non-Fast-Forward Perbaikan Fixed"
-youtube_id = "https://www.youtube.com/channel/UCuWaoRaB3rB7A0ZiGH0uqNw"
+youtube_id = ""
 +++
 
 # Fix Error Saat Push Project di GitHub (Non-Fast-Forward)
@@ -72,7 +72,6 @@ git merge origin/main
 Setelah berhasil di-merge, lakukan push:
 
 git push -u origin main
-
 
 ## Kesimpulan
 
