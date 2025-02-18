@@ -7,7 +7,7 @@ title = "Solusi Ampuh Mengatasi Error Non-Fast-Forward saat Push ke GitHub"
 youtube_id = ""
 +++
 
-# Fix Error Saat Push Project di GitHub (Non-Fast-Forward)
+# **Fix Error Saat Push Project di GitHub (Non-Fast-Forward)**
 
 ![](/error.png)
 
