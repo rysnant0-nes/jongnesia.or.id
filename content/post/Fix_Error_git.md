@@ -8,8 +8,6 @@ youtube_id = ""
 slug = "non-fast-forward"
 +++
 
-# **Fix Error Saat Push Project di GitHub (Non-Fast-Forward)**
-
 ![](/error.png)
 
 Ketika sedang bekerja dengan Git dan ingin menyimpan atau push project ke GitHub, tentu kita berharap prosesnya berjalan lancar tanpa kendala. Namun, apa jadinya jika justru muncul error yang menyatakan "non-fast-forward"? Hal ini bisa sangat menjengkelkan, terutama jika kita tidak memahami penyebabnya.
