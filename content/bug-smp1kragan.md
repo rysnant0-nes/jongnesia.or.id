@@ -4,7 +4,7 @@ penulis = "Admin"
 +++
 Kepada YTH. BPK/IBU Guru SMP1KRAGAN
 
-saya menemukan celah  SQLI BOOLEAN BASED di halaman lulus.smp1kragan.sch.id/index.php?page=carinisn
+saya menemukan celah  SQLI BOOLEAN BASED di halaman lulus.smp1kragan.sch.id/index.php?page=carinisn  
 
 setelah saya test alhasil muncul INFORMASI database , segera di fix untuk mencegah webste Ter Hack. Berikut informasi yang saya dapatkan : 
 
@@ -20,7 +20,7 @@ Database: u873893874_dblulus
 | tbl_profil |
 
 | tbl_user   |
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 +------------+
 sqlmap resumed the following injection point(s) from stored session:
 ---
