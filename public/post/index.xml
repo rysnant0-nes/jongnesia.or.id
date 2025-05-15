@@ -6,8 +6,22 @@
     <description>Recent content in Coretan Tangan on Jongnesia</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Dec 2023 12:20:59 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2025 17:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solusi Ampuh Mengatasi Error Non-Fast-Forward saat Push ke GitHub</title>
+      <link>http://localhost:1313/post/non-fast-forward/</link>
+      <pubDate>Mon, 17 Feb 2025 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/non-fast-forward/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/error.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ketika sedang bekerja dengan Git dan ingin menyimpan atau push project ke GitHub, tentu kita berharap prosesnya berjalan lancar tanpa kendala. Namun, apa jadinya jika justru muncul error yang menyatakan &amp;ldquo;non-fast-forward&amp;rdquo;? Hal ini bisa sangat menjengkelkan, terutama jika kita tidak memahami penyebabnya.&lt;/p&gt;&#xA;&lt;p&gt;Error non-fast-forward terjadi karena branch main di repositori lokal tertahan atau tertinggal dibandingkan branch main di repositori remote (GitHub). Akibatnya, Git menolak push karena perubahan yang ada tidak bisa digabungkan secara fast-forward.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cara Licik Agar Google Meet Jadi Premium</title>
+      <link>http://localhost:1313/post/google-meet-premium/</link>
+      <pubDate>Sun, 01 Dec 2024 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/google-meet-premium/</guid>
+      <description>&lt;p&gt;Sebagai mahasiswa, kita pasti sering menggunakan platform video conference seperti Google Meet untuk melakukan pertemuan daring. Entah itu untuk kuliah,Obrolan Organisasi, tugas kelompok, atau diskusi dengan teman-teman, Google Meet menjadi salah satu aplikasi andalan ( Andalan saya sih). Namun, satu masalah besar yang sering muncul adalah keterbatasan waktu ketika menggunakan versi gratisnya. Bayangkan, ketika lagi asyik-asyiknya diskusi, tiba-tiba muncul notifikasi waktu habis, dan kita harus keluar, Seperti waktu saya daring Matkul IPA , waktunya terbatas sehingga saya membuat 2 link sekaligus. Rasanya, pengen banget bisa nikmatin fitur premium yang lebih fleksibel, kan? Nah, di artikel kali ini, saya bakal berbagi beberapa cara licik (tapi tetap aman) supaya Google Meet bisa kamu pakai tanpa batasan waktu, layaknya akun premium ( Memamng Premium ).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Kamu pilih Wordpress Atau Blogspot?</title>
       <link>http://localhost:1313/post/wordpress-atau-blogspot/</link>

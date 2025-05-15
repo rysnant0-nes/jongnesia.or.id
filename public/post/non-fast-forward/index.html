@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+
+<link rel="stylesheet" href="http://localhost:1313//style.css" />
+<link
+  rel="shortcut icon"
+  href="http://localhost:1313/static/favicon.png"
+  type="image/x-icon"
+/>
+<meta name="google-adsense-account" content="ca-pub-5490482637087802">
+<meta property="og:description" name="description" content="Cara Memperbaiki Error &#34;Non-Fast-Forward&#34; pada git saat push project" />
+<meta property="og:title" name="description" content="Solusi Ampuh Mengatasi Error Non-Fast-Forward saat Push ke GitHub" />
+<meta property="og:image" name="description" content="http://localhost:1313/https://assets.tina.io/c0d66a0c-56da-4506-85d7-c2a9b6ad3b0c/ilustration/Group 191.png" />
+<title>Solusi Ampuh Mengatasi Error Non-Fast-Forward saat Push ke GitHub</title>
+
+
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Poppins&display=swap");
+  body {
+    overflow-y: scroll;
+    width: 100%;
+    padding: 10px;
+  }
+  p {
+    font-family: "Poppins", sans-serif;
+  }
+  h1 {
+    color:black;
+    font-weight: bold;
+  }
+  pre code {
+  font-size: 16px;
+  border: 3px dashed black !important;
+  border-radius:10px ;
+  font-family: "Source Code Pro", monospace;
+  color: rgb(107, 223, 198);
+  padding: 5px;
+  display: block;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  }
+  li{
+    margin-left: 0px !important;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  a.nav-link  {
+    margin-left: 0px !important;
+    padding-top: 10px;
+    font-size: 25px;
+    padding-left: 20px !important;
+  }
+  li.footer {
+    display: inline;
+    margin: 0;
+  }
+  ol {
+     
+    margin-top: -20px;
+  }
+
+  ul a {
+    text-decoration: none;
+  }
+  div.card {
+    background-color: #f4d9ae !important;
+    border: 5px dashed black;
+    border-bottom-left-radius: 5px solid black;
+    font-size: 15px !important;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .penulis {
+    font-size: 10px;
+  }
+  iframe {
+    width: 760px;
+    height: 515px;
+    border-radius: 15px;
+    border: 5px solid #20c997;
+    border-style: dashed;
+  }
+  div.container.custome {
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    img.profile {
+      width: 300px;
+    }
+    .footer p {
+      text-align: center;
+  
+    }
+    .footer ol {
+      margin-left: 18px !important;
+   
+    }
+    .footer ol a {
+      font-size: 15px !important;
+    }
+    .div-custome {
+      text-align: left;
+    }
+    iframe {
+      width: 340px;
+      height: 200px;
+      border-radius: 15px;
+      border: 5px solid #20c997;
+      border-style: dashed;
+    }
+  }
+  @media (min-width: 1011px) {
+    img.profile {
+      width: 300px;
+    }
+    .div-custome {
+      text-align: left;
+    }
+    iframe {
+      width: 500px;
+      height: 300px;
+      border-radius: 15px;
+      border: 5px solid #20c997;
+      border-style: dashed;
+    }
+  }
+  
+</style>
+
+  </head>
+  <body><nav class="navbar navbar-expand-lg navbar-light bg-custome fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">JONGNESIA</a>
+    <button
+      style="border: none"
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span><img src="http://localhost:1313//menu.webp" width="30px" alt=""></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/post">post</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/koding">Koding</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/admin">Login</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="content">
+<div class="container" style="margin-top: 120px">
+  <div class="row">
+    <div class="col-lg-8">
+      <h2 style="font-weight: bold">Solusi Ampuh Mengatasi Error Non-Fast-Forward saat Push ke GitHub</h2>
+      <p class="penulis">
+        Ditulis oleh Nuriskha Ainun Fahmi <span
+          ><img loading="lazy" src="http://localhost:1313//verified.png" width="12px" alt=""
+        /></span>
+        , Pada 02-17-2025
+      </p>
+      <div class="scrap-artikel">
+        
+      
+        <div class="container custome">
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+            crossorigin="anonymous"
+          ></script>
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-gw+2+12-5g+83"
+            data-ad-client="ca-pub-5490482637087802"
+            data-ad-slot="6933891977"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <p><p><img src="/error.png" alt=""></p>
+<p>Ketika sedang bekerja dengan Git dan ingin menyimpan atau push project ke GitHub, tentu kita berharap prosesnya berjalan lancar tanpa kendala. Namun, apa jadinya jika justru muncul error yang menyatakan &ldquo;non-fast-forward&rdquo;? Hal ini bisa sangat menjengkelkan, terutama jika kita tidak memahami penyebabnya.</p>
+<p>Error non-fast-forward terjadi karena branch main di repositori lokal tertahan atau tertinggal dibandingkan branch main di repositori remote (GitHub). Akibatnya, Git menolak push karena perubahan yang ada tidak bisa digabungkan secara fast-forward.</p>
+<h3 id="penyebab-error-non-fast-forward">Penyebab Error &ldquo;Non-Fast-Forward&rdquo;</h3>
+<p>Beberapa penyebab utama error ini antara lain:</p>
+<ol>
+<li>Branch lokal tidak up-to-date – Ada perubahan terbaru di remote yang belum diambil ke lokal.</li>
+<li>Push dilakukan tanpa menarik perubahan terbaru terlebih dahulu – Ini sering terjadi jika ada orang lain atau proses lain yang sudah memperbarui repositori remote.</li>
+<li>Merge yang belum terselesaikan – Jika ada perubahan yang belum selesai digabungkan, Git akan menolak push untuk menghindari konflik.</li>
+</ol>
+<p>Jika kamu mengalami error ini, jangan panik! Berikut adalah beberapa cara memperbaikinya.</p>
+<h2 id="cara-memperbaiki-error-non-fast-forward">Cara Memperbaiki Error &ldquo;Non-Fast-Forward&rdquo;</h2>
+<h3 id="1-tarik-perubahan-terbaru-dari-remote">1. Tarik Perubahan Terbaru dari Remote</h3>
+<p>Sebelum melakukan push, pastikan repositori lokal sudah sinkron dengan remote dengan menjalankan perintah:</p>
+<p>git pull origin main</p>
+<p>Perintah ini akan mengambil perubahan terbaru dari remote branch main dan mencoba menggabungkannya dengan branch lokal. Jika tidak ada konflik, maka kamu bisa langsung melakukan push ulang:</p>
+<p>git push -u origin main</p>
+<p>Namun, jika ada konflik, Git akan meminta kamu untuk menyelesaikannya terlebih dahulu sebelum push.</p>
+<h3 id="2-paksa-perubahan-ke-remote-force-push">2. Paksa Perubahan ke Remote (Force Push)</h3>
+<p>Jika kamu benar-benar yakin bahwa perubahan di lokal lebih penting dan ingin mengabaikan perubahan di remote, kamu bisa menggunakan force push:</p>
+<p><code>git push -f -u origin main </code></p>
+<p>atau</p>
+<p><code>git push --force -u origin main</code></p>
+<p>⚠️ Peringatan: Perintah ini akan menimpa perubahan yang ada di remote. Jika ada rekan kerja yang telah mengupdate kode di remote, perubahan mereka akan hilang! Oleh karena itu, gunakan perintah ini dengan hati-hati.</p>
+<h3 id="3-gunakan-force-with-lease-metode-lebih-aman">3. Gunakan Force with Lease (Metode Lebih Aman)</h3>
+<p>Jika kamu ingin memastikan bahwa force push tidak menghapus perubahan yang dibuat oleh orang lain sejak terakhir kali kamu melakukan pull, gunakan:</p>
+<p>git push &ndash;force-with-lease</p>
+<p>Metode ini lebih aman dibandingkan &ndash;force karena Git akan mengecek apakah ada perubahan baru di remote yang belum diambil. Jika ada, push akan dibatalkan untuk mencegah kehilangan data.</p>
+<h3 id="4-gunakan-fetch-dan-merge-secara-manual">4. Gunakan Fetch dan Merge Secara Manual</h3>
+<p>Jika ingin melihat perubahan sebelum menggabungkannya, gunakan:</p>
+<p>git fetch origin main</p>
+<p>Kemudian periksa perbedaannya:</p>
+<p>git diff main origin/main</p>
+<p>Jika perubahan sesuai, lakukan merge secara manual:</p>
+<p>git merge origin/main</p>
+<p>Setelah berhasil di-merge, lakukan push:</p>
+<p>git push -u origin main</p>
+<h2 id="kesimpulan">Kesimpulan</h2>
+<p><img src="/tutorial/image_2025-02-18_21-18-15.png" alt=""></p>
+<p>Error non-fast-forward adalah mekanisme keamanan Git untuk mencegah kehilangan data dan konflik yang tidak diinginkan. Oleh karena itu, sebelum melakukan push, selalu pastikan untuk melakukan pull atau fetch terlebih dahulu agar branch lokal tetap sinkron dengan remote.</p>
+<p>Jika tetap ingin memaksa push, gunakan git push &ndash;force dengan penuh kesadaran bahwa hal itu bisa menghapus perubahan di remote. Untuk opsi lebih aman, gunakan git push &ndash;force-with-lease agar tidak menimpa perubahan terbaru yang dibuat oleh orang lain.</p>
+<p>Dengan memahami konsep ini, kamu bisa bekerja lebih lancar dengan Git tanpa mengalami hambatan yang tidak perlu. Semoga artikel ini membantu! 🚀</p>
+<hr>
+<p>Terima kasih telah membaca! Jika masih mengalami kendala atau ingin berbagi pengalaman, silakan tinggalkan komentar atau diskusi lebih lanjut. 😊</p>
+</p>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+          crossorigin="anonymous"
+        ></script>
+        <ins
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-5490482637087802"
+          data-ad-slot="1295440535"
+        ></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+    <div class="col-lg-4" style="margin-top: 80px">
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
+        crossorigin="anonymous"
+      ></script>
+      
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-5490482637087802"
+        data-ad-slot="4985551332"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      
+      <div class="card mb-4 mt-4">
+         
+        <h3 style="font-weight: bold; padding-left: 10px">Cuitan New</h3>
+        <ul>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/non-fast-forward/"
+              >Solusi Ampuh Mengatasi Error Non-Fast-Forward saat Push ke GitHub</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/google-meet-premium/"
+              >Cara Licik Agar Google Meet Jadi Premium</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/wordpress-atau-blogspot/"
+              >Kamu pilih Wordpress Atau Blogspot?</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/meta-tag-seo/"
+              >Cara memunculkan Tag Meta website ketika di Whatsapp</a
+            >
+          </li>
+          
+          <li style="margin-left: -5px !important">
+            <a style="font-size: 20px" href="/post/bot-whatsapp-sticker/"
+              >Membuat Bot Whatsapp Sticker</a
+            >
+          </li>
+          
+        </ul>
+        
+      </div>
+       
+      <div id="disqus_thread"></div>
+      <script>
+        (function () {
+          
+          var d = document,
+            s = d.createElement("script");
+          s.src = "https://jongnesia-com-1.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript
+        >Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript"
+          >comments powered by Disqus.</a
+        ></noscript
+      >
+    </div>
+  </div>
+</div>
+</div>
+<div class="container" style="margin-top: 80px">
+  
+</div> 
+
+<footer class="footer ">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="/privacy">Privacy Policy</a> |
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+      <div class="col-md-12">
+        <p>&copy; 2023 Jongnesia. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>
