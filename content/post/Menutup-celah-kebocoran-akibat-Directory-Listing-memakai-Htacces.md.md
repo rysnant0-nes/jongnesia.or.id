@@ -16,7 +16,6 @@ Contoh tampilannya:
 
 Jika hal ini terjadi, pengunjung (termasuk hacker) bisa melihat struktur folder Anda, bahkan mengakses file sensitif yang tidak seharusnya dilihat publik. Ini tentu berbahaya dan rentan terhadap eksploitasi.
 
-
 Kenapa Harus Dimatikan?
 
 1. Melindungi File Sensitif – File konfigurasi, backup, atau skrip bisa terlihat oleh siapa saja.
@@ -25,9 +24,7 @@ Kenapa Harus Dimatikan?
 
 Tapi bukan berarti harus dimatikan , saya juga membuat website untuk keperluan download OS untuk kebutuhan sekolah , sengaja tidak saya matikan karena mempermudah untuk download yang hanya tinggal klick saja. Jadi intinya ketika dirasa tidak penting folder tanpa index.html/php tidak ada masalah. namun ketika folder-folder tersebut di rasa penting alangkah baiknya harus di perhitungkan untuk di tutup.
 
-
-Cara Mematikan Directory Listing dengan .htaccess
--------------------------------------------------
+## Cara Mematikan Directory Listing dengan .htaccess
 
 ###### 1. Buka Cpanel File Manager / FTP
 
@@ -48,10 +45,7 @@ Options -Indexes
 
 Simpan file .htaccess, lalu coba akses salah satu folder tanpa file index di browser (contoh: domain.com/folder). Jika berhasil, Anda akan melihat pesan 403 Forbidden atau halaman kosong — bukan daftar isi folder lagi.
 
-
-
-🛡️ Tips Tambahan
------------------
+## 🛡️ Tips Tambahan
 
 * Selalu backup file .htaccess sebelum mengedit.
 * Jangan simpan file penting (seperti backup database) di folder publik.
@@ -60,13 +54,8 @@ Simpan file .htaccess, lalu coba akses salah satu folder tanpa file index di bro
   * Password protection pada direktori via .htpasswd
   * Plugin keamanan jika menggunakan CMS (WordPress, Joomla, dsb)
 
-
-🧩 Penutup
-----------
+## 🧩 Penutup
 
 Dengan menonaktifkan Directory Listing, Anda sudah melakukan langkah penting dalam meningkatkan keamanan website. File .htaccess adalah alat sederhana namun sangat kuat untuk mengontrol perilaku server Apache.
 
 Jika Anda membutuhkan bantuan lebih lanjut untuk meningkatkan keamanan situs Anda, jangan ragu untuk menghubungi kami. Keamanan website adalah investasi jangka panjang.
-
-
-
