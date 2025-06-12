@@ -25,3 +25,48 @@ Kenapa Harus Dimatikan?
 
 Tapi bukan berarti harus dimatikan , saya juga membuat website untuk keperluan download OS untuk kebutuhan sekolah , sengaja tidak saya matikan karena mempermudah untuk download yang hanya tinggal klick saja. Jadi intinya ketika dirasa tidak penting folder tanpa index.html/php tidak ada masalah. namun ketika folder-folder tersebut di rasa penting alangkah baiknya harus di perhitungkan untuk di tutup.
 
+
+Cara Mematikan Directory Listing dengan .htaccess
+-------------------------------------------------
+
+###### 1. Buka Cpanel File Manager / FTP
+
+Masuk ke file manager di cPanel Anda, atau gunakan FTP (misalnya FileZilla). Arahkan ke direktori root situs Anda (biasanya public\_html atau /).
+
+###### 2. Edit atau Buat File .htaccess
+
+Jika belum ada file .htaccess, silakan buat baru dengan nama:
+
+##### 3. Tambahkan Baris Berikut:
+
+```html
+# Matikan Directory Listing
+Options -Indexes
+```
+
+### 4. Simpan Perubahan
+
+Simpan file .htaccess, lalu coba akses salah satu folder tanpa file index di browser (contoh: domain.com/folder). Jika berhasil, Anda akan melihat pesan 403 Forbidden atau halaman kosong — bukan daftar isi folder lagi.
+
+
+
+🛡️ Tips Tambahan
+-----------------
+
+* Selalu backup file .htaccess sebelum mengedit.
+* Jangan simpan file penting (seperti backup database) di folder publik.
+* Gunakan juga proteksi tambahan seperti:
+  * File permission yang tepat (misalnya 644 untuk file, 755 untuk folder)
+  * Password protection pada direktori via .htpasswd
+  * Plugin keamanan jika menggunakan CMS (WordPress, Joomla, dsb)
+
+
+🧩 Penutup
+----------
+
+Dengan menonaktifkan Directory Listing, Anda sudah melakukan langkah penting dalam meningkatkan keamanan website. File .htaccess adalah alat sederhana namun sangat kuat untuk mengontrol perilaku server Apache.
+
+Jika Anda membutuhkan bantuan lebih lanjut untuk meningkatkan keamanan situs Anda, jangan ragu untuk menghubungi kami. Keamanan website adalah investasi jangka panjang.
+
+
+
