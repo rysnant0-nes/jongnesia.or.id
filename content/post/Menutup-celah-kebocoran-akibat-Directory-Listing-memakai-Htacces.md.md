@@ -1,5 +1,6 @@
 +++
 penulis = "Rysnanto"
+ilustration = "https://assets.tina.io/c0d66a0c-56da-4506-85d7-c2a9b6ad3b0c/ilustration/Group 375 (2).png"
 date = 2025-06-11T17:00:00.000Z
 description = "Directory Listing adalah kondisi ketika server web menampilkan daftar isi folder (file dan subfolder) kepada pengunjung, jika tidak ada file index (seperti index.html atau index.php) di dalam folder tersebut."
 title = "🔒Cara Fix Directory Listing Mencegah Kebocoran Data"
