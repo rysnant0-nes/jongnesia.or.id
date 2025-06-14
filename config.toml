@@ -5,7 +5,7 @@ paginate = 6
 
 [params]
 quote = "KAMI BANGGA MENJADI WARGA NEGARA REPUBLIK INDONESIA"
-about = "Jongnesia adalah forum OBROLAN | TEKNOLOGI | DLL di mana Anda dapat berdiskusi dan berbagi pengalaman seputar pemrograman , binsik dll . Filosofi Jongnesia didasarkan pada makna kata 'JONG' yang berasal dari Bahasa Belanda, yang berarti pemuda, sementara 'NESIA' merujuk kepada Indonesia. Dengan demikian, Jongnesia dapat diartikan sebagai pemuda Indonesia."
+about = "Jongnesia merupakan organisasi yang ada di internet sebagai forum diskusi penggiat teknologi, di mana Anda dapat berdiskusi dan berbagi pengalaman, Namun bukan hanya diskusi terkait teknologi akan tetapi diskusi berbagai hal yang menjadi isu. Filosofi Jongnesia didasarkan pada makna kata &#39;JONG&#39; yang berasal dari Bahasa Belanda, yang berarti pemuda, sementara &#39;NESIA&#39; merujuk kepada Indonesia. Dengan demikian, Jongnesia dapat diartikan sebagai pemuda Indonesia."
 footer = "Develop By JongNesia ♥"
 description = "Pemuda Indonesia Berkarya , tempat sharing mengenai koding"
 favicon= "static/favicon.png"
