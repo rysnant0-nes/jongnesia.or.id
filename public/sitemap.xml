@@ -2,11 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/post/web-server-android/</loc>
+    <lastmod>2025-06-24T20:30:02+07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2025-02-17T17:00:00+00:00</lastmod>
+    <lastmod>2025-06-24T20:30:02+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-02-17T17:00:00+00:00</lastmod>
+    <lastmod>2025-06-24T20:30:02+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/fix-directory-listing/</loc>
+    <lastmod>2025-06-11T17:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/non-fast-forward/</loc>
     <lastmod>2025-02-17T17:00:00+00:00</lastmod>

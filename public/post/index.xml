@@ -6,8 +6,22 @@
     <description>Recent content in Coretan Tangan on Jongnesia</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 17 Feb 2025 17:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Jun 2025 20:30:02 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cara Membuat HP Android Menjadi Web Server Online dengan Termux, Nginx, dan Custom Domain Cloudflare Tunnel</title>
+      <link>http://localhost:1313/post/web-server-android/</link>
+      <pubDate>Tue, 24 Jun 2025 20:30:02 +0700</pubDate>
+      <guid>http://localhost:1313/post/web-server-android/</guid>
+      <description>&lt;p&gt;Ingin membuat server web langsung dari perangkat Android tanpa mengeluarkan uang untuk penyimpanan online, tanpa perlu melakukan root, serta dapat diakses melalui internet. Dalam tulisan ini, kamu akan menemukan cara mengubah ponsel pintar menjadi server. Android sebagai server web &lt;strong&gt;dengan Nginx melalui Termux&lt;/strong&gt;, dan menghubungkannya ke internet menggunakan &lt;strong&gt;Cloudflare Tunnel&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Panduan ini ideal untuk:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Pengembang web yang ingin menguji proyek&lt;/li&gt;&#xA;&lt;li&gt;Siswa yang belajar pengembangan sisi server&lt;/li&gt;&#xA;&lt;li&gt;Siapa saja yang ingin hosting gratis dari Android.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Dengan mematuhi langkah-langkah sederhana, kamu bisa mengoperasikan situs web baik yang bersifat statis maupun dinamis dari ponselmu, tanpa harus membeli nama domain maupun menyewa tempat server. Ini adalah opsi yang lebih mudah, adaptif, dan dapat dimanfaatkan kapan saja.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🔒Cara Fix Directory Listing Mencegah Kebocoran Data</title>
+      <link>http://localhost:1313/post/fix-directory-listing/</link>
+      <pubDate>Wed, 11 Jun 2025 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/fix-directory-listing/</guid>
+      <description>&lt;h2 id=&#34;apa-itu-directory-listing&#34;&gt;Apa itu Directory Listing?&lt;/h2&gt;&#xA;&lt;p&gt;Directory Listing adalah kondisi ketika server web menampilkan daftar isi folder (file dan subfolder) kepada pengunjung, jika tidak ada file index (seperti &lt;strong&gt;index.html&lt;/strong&gt; atau &lt;strong&gt;index.php&lt;/strong&gt;) di dalam folder tersebut.&lt;/p&gt;&#xA;&lt;p&gt;Contoh tampilannya:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/tutorial/Screenshot%202025-06-12%20105005.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Jika hal ini terjadi, pengunjung (termasuk hacker) bisa melihat struktur folder Anda, bahkan mengakses file sensitif yang tidak seharusnya dilihat publik. Ini tentu berbahaya dan rentan terhadap eksploitasi.&lt;/p&gt;&#xA;&lt;p&gt;Kenapa Harus Dimatikan?&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Melindungi File Sensitif – File konfigurasi, backup, atau skrip bisa terlihat oleh siapa saja.&lt;/li&gt;&#xA;&lt;li&gt;Mencegah Informasi Bocor – Struktur folder bisa dimanfaatkan untuk menemukan celah keamanan.&lt;/li&gt;&#xA;&lt;li&gt;Meningkatkan Profesionalisme – Directory listing terlihat seperti situs belum selesai dikembangkan.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Tapi bukan berarti harus dimatikan , saya juga membuat website untuk keperluan download OS untuk kebutuhan sekolah , sengaja tidak saya matikan karena mempermudah untuk download yang hanya tinggal klick saja. Jadi intinya ketika dirasa tidak penting folder tanpa index.html/php tidak ada masalah. namun ketika folder-folder tersebut di rasa penting alangkah baiknya harus di perhitungkan untuk di tutup.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Solusi Ampuh Mengatasi Error Non-Fast-Forward saat Push ke GitHub</title>
       <link>http://localhost:1313/post/non-fast-forward/</link>
