@@ -1,6 +1,6 @@
 +++
 penulis = "Rysnanto"
-ilustration = "/ilustration/www.jongnesia.or.id.png"
+ilustration = "/ilustration/jongnesia-a.png"
 date = 2025-06-23T17:00:00.000Z
 description = "Panduan lengkap untuk mengubah HP Android menjadi web server online menggunakan Termux, Nginx, dan Cloudflare Tunnel dengan domain sendiri. Hosting gratis tanpa root dan tanpa IP publik."
 title = "Cara Membuat HP Android Menjadi Web Server Online dengan Termux, Nginx, dan Custom Domain Cloudflare Tunnel"
