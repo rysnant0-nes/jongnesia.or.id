@@ -9,14 +9,6 @@ slug = "webserver-android-termux-cloudflared"
 
 ***
 
-ilustration: ""
-penulis: "Rysnanto"
-description: "Panduan lengkap untuk mengubah HP Android menjadi web server online menggunakan Termux, Nginx, dan Cloudflare Tunnel dengan domain sendiri. Hosting gratis tanpa root dan tanpa IP publik."
-slug: "web-server-android"
-title: "Cara Membuat HP Android Menjadi Web Server Online dengan Termux, Nginx, dan Custom Domain Cloudflare Tunnel"
-date: 2025-06-24T20:30:02+07:00
--------------------------------
-
 Ingin membuat server web langsung dari perangkat Android tanpa mengeluarkan uang untuk penyimpanan online, tanpa perlu melakukan root, serta dapat diakses melalui internet. Dalam tulisan ini, kamu akan menemukan cara mengubah ponsel pintar menjadi server. Android sebagai server web **dengan Nginx melalui Termux**, dan menghubungkannya ke internet menggunakan **Cloudflare Tunnel**.
 
 Panduan ini ideal untuk:
