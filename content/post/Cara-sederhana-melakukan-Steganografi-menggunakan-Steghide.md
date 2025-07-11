@@ -31,7 +31,7 @@ Setelah mempersiapkan file gambar, langkah selanjutnya adalah menyembunyikan pes
 
 `steghide embed -cf nama_file_gambar -ef nama_file_pesan -sf nama_file_output`
 
-![steg1](https://jongnesia.com/steg1.png)
+![steg1](https://jongnesia.or.id/steg1.png)
 
 Penjelasan untuk setiap argumen perintah:
 
@@ -49,7 +49,7 @@ Setelah menyembunyikan pesan di dalam file gambar, langkah terakhir adalah menge
 
 `steghide extract -sf nama_file_output`
 
-![steg2](https://jongnesia.com/steg2.png)
+![steg2](https://jongnesia.or.id/steg2.png)
 
 Penjelasan untuk argumen perintah:
 
@@ -66,4 +66,4 @@ Namun, perlu diingat bahwa steganografi bukanlah cara yang aman untuk menyimpan 
 Sekian tutorial singkat tentang cara melakukan steganografi dengan menggunakan Steghide. Semoga artikel ini dapat membantu Anda memahami konsep steganografi dan memberikan ide untuk menggunakannya dalam kehidupan sehari-hari atau dalam proyek-proyek kreatif Anda.
 
 Vidio Tutorial :
-[![Vidio Perbedaan](https://jongnesia.com/steg3.png)](https://jongnesia.com/embed/yt2.html)
+(https://jongnesia.or.id/steg3.png)](https://jongnesia.or.id/embed/yt2.html)
