@@ -5,6 +5,7 @@ description = "Cara Sederhana Melakukan Steganografi Menggunakan Steghide"
 slug = "Steganografi Menggunakan Steghide"
 title = "Cara Sederhana Melakukan Steganografi Menggunakan Steghide"
 ilustration= "/ilustration/stega.webp"
+youtube_id= wk5X55uDVM0
 +++
 
 Steganografi adalah seni menyembunyikan pesan rahasia di dalam file lain seperti gambar, audio, atau video. Tujuannya adalah untuk menyembunyikan keberadaan pesan sehingga tidak terlihat oleh orang yang tidak berwenang.
