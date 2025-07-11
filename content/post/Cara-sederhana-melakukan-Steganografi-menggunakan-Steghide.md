@@ -66,4 +66,4 @@ Namun, perlu diingat bahwa steganografi bukanlah cara yang aman untuk menyimpan 
 Sekian tutorial singkat tentang cara melakukan steganografi dengan menggunakan Steghide. Semoga artikel ini dapat membantu Anda memahami konsep steganografi dan memberikan ide untuk menggunakannya dalam kehidupan sehari-hari atau dalam proyek-proyek kreatif Anda.
 
 Vidio Tutorial :
-(https://jongnesia.or.id/steg3.png)](https://jongnesia.or.id/embed/yt2.html)
+![](https://jongnesia.or.id/steg3.png)![](https://jongnesia.or.id/embed/yt2.html)
