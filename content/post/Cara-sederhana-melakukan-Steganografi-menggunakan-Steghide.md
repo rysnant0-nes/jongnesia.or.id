@@ -5,9 +5,8 @@ description: "Pelajari teknik steganografi sederhana untuk menyembunyikan pesan 
 title: "Cara Sederhana Menyembunyikan Pesan Rahasia ke dalam File Menggunakan Steganografi"
 youtube_id: wk5X55uDVM0
 date : 2023-04-27T17:00:00Z
-slug : "steganografi sederhana sembunyikan pesan dalamfile"
+slug : "steganografi sederhana sembunyikan pesan dalam file"
 ---
-
 Steganografi adalah seni menyembunyikan pesan rahasia di dalam file lain seperti gambar, audio, atau video. Tujuannya adalah untuk menyembunyikan keberadaan pesan sehingga tidak terlihat oleh orang yang tidak berwenang.
 
 Salah satu cara untuk melakukan steganografi adalah dengan menggunakan perangkat lunak Steghide. Steghide adalah alat steganografi open-source yang dapat menyembunyikan pesan dalam berbagai jenis file, termasuk gambar dan audio.
@@ -65,8 +64,6 @@ Melakukan steganografi dengan Steghide cukup mudah dan sederhana. Dengan beberap
 Namun, perlu diingat bahwa steganografi bukanlah cara yang aman untuk menyimpan informasi rahasia. Pesan rahasia masih dapat ditemukan oleh orang yang memiliki kemampuan teknis yang memadai. Oleh karena itu, disarankan untuk menggunakan steganografi hanya untuk tujuan yang tidak sensitif atau dengan menggabungkannya dengan teknologi keamanan lainnya.
 
 Sekian tutorial singkat tentang cara melakukan steganografi dengan menggunakan Steghide. Semoga artikel ini dapat membantu Anda memahami konsep steganografi dan memberikan ide untuk menggunakannya dalam kehidupan sehari-hari atau dalam proyek-proyek kreatif Anda.
-
-Vidio Tutorial :
-
-[![Tonton Video](https://jongnesia.or.id/steg3.png)](https://jongnesia.or.id/embed/yt2.html)
-
+```
+Steganografi, Keamanan Data, Menyembunyikan Pesan, File Rahasia, Privasi Digital, Teknik Kriptografi, Cybersecurity Dasar, Pesan Tersembunyi, Stego Tools, Perlindungan Informasi , Steghide
+```
