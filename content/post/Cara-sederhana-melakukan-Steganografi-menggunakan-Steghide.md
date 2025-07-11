@@ -67,4 +67,5 @@ Sekian tutorial singkat tentang cara melakukan steganografi dengan menggunakan S
 
 Vidio Tutorial :
 
-![https://jongnesia.or.id/embed/yt2.html](https://jongnesia.or.id/steg3.png)
+[![Tonton Video](https://jongnesia.or.id/steg3.png)](https://jongnesia.or.id/embed/yt2.html)
+
