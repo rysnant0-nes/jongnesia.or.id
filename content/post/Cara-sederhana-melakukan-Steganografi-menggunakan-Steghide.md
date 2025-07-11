@@ -1,12 +1,12 @@
-+++
-author = "admin"
-date = 2023-04-27T17:00:00Z
-description = "Cara Sederhana Melakukan Steganografi Menggunakan Steghide"
-slug = "Steganografi Menggunakan Steghide"
-title = "Cara Sederhana Melakukan Steganografi Menggunakan Steghide"
-ilustration= "/ilustration/stega.webp"
-youtube_id= wk5X55uDVM0
-+++
+---
+ilustration: "/ilustration/stega.webp"
+penulis: "Rysnanto"
+description: "Pelajari teknik steganografi sederhana untuk menyembunyikan pesan rahasia ke dalam gambar, audio, atau file lainnya. Panduan ini cocok untuk pemula yang ingin menjaga privasi data secara kreatif dan aman"
+title: "Cara Sederhana Menyembunyikan Pesan Rahasia ke dalam File Menggunakan Steganografi"
+youtube_id: wk5X55uDVM0
+date : 2023-04-27T17:00:00Z
+slug : "steganografi sederhana sembunyikan pesan dalamfile"
+---
 
 Steganografi adalah seni menyembunyikan pesan rahasia di dalam file lain seperti gambar, audio, atau video. Tujuannya adalah untuk menyembunyikan keberadaan pesan sehingga tidak terlihat oleh orang yang tidak berwenang.
 
