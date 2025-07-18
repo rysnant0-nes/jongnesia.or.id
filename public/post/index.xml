@@ -6,14 +6,21 @@
     <description>Recent content in Coretan Tangan on Jongnesia</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Jun 2025 20:30:02 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 18 Jul 2025 17:27:03 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Script Bucin HTML JS: Ekspresikan Rasa Sayang Lewat Kode Web</title>
+      <link>http://localhost:1313/post/script-bucin-html-js/</link>
+      <pubDate>Fri, 18 Jul 2025 17:27:03 +0700</pubDate>
+      <guid>http://localhost:1313/post/script-bucin-html-js/</guid>
+      <description>&lt;h2 id=&#34;kenapa-harus-ngoding-bucin&#34;&gt;Kenapa Harus Ngoding Bucin&lt;/h2&gt;&#xA;&lt;p&gt;Karena cinta dan kode itu bisa saling melengkapi. Programmer seperti kita sering mengekspresikan perasaannya lewat baris kode, kita atau hanya saya ya? haha. Dengan script bucin HTML + JS, kamu bisa menunjukkan sisi romantis kamu — bukan cuma lewat kata, tapi lewat logika dan kreativitas!, Kalau saya sering sekali membawa nama pasangan kedalam project saya sebagai contoh ketika membuat WhatsaapBot nama dari project tersebut adalah NesBot (Nesa Bot).&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Cara Membuat HP Android Menjadi Web Server Online dengan Termux, Nginx, dan Custom Domain Cloudflare Tunnel</title>
-      <link>http://localhost:1313/post/web-server-android/</link>
-      <pubDate>Tue, 24 Jun 2025 20:30:02 +0700</pubDate>
-      <guid>http://localhost:1313/post/web-server-android/</guid>
-      <description>&lt;p&gt;Ingin membuat server web langsung dari perangkat Android tanpa mengeluarkan uang untuk penyimpanan online, tanpa perlu melakukan root, serta dapat diakses melalui internet. Dalam tulisan ini, kamu akan menemukan cara mengubah ponsel pintar menjadi server. Android sebagai server web &lt;strong&gt;dengan Nginx melalui Termux&lt;/strong&gt;, dan menghubungkannya ke internet menggunakan &lt;strong&gt;Cloudflare Tunnel&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Panduan ini ideal untuk:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Pengembang web yang ingin menguji proyek&lt;/li&gt;&#xA;&lt;li&gt;Siswa yang belajar pengembangan sisi server&lt;/li&gt;&#xA;&lt;li&gt;Siapa saja yang ingin hosting gratis dari Android.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Dengan mematuhi langkah-langkah sederhana, kamu bisa mengoperasikan situs web baik yang bersifat statis maupun dinamis dari ponselmu, tanpa harus membeli nama domain maupun menyewa tempat server. Ini adalah opsi yang lebih mudah, adaptif, dan dapat dimanfaatkan kapan saja.&lt;/p&gt;</description>
+      <link>http://localhost:1313/post/webserver-android-termux-cloudflared/</link>
+      <pubDate>Mon, 23 Jun 2025 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/webserver-android-termux-cloudflared/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;p&gt;Ingin membuat server web langsung dari perangkat Android tanpa mengeluarkan uang untuk penyimpanan online, tanpa perlu melakukan root, serta dapat diakses melalui internet. Dalam tulisan ini, kamu akan menemukan cara mengubah ponsel pintar menjadi server. Android sebagai server web &lt;strong&gt;dengan Nginx melalui Termux&lt;/strong&gt;, dan menghubungkannya ke internet menggunakan &lt;strong&gt;Cloudflare Tunnel&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Panduan ini ideal untuk:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Pengembang web yang ingin menguji proyek&lt;/li&gt;&#xA;&lt;li&gt;Siswa yang belajar pengembangan sisi server&lt;/li&gt;&#xA;&lt;li&gt;Siapa saja yang ingin hosting gratis dari Android.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Dengan mematuhi langkah-langkah sederhana, kamu bisa mengoperasikan situs web baik yang bersifat statis maupun dinamis dari ponselmu, tanpa harus membeli nama domain maupun menyewa tempat server. Ini adalah opsi yang lebih mudah, adaptif, dan dapat dimanfaatkan kapan saja.&lt;/p&gt;</description>
     </item>
     <item>
       <title>🔒Cara Fix Directory Listing Mencegah Kebocoran Data</title>
@@ -149,10 +156,10 @@
       <description>&lt;h1 id=&#34;panduan-lengkap-membuat-website-responsive-dengan-media-queries-dan-meta-viewport&#34;&gt;Panduan Lengkap Membuat Website Responsive dengan Media Queries dan Meta Viewport&lt;/h1&gt;&#xA;&lt;p&gt;Membuat website yang responsif adalah hal yang penting dalam pengembangan website. Dengan meningkatnya penggunaan perangkat mobile, website yang responsif dapat memberikan pengalaman yang lebih baik untuk pengguna, sehingga meningkatkan konversi dan mengurangi bounce rate.&lt;/p&gt;&#xA;&lt;p&gt;Dalam artikel ini, kami akan memberikan panduan lengkap tentang cara membuat website yang responsif dengan menggunakan media queries dan meta viewport.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Apa itu Media Queries?&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Media queries adalah teknik CSS yang memungkinkan Anda mengubah tampilan website sesuai dengan ukuran layar pengguna. Dengan media queries, Anda dapat menentukan aturan CSS yang hanya akan diterapkan pada perangkat dengan ukuran layar tertentu.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Cara Sederhana Melakukan Steganografi Menggunakan Steghide</title>
-      <link>http://localhost:1313/post/steganografi-menggunakan-steghide/</link>
+      <title>Cara Sederhana Menyembunyikan Pesan Rahasia ke dalam File Menggunakan Steganografi</title>
+      <link>http://localhost:1313/post/steganografi-sederhana-sembunyikan-pesan-dalam-file/</link>
       <pubDate>Thu, 27 Apr 2023 17:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/steganografi-menggunakan-steghide/</guid>
+      <guid>http://localhost:1313/post/steganografi-sederhana-sembunyikan-pesan-dalam-file/</guid>
       <description>&lt;p&gt;Steganografi adalah seni menyembunyikan pesan rahasia di dalam file lain seperti gambar, audio, atau video. Tujuannya adalah untuk menyembunyikan keberadaan pesan sehingga tidak terlihat oleh orang yang tidak berwenang.&lt;/p&gt;&#xA;&lt;p&gt;Salah satu cara untuk melakukan steganografi adalah dengan menggunakan perangkat lunak Steghide. Steghide adalah alat steganografi open-source yang dapat menyembunyikan pesan dalam berbagai jenis file, termasuk gambar dan audio.&lt;/p&gt;&#xA;&lt;h2 id=&#34;langkah-1-install-steghide&#34;&gt;Langkah 1: Install Steghide&lt;/h2&gt;&#xA;&lt;p&gt;Langkah pertama adalah menginstal Steghide di sistem Anda. Untuk melakukannya, buka terminal dan jalankan perintah berikut:&lt;/p&gt;</description>
     </item>
     <item>

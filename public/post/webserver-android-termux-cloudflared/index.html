@@ -28,10 +28,10 @@
   type="image/x-icon"
 />
 <meta name="google-adsense-account" content="ca-pub-5490482637087802">
-<meta property="og:description" name="description" content="Berikut ini merupakan cara untuk mengcustome halaman 404 error di cpanel" />
-<meta property="og:title" name="description" content="Custom Tampilan Error Pages 404 di cPanel" />
-<meta property="og:image" name="description" content="http://localhost:1313//ilustration/404-notfound.webp" />
-<title>Custom Tampilan Error Pages 404 di cPanel</title>
+<meta property="og:description" name="description" content="Panduan lengkap untuk mengubah HP Android menjadi web server online menggunakan Termux, Nginx, dan Cloudflare Tunnel dengan domain sendiri. Hosting gratis tanpa root dan tanpa IP publik." />
+<meta property="og:title" name="description" content="Cara Membuat HP Android Menjadi Web Server Online dengan Termux, Nginx, dan Custom Domain Cloudflare Tunnel" />
+<meta property="og:image" name="description" content="http://localhost:1313//ilustration/jongnesia-a.png" />
+<title>Cara Membuat HP Android Menjadi Web Server Online dengan Termux, Nginx, dan Custom Domain Cloudflare Tunnel</title>
 
 
 
@@ -195,29 +195,14 @@
 <div class="container" style="margin-top: 120px">
   <div class="row">
     <div class="col-lg-8">
-      <h2 style="font-weight: bold">Custom Tampilan Error Pages 404 di cPanel</h2>
+      <h2 style="font-weight: bold">Cara Membuat HP Android Menjadi Web Server Online dengan Termux, Nginx, dan Custom Domain Cloudflare Tunnel</h2>
       <p class="penulis">
-        Ditulis oleh Fitriani<span
+        Ditulis oleh Rysnanto<span
           ><img loading="lazy" src="http://localhost:1313//verified.png" width="12px" alt=""
         /></span>
-        , Pada 04-29-2023
+        , Pada 06-23-2025
       </p>
       <div class="scrap-artikel">
-        
-        <div class="plyr__video-embed" id="player">
-        <iframe 
-          src="https://www.youtube.com/embed/uBkB5VgMbJg?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-          frameborder="0"
-          allowfullscreen
-          allowtransparency
-          allow="autoplay"
-        ></iframe>
-      </div>
-        <br>
-         
-         <span class="likebtn-wrapper" data-i18n_like="Suka" data-ef_voting="wobble" data-identifier="item_1"></span>
-         <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
-         
         
       
         <div class="container custome">
@@ -238,19 +223,101 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
         </div>
-        <p><p>Error page atau halaman kesalahan adalah halaman yang muncul ketika teman-teman mencoba mengakses halaman yang tidak tersedia atau tidak ditemukan pada situs web. Standar error page yang disediakan oleh server web dapat terlihat membosankan dan tidak informatif bagi pengguna. Oleh karena itu, teman-teman dapat meningkatkan tampilan situs web dengan membuat custom error pages di cPanel.</p>
-<p>Berikut adalah langkah-langkah mudah untuk membuat custom error pages di cPanel:</p>
-<ol>
-<li>Login ke akun cPanel teman-teman.</li>
-<li>Pada halaman utama cPanel, teman-teman dapat mencari dan klik ikon &ldquo;Error Pages&rdquo; atau masuk ke kategori &ldquo;Advanced&rdquo; dan klik &ldquo;Error Pages&rdquo;.</li>
-<li>Pada halaman &ldquo;Error Pages&rdquo;, teman-teman akan melihat daftar error pages yang dapat disesuaikan. Pilih salah satu error page yang ingin diubah.</li>
-<li>Setelah memilih error page, teman-teman akan melihat tampilan halaman kesalahan standar di sisi kanan layar dan formulir di sisi kiri layar.</li>
-<li>Pada formulir, teman-teman dapat mengedit pesan kesalahan, judul halaman, dan pesan kustom sesuai dengan kebutuhan.</li>
-<li>Klik tombol &ldquo;Save&rdquo; untuk menyimpan perubahan.</li>
-<li>Uji halaman kesalahan dengan mencoba mengakses URL yang tidak tersedia pada situs web teman-teman.</li>
-</ol>
-<p>Dengan membuat custom error pages di cPanel, teman-teman dapat meningkatkan tampilan situs web dan memberikan informasi yang lebih jelas dan berguna bagi pengguna.</p>
-</p>
+        <p><hr>
+<p>Ingin membuat server web langsung dari perangkat Android tanpa mengeluarkan uang untuk penyimpanan online, tanpa perlu melakukan root, serta dapat diakses melalui internet. Dalam tulisan ini, kamu akan menemukan cara mengubah ponsel pintar menjadi server. Android sebagai server web <strong>dengan Nginx melalui Termux</strong>, dan menghubungkannya ke internet menggunakan <strong>Cloudflare Tunnel</strong>.</p>
+<p>Panduan ini ideal untuk:</p>
+<ul>
+<li>Pengembang web yang ingin menguji proyek</li>
+<li>Siswa yang belajar pengembangan sisi server</li>
+<li>Siapa saja yang ingin hosting gratis dari Android.</li>
+</ul>
+<p>Dengan mematuhi langkah-langkah sederhana, kamu bisa mengoperasikan situs web baik yang bersifat statis maupun dinamis dari ponselmu, tanpa harus membeli nama domain maupun menyewa tempat server. Ini adalah opsi yang lebih mudah, adaptif, dan dapat dimanfaatkan kapan saja.</p>
+<hr>
+<h2 id="-menggunakan-domain-sendiri">🎯 Menggunakan Domain Sendiri?</h2>
+<p>Memanfaatkan domain yang disesuaikan menciptakan citra yang lebih profesional dan mempermudah pengaturan lalu lintas. Cloudflare Tunnel memungkinkan kamu:</p>
+<ul>
+<li>Membuat koneksi aman dari HP ke internet</li>
+<li>Menghubungkan server lokal ke <strong>subdomain kamu sendiri</strong></li>
+<li>Tanpa perlu port forwarding atau IP statis</li>
+</ul>
+<hr>
+<h2 id="-persiapan">📦 Persiapan</h2>
+<ul>
+<li>HP Android (minimal RAM 2 GB)</li>
+<li>Termux dari F-Droid</li>
+<li>Akun Cloudflare aktif</li>
+<li>Domain kamu yang terhubung ke Cloudflare</li>
+<li>Cloudflared dan Nginx</li>
+</ul>
+<hr>
+<h2 id="-langkah-langkah-instalasi">⚙️ Langkah-Langkah Instalasi</h2>
+<h3 id="1-instalasi-awal-termux-dan-nginx">1. Instalasi Awal Termux dan Nginx</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pkg update <span style="color:#f92672">&amp;&amp;</span> pkg upgrade
+</span></span><span style="display:flex;"><span>pkg install nginx
+</span></span></code></pre></div><h3 id="2-jalankan-server-nginx">2. Jalankan Server Nginx</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nginx
+</span></span></code></pre></div><p>Tes dengan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl 127.0.0.1:8080
+</span></span></code></pre></div><hr>
+<h2 id="-konfigurasi-cloudflare-tunnel-dengan-domain-sendiri">🌐 Konfigurasi Cloudflare Tunnel dengan Domain Sendiri</h2>
+<h3 id="3-install-cloudflared">3. Install Cloudflared</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pkg install cloudflared
+</span></span></code></pre></div><h3 id="4-login-cloudflare">4. Login Cloudflare</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cloudflared login
+</span></span></code></pre></div><p>Perintah ini akan membuka link autentikasi. Login dengan akun Cloudflare kamu, lalu pilih domain yang ingin kamu gunakan.</p>
+<hr>
+<h3 id="5-buat-tunnel-baru">5. Buat Tunnel Baru</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cloudflared tunnel create serverku-android
+</span></span></code></pre></div><p>Nama <code>serverku-android</code> bebas, sesuaikan dengan nama project kamu.</p>
+<p>Cloudflared akan menyimpan kredensial tunnel di:</p>
+<pre tabindex="0"><code>~/.cloudflared/serverku-android.json
+</code></pre><hr>
+<h3 id="6-buat-konfigurasi-tunnel-configyml">6. Buat Konfigurasi Tunnel (config.yml)</h3>
+<p>Buat file konfigurasi Cloudflared:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p ~/.cloudflared
+</span></span><span style="display:flex;"><span>nano ~/.cloudflared/config.yml
+</span></span></code></pre></div><p>Isi file dengan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">tunnel</span>: <span style="color:#ae81ff">&lt;TUNNEL-ID&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">credentials-file</span>: <span style="color:#ae81ff">/data/data/com.termux/files/home/.cloudflared/&lt;TUNNEL-ID&gt;.json</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">ingress</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">hostname</span>: <span style="color:#ae81ff">kodingin.eu.org</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">service</span>: <span style="color:#ae81ff">http://localhost:8080</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">service</span>: <span style="color:#ae81ff">http_status:404</span>
+</span></span></code></pre></div><p>Ganti <code>kodingin.eu.org</code> dengan subdomain milikmu yang aktif di Cloudflare.</p>
+<hr>
+<h3 id="7-arahkan-dns-di-cloudflare">7. Arahkan DNS di Cloudflare</h3>
+<p>Masuk ke dashboard Cloudflare:</p>
+<ul>
+<li>Tambahkan DNS record <strong>CNAME</strong> ke <code>tunnel.cfargotunnel.com</code></li>
+<li>Nama: <code>subdomainkamu</code></li>
+<li>Target: <code>tunnel-id.cfargotunnel.com</code> (dapatkan ID dengan <code>cloudflared tunnel list</code>)</li>
+</ul>
+<hr>
+<h3 id="8-jalankan-tunnel">8. Jalankan Tunnel</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cloudflared tunnel run serverku-android
+</span></span></code></pre></div><p>Jika berhasil, domain kamu akan mengarah ke server Nginx yang berjalan di Termux!</p>
+<hr>
+<h2 id="-tips-keamanan">🔐 Tips Keamanan</h2>
+<ul>
+<li>Tambahkan autentikasi (Basic Auth) di Nginx</li>
+<li>Gunakan HTTPS default dari Cloudflare</li>
+<li>Jangan jalankan file berbahaya tanpa validasi</li>
+</ul>
+<hr>
+<h2 id="-keuntungan-metode-ini">✅ Keuntungan Metode Ini</h2>
+<ul>
+<li>Bisa pakai <strong>domain sendiri</strong></li>
+<li>Lebih stabil dan profesional</li>
+<li>Tidak bergantung pada URL sementara</li>
+<li>Tetap gratis!</li>
+</ul>
+<hr>
+<h2 id="-kesimpulan">🧾 Kesimpulan</h2>
+<p>Dengan memanfaatkan Termux, Nginx, dan Cloudflare Tunnel pada domain yang kamu miliki, kamu dapat mengubah smartphone Android kamu menjadi server web yang canggih dan dapat disesuaikan. Sangat ideal untuk proyek demo, belajar tentang hosting, sampai pengujian secara langsung.</p>
+<hr>
+<pre tabindex="0"><code>termux nginx domain sendiri, cloudflare tunnel custom domain android, web server hp android, hosting web dari hp, nginx cloudflare termux, server termux pakai domain
+</code></pre></p>
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
