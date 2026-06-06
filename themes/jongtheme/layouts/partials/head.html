@@ -32,7 +32,7 @@
 {{- if eq .Kind "home" }}
   {{- $image = "jongnesia.png" | absURL }}
 {{- else }}
-  {{- $image = .Params.ilustration | absURL }}
+  {{- $image = (.Params.ilustration | default "/jongnesia.png") | absURL }}
 {{- end }}
 
 <title>{{ if .IsHome }}{{ $siteTitle }} - {{ .Site.Params.description }}{{ else }}{{ $title }} | {{ $siteTitle }}{{ end }}</title>
