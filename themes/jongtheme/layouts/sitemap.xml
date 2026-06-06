@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{{- range .Data.Pages }}
+  {{- $exclude := false }}
+  {{- if in .Path "intanonline" }}{{ $exclude = true }}{{ end }}
+  {{- if eq .Kind "section" }}
+    {{- if or (eq .Section "css") (eq .Section "html") (eq .Section "js") (eq .Section "tags") (eq .Section "categories") }}
+      {{- $exclude = true }}
+    {{- end }}
+  {{- end }}
+  {{- if not $exclude }}
+  <url>
+    <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>{{ end }}
+    {{- if eq .Kind "page" }}
+      {{- if or (eq .Section "post") (eq .Section "koding") }}
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+      {{- else }}
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+      {{- end }}
+    {{- else if eq .Kind "home" }}
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    {{- else }}
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    {{- end }}
+  </url>
+  {{- end }}
+{{- end }}
+</urlset>
