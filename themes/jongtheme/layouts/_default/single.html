@@ -1,251 +1,513 @@
 {{- define "style"}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Courier+Prime&family=Poppins&display=swap");
-  body {
-    overflow-y: scroll;
-    width: 100%;
-    padding: 10px;
-  }
-  p {
+  .scrap-artikel p {
     font-family: "Poppins", sans-serif;
   }
-  h1 {
-    color:black;
-    font-weight: bold;
-  }
-  pre code {
-  font-size: 16px;
-  border: 3px dashed black !important;
-  border-radius:10px ;
-  font-family: "Source Code Pro", monospace;
-  color: rgb(107, 223, 198);
-  padding: 5px;
-  display: block;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  }
-  li{
-    margin-left: 0px !important;
-    font-size: 16px;
+  li {
+    margin-left: 0;
+    font-size: 1rem;
     padding-top: 10px;
   }
-  a.nav-link  {
-    margin-left: 0px !important;
+  a.nav-link {
+    margin-left: 0;
     padding-top: 10px;
     font-size: 25px;
-    padding-left: 20px !important;
+    padding-left: 20px;
   }
-  li.footer {
-    display: inline;
-    margin: 0;
-  }
-  ol {
-    /* margin-left: -32px !important; */
-    margin-top: -20px;
-  }
-
   ul a {
     text-decoration: none;
   }
-  div.card {
-    background-color: #f4d9ae !important;
-    border: 5px dashed black;
-    border-bottom-left-radius: 5px solid black;
-    font-size: 15px !important;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-  }
-  .penulis {
-    font-size: 10px;
-  }
-  iframe {
-    width: 760px;
-    height: 515px;
-    border-radius: 15px;
-    border: 5px solid #20c997;
-    border-style: dashed;
-  }
-  div.container.custome {
+  .container.custome {
     max-width: 100%;
   }
 
-  @media (max-width: 768px) {
-    img.profile {
-      width: 300px;
-    }
-    .footer p {
-      text-align: center;
-  
-    }
-    .footer ol {
-      margin-left: 18px !important;
-   
-    }
-    .footer ol a {
-      font-size: 15px !important;
-    }
-    .div-custome {
-      text-align: left;
-    }
-    iframe {
-      width: 340px;
-      height: 200px;
-      border-radius: 15px;
-      border: 5px solid #20c997;
-      border-style: dashed;
-    }
+  .scrap-artikel pre {
+    position: relative;
+    border: 3px dashed #333;
+    border-radius: 12px;
+    overflow: hidden;
   }
-  @media (min-width: 1011px) {
-    img.profile {
-      width: 300px;
-    }
-    .div-custome {
-      text-align: left;
-    }
-    iframe {
-      width: 500px;
-      height: 300px;
-      border-radius: 15px;
-      border: 5px solid #20c997;
-      border-style: dashed;
-    }
+  .scrap-artikel pre code {
+    font-family: "Source Code Pro", "Fira Code", "Consolas", monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    padding: 1rem;
+    display: block;
+    overflow-x: auto;
+    white-space: pre;
+    tab-size: 2;
   }
-  
+  .copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px 12px;
+    font-family: "Courier Prime", monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.8);
+    background: rgba(0,0,0,0.4);
+    transition: all 0.2s ease;
+    z-index: 2;
+    line-height: 1.4;
+  }
+  .copy-btn:hover {
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    border-color: rgba(255,255,255,0.6);
+  }
+  .copy-btn.copied {
+    background: #009f8f;
+    border-color: #009f8f;
+    color: #fff;
+  }
+
+  #toc {
+    background: #f4d9ae;
+    border: 3px dashed black;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 1.5rem;
+    font-family: "Courier Prime", monospace;
+  }
+  #toc summary {
+    font-size: 1rem;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-family: "Bowlby One", cursive;
+    background: #009f8f;
+    color: #000;
+    border: 3px solid rgba(10,10,10,0.73);
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+  #toc nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  #toc nav ul li {
+    margin-left: 0;
+    padding: 4px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+  }
+  #toc nav ul li:last-child {
+    border-bottom: none;
+  }
+  #toc nav ul li a {
+    color: #000;
+    text-decoration: none;
+  }
+  #toc nav ul li a:hover {
+    color: #009f8f;
+    text-decoration: underline;
+  }
+  #toc nav ul ul {
+    padding-left: 1.5rem;
+  }
+
+  .related-card {
+    background: #f4d9ae;
+    border: 5px dashed black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  .related-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+  .related-card .card-title {
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .share-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 24px 0;
+    padding: 16px 0;
+    border-top: 2px dashed #ccc;
+    border-bottom: 2px dashed #ccc;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid black;
+    color: #000;
+  }
+  .share-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    color: #000;
+  }
+  .share-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  .share-btn-wa {
+    background: #25D366;
+  }
+  .share-btn-tg {
+    background: #0088cc;
+  }
+  .share-btn-tw {
+    background: #000;
+    color: #fff;
+  }
+  .share-btn-tw:hover {
+    color: #fff;
+  }
+
+  .scrap-artikel img {
+    cursor: zoom-in;
+    transition: opacity 0.2s ease;
+  }
+  .scrap-artikel img:hover {
+    opacity: 0.9;
+  }
+
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: zoom-out;
+    padding: 20px;
+  }
+  .lightbox.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .lightbox img {
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    cursor: default;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    background: none;
+    border: none;
+    padding: 8px;
+    line-height: 1;
+  }
+  .lightbox-close:hover {
+    opacity: 1;
+  }
 </style>
-{{end}} {{- define "main"}}
-<div class="container" style="margin-top: 120px">
+{{end}}
+
+{{- define "main"}}
+<article class="container" style="margin-top: 100px;">
   <div class="row">
     <div class="col-lg-8">
-      <h2 style="font-weight: bold">{{.Title}}</h2>
+      <h1 class="fw-bold">{{.Title}}</h1>
       <p class="penulis">
-        Ditulis oleh {{.Params.penulis}}<span
-          ><img loading="lazy" src="{{.Site.BaseURL}}/verified.png" width="12px" alt=""
-        /></span>
-        , Pada {{.Date.Format "01-02-2006"}}
+        Ditulis oleh {{.Params.penulis}}
+        <img loading="lazy" src="{{ "verified.png" | absURL }}" width="12" height="12" alt="Verified" />,
+        <time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "02-01-2006"}}</time>
+        <span class="mx-2">|</span>
+        {{ .ReadingTime }} menit baca
+        <span class="mx-1">·</span>
+        {{ .WordCount }} kata
       </p>
-      <div class="scrap-artikel">
-        {{ if .Params.youtube_id }}
-        <div class="plyr__video-embed" id="player">
-        <iframe 
+
+      {{ if .Params.youtube_id }}
+      <div class="plyr__video-embed" id="player">
+        <iframe
           src="https://www.youtube.com/embed/{{.Params.youtube_id}}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
           frameborder="0"
           allowfullscreen
           allowtransparency
           allow="autoplay"
+          title="Video YouTube: {{.Title}}"
         ></iframe>
       </div>
-        <br>
-         <!-- LikeBtn.com BEGIN -->
-         <span class="likebtn-wrapper" data-i18n_like="Suka" data-ef_voting="wobble" data-identifier="item_1"></span>
-         <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
-         <!-- LikeBtn.com END -->
-        {{ end }}
-      
-        <div class="container custome">
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
-            crossorigin="anonymous"
-          ></script>
-          <ins
-            class="adsbygoogle"
-            style="display: block"
-            data-ad-format="fluid"
-            data-ad-layout-key="-gw+2+12-5g+83"
-            data-ad-client="ca-pub-5490482637087802"
-            data-ad-slot="6933891977"
-          ></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-        </div>
-        <p>{{.Content}}</p>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
-          crossorigin="anonymous"
-        ></script>
-        <ins
-          class="adsbygoogle"
-          style="display: block"
-          data-ad-format="autorelaxed"
-          data-ad-client="ca-pub-5490482637087802"
-          data-ad-slot="1295440535"
-        ></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+      <br />
+      <span class="likebtn-wrapper" data-i18n_like="Suka" data-ef_voting="wobble" data-identifier="item_1"></span>
+      <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+      {{ end }}
+
+      <!-- TOC on mobile -->
+      {{ if .TableOfContents }}
+      <details id="toc" class="d-lg-none">
+        <summary>Daftar Isi</summary>
+        {{ .TableOfContents }}
+      </details>
+      {{ end }}
+
+      <!-- Ad Top -->
+      <div class="container custome my-3">
+        <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw+2+12-5g+83" data-ad-client="ca-pub-5490482637087802" data-ad-slot="6933891977"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
+
+      <div class="scrap-artikel">
+        {{ .Content }}
+      </div>
+
+      <!-- Share Buttons -->
+      {{ $url := .Permalink }}
+      {{ $title := .Title }}
+      {{ $text := delimit (slice $title " - " $url) "" }}
+      <div class="share-buttons">
+        <a href="https://api.whatsapp.com/send?text={{ $text | safeURL }}" target="_blank" rel="noopener" class="share-btn share-btn-wa" aria-label="Bagikan ke WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="https://t.me/share/url?url={{ $url | safeURL }}&text={{ $title | safeURL }}" target="_blank" rel="noopener" class="share-btn share-btn-tg" aria-label="Bagikan ke Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Telegram
+        </a>
+        <a href="https://twitter.com/intent/tweet?text={{ $text | safeURL }}" target="_blank" rel="noopener" class="share-btn share-btn-tw" aria-label="Bagikan ke Twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Twitter
+        </a>
+      </div>
+
+      <!-- Ad Bottom -->
+      <div class="container custome my-3">
+        <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-5490482637087802" data-ad-slot="1295440535"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Related Posts -->
+      {{ $related := where (.Site.RegularPages.Related .) "Type" .Type }}
+      {{ if gt (len $related) 0 }}
+      <section class="mt-5">
+        <h2 class="section-title mb-4">Artikel Terkait</h2>
+        <div class="row">
+          {{ range first 3 $related }}
+          <div class="col-md-4 mb-3 d-flex">
+            <a href="{{ .RelPermalink }}" class="text-decoration-none text-dark w-100">
+              <div class="related-card card">
+                {{ if .Params.ilustration }}
+                <img src="{{ .Params.ilustration }}" class="card-img-top" alt="{{ .Title }}" loading="lazy" height="140" style="object-fit: cover;">
+                {{ else }}
+                <img src="/ilustration/noimage.png" class="card-img-top" alt="{{ .Title }}" loading="lazy" height="140" style="object-fit: cover;">
+                {{ end }}
+                <div class="card-body d-flex align-items-center">
+                  <h5 class="card-title text-center w-100 mb-0">{{ .Title }}</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
     </div>
-    <div class="col-lg-4" style="margin-top: 80px">
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5490482637087802"
-        crossorigin="anonymous"
-      ></script>
-      <!-- iklan display -->
-      <ins
-        class="adsbygoogle"
-        style="display: block"
-        data-ad-client="ca-pub-5490482637087802"
-        data-ad-slot="4985551332"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+
+    <!-- Sidebar -->
+    <aside class="col-lg-4" style="margin-top: 80px;">
+      <!-- TOC on desktop -->
+      {{ if .TableOfContents }}
+      <div id="toc" class="d-none d-lg-block">
+        <summary style="font-size:1rem;padding:4px 10px;font-family:'Bowlby One',cursive;background:#009f8f;color:#000;border:3px solid rgba(10,10,10,0.73);border-right:5px solid black;border-bottom:5px solid black;">Daftar Isi</summary>
+        {{ .TableOfContents }}
+      </div>
+      {{ end }}
+
+      <!-- Ad Sidebar -->
+      <div class="mb-4">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5490482637087802" data-ad-slot="4985551332" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
       {{ if eq .Type "post" }}
-      <div class="card mb-4 mt-4">
-        {{ $recent := (where .Site.RegularPages "Type" "post").ByDate.Reverse |
-        first 5 }} {{ if $recent }}
-        <h3 style="font-weight: bold; padding-left: 10px">Cuitan New</h3>
+      <div class="sidebar-card">
+        <h3>Cuitan New</h3>
         <ul>
+          {{ $recent := (where .Site.RegularPages "Type" "post").ByDate.Reverse | first 5 }}
           {{ range $recent }}
-          <li style="margin-left: -5px !important">
-            <a style="font-size: 20px" href="{{ .RelPermalink }}"
-              >{{ .Title }}</a
-            >
-          </li>
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
           {{ end }}
         </ul>
-        {{ end }}
       </div>
-      {{ end }} {{ if eq .Type "koding" }} {{ $recent := (where
-      .Site.RegularPages "Type" "koding").ByDate.Reverse | first 5 }} {{ if
-      $recent }}
-      <div class="card mb-4">
-        <h3 style="font-weight: bold; padding-left: 10px">Koding New</h3>
+      {{ end }}
+
+      {{ if eq .Type "koding" }}
+      <div class="sidebar-card">
+        <h3>Koding New</h3>
         <ul>
+          {{ $recent := (where .Site.RegularPages "Type" "koding").ByDate.Reverse | first 5 }}
           {{ range $recent }}
-          <li>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </li>
-          {{end}}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
         </ul>
       </div>
-      {{end}} {{end}}
-      <div id="disqus_thread"></div>
-      <script>
-        (function () {
-          // DON'T EDIT BELOW THIS LINE
-          var d = document,
-            s = d.createElement("script");
-          s.src = "https://jongnesia-com-1.disqus.com/embed.js";
-          s.setAttribute("data-timestamp", +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript
-        >Please enable JavaScript to view the
-        <a href="https://disqus.com/?ref_noscript"
-          >comments powered by Disqus.</a
-        ></noscript
-      >
-    </div>
+      {{ end }}
+
+      <!-- Disqus (lazy loaded) -->
+      <div id="disqus_thread" class="mt-4">
+        <div id="disqus_placeholder" style="padding:20px;text-align:center;font-family:'Courier Prime',monospace;color:#888;border:2px dashed #ddd;border-radius:8px;">Memuat komentar...</div>
+      </div>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </aside>
   </div>
+</article>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" role="dialog" aria-label="Preview gambar">
+  <button class="lightbox-close" aria-label="Tutup">&times;</button>
+  <img id="lightbox-img" src="" alt="">
 </div>
+
+<script>
+  (function() {
+    // === Image zoom ===
+    var scrap = document.querySelector('.scrap-artikel');
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    var lightboxClose = document.querySelector('.lightbox-close');
+
+    if (scrap && lightbox) {
+      scrap.addEventListener('click', function(e) {
+        var target = e.target.closest('img');
+        if (target && target.closest('.scrap-artikel')) {
+          lightboxImg.src = target.src;
+          lightbox.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightbox) lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox && lightbox.classList.contains('open')) closeLightbox();
+    });
+
+    // === Disqus lazy load ===
+    var disqusEl = document.getElementById('disqus_thread');
+    var disqusPlaceholder = document.getElementById('disqus_placeholder');
+    var disqusLoaded = false;
+
+    function loadDisqus() {
+      if (disqusLoaded) return;
+      disqusLoaded = true;
+      if (disqusPlaceholder) disqusPlaceholder.style.display = 'none';
+      window.disqus_config = function () {
+        this.page.url = '{{ .Permalink }}';
+        this.page.identifier = '{{ .RelPermalink }}';
+      };
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jongnesia-com-1.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+
+    if (disqusEl && 'IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            loadDisqus();
+            obs.disconnect();
+          }
+        });
+      }, { rootMargin: '300px' });
+      obs.observe(disqusEl);
+    } else if (disqusEl) {
+      loadDisqus();
+    }
+
+    // === Syntax highlighting + Copy button ===
+    (function() {
+      var pres = document.querySelectorAll('.scrap-artikel pre');
+      pres.forEach(function(pre) {
+        var code = pre.querySelector('code');
+        if (!code) return;
+
+        // Create copy button
+        var btn = document.createElement('button');
+        btn.className = 'copy-btn';
+        btn.textContent = 'Salin';
+        btn.setAttribute('aria-label', 'Salin kode');
+        pre.style.position = 'relative';
+        pre.appendChild(btn);
+
+        btn.addEventListener('click', function() {
+          var text = code.textContent || code.innerText;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function() {
+              btn.textContent = 'Tersalin!';
+              btn.classList.add('copied');
+              setTimeout(function() {
+                btn.textContent = 'Salin';
+                btn.classList.remove('copied');
+              }, 2000);
+            });
+          } else {
+            // Fallback
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            btn.textContent = 'Tersalin!';
+            btn.classList.add('copied');
+            setTimeout(function() {
+              btn.textContent = 'Salin';
+              btn.classList.remove('copied');
+            }, 2000);
+          }
+        });
+      });
+
+    })();
+
+    // Highlight.js - load and apply
+    var hlScript = document.createElement('script');
+    hlScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js';
+    hlScript.onload = function() {
+      document.querySelectorAll('.scrap-artikel pre code').forEach(function(el) {
+        hljs.highlightElement(el);
+      });
+    };
+    document.body.appendChild(hlScript);
+  })();
+</script>
 {{end}}

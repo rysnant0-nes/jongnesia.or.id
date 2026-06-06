@@ -2,13 +2,15 @@ baseURL = "https://jongnesia.or.id/"
 title = "Jongnesia"
 theme = "jongtheme"
 paginate = 6
+languageCode = "id"
+defaultContentLanguage = "id"
 
 [params]
 quote = "KAMI BANGGA MENJADI WARGA NEGARA REPUBLIK INDONESIA"
 about = "Jongnesia merupakan organisasi yang ada di internet sebagai forum diskusi penggiat teknologi, di mana Anda dapat berdiskusi dan berbagi pengalaman, Namun bukan hanya diskusi terkait teknologi akan tetapi diskusi berbagai hal yang menjadi isu. Filosofi Jongnesia didasarkan pada makna kata JONG; yang berasal dari Bahasa Belanda, yang berarti pemuda, sementara NESIA; merujuk kepada Indonesia. Dengan demikian, Jongnesia dapat diartikan sebagai pemuda Indonesia."
 footer = "Develop By JongNesia ♥"
-description = "Pemuda Indonesia Berkarya , tempat sharing mengenai koding"
-favicon= "static/favicon.png"
+description = "Pemuda Indonesia Berkarya, tempat sharing mengenai koding"
+favicon = "/favicon.png"
 
 [[params.link]]
 name = "Whatsapp"
@@ -20,15 +22,13 @@ url = "https://t.me/@jongnesia"
 name = "Github"
 url = "https://github.com/rysnant0-nes"
 
-
-
 [[menus.main]]
 name = "Home"
 url = "/"
 weight = 1
 
 [[menus.main]]
-name = "post"
+name = "Post"
 url = "/post"
 weight = 2
 
@@ -40,14 +40,18 @@ weight = 3
 [[menus.main]]
 name = "Login"
 url = "/admin"
-weight = 3
-
-
+weight = 4
 
 [taxonomies]
   html = "html"
   css = "css"
   js = "js"
 
+[mediaTypes]
+  [mediaTypes."application/atom+xml"]
+    suffixes = ["xml"]
 
-
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = "application/rss+xml"
+    baseName = "index"

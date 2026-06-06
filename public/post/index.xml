@@ -5,15 +5,15 @@
     <link>http://localhost:1313/post/</link>
     <description>Recent content in Coretan Tangan on Jongnesia</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>id</language>
     <lastBuildDate>Fri, 18 Jul 2025 17:27:03 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Script Bucin HTML JS: Ekspresikan Rasa Sayang Lewat Kode Web</title>
-      <link>http://localhost:1313/post/script-bucin-html-js/</link>
+      <title>Script Bucin HTML CSS: Ekspresikan Rasa Sayang Lewat Kode Web</title>
+      <link>http://localhost:1313/post/script-bucin-html-css/</link>
       <pubDate>Fri, 18 Jul 2025 17:27:03 +0700</pubDate>
-      <guid>http://localhost:1313/post/script-bucin-html-js/</guid>
-      <description>&lt;h2 id=&#34;kenapa-harus-ngoding-bucin&#34;&gt;Kenapa Harus Ngoding Bucin&lt;/h2&gt;&#xA;&lt;p&gt;Karena cinta dan kode itu bisa saling melengkapi. Programmer seperti kita sering mengekspresikan perasaannya lewat baris kode, kita atau hanya saya ya? haha. Dengan script bucin HTML + JS, kamu bisa menunjukkan sisi romantis kamu — bukan cuma lewat kata, tapi lewat logika dan kreativitas!, Kalau saya sering sekali membawa nama pasangan kedalam project saya sebagai contoh ketika membuat WhatsaapBot nama dari project tersebut adalah NesBot (Nesa Bot).&lt;/p&gt;</description>
+      <guid>http://localhost:1313/post/script-bucin-html-css/</guid>
+      <description>&lt;h2 id=&#34;kenapa-harus-ngoding-bucin&#34;&gt;Kenapa Harus Ngoding Bucin&lt;/h2&gt;&#xA;&lt;p&gt;Karena cinta dan kode itu bisa saling melengkapi. Programmer seperti kita sering mengekspresikan perasaannya lewat baris kode, kita atau hanya saya ya? haha. Dengan script bucin HTML + CSS, kamu bisa menunjukkan sisi romantis kamu — bukan cuma lewat kata, tapi lewat logika dan kreativitas!, Kalau saya sering sekali membawa nama pasangan kedalam project saya sebagai contoh ketika membuat WhatsaapBot nama dari project tersebut adalah NesBot (Nesa Bot).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cara Membuat HP Android Menjadi Web Server Online dengan Termux, Nginx, dan Custom Domain Cloudflare Tunnel</title>
