@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+{{ `<?xml version="1.0" encoding="utf-8" standalone="yes"?>` | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {{- range .Data.Pages }}
   {{- $exclude := false }}
   {{- if in .Path "intanonline" }}{{ $exclude = true }}{{ end }}
+  {{- if or (eq .Kind "taxonomy") (eq .Kind "term") }}{{ $exclude = true }}{{ end }}
   {{- if eq .Kind "section" }}
     {{- if or (eq .Section "css") (eq .Section "html") (eq .Section "js") (eq .Section "tags") (eq .Section "categories") }}
       {{- $exclude = true }}
