@@ -483,14 +483,6 @@ div.pagi {
   position: relative;
 }
 
-button.bottom-nav-item {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: inherit;
-}
-
 .bottom-nav-item.active {
   color: var(--primary);
 }
