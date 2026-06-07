@@ -1066,3 +1066,112 @@ html.a11y-dark .a11y-toggle.on .a11y-toggle-indicator {
     border-width: 3px;
   }
 }
+
+/* ===== SEARCH OVERLAY ===== */
+
+.search-overlay {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(4px);
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.search-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+}
+
+.search-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  z-index: 10;
+}
+
+.search-close:hover {
+  opacity: 0.7;
+}
+
+.search-container .pagefind-ui {
+  --pagefind-ui-scale: 1.05;
+  --pagefind-ui-primary: #009f8f;
+  --pagefind-ui-text: #fff;
+  --pagefind-ui-background: #1a1a2e;
+  --pagefind-ui-border: #333;
+  --pagefind-ui-tag: #009f8f;
+  --pagefind-ui-border-width: 2px;
+  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-image-border-radius: 8px;
+  --pagefind-ui-font: "Courier Prime", monospace;
+}
+
+.search-container .pagefind-ui__search-input {
+  background: #16213e !important;
+  color: #fff !important;
+  border-color: #009f8f !important;
+  font-size: 1.1rem !important;
+  padding: 16px !important;
+}
+
+.search-container .pagefind-ui__search-input::placeholder {
+  color: #888 !important;
+}
+
+.search-container .pagefind-ui__result-title {
+  color: #00d4bd !important;
+}
+
+.search-container .pagefind-ui__result-excerpt {
+  color: #ccc !important;
+}
+
+.search-container .pagefind-ui__result {
+  border-color: #333 !important;
+}
+
+html.a11y-dark .search-overlay {
+  background: rgba(0,0,0,0.92);
+}
+
+html.a11y-dark .search-container .pagefind-ui__search-input {
+  background: #0d1b2a !important;
+  border-color: var(--primary) !important;
+}
+
+html.a11y-high-contrast .search-overlay {
+  background: rgba(0,0,0,0.95);
+}
+
+html.a11y-high-contrast .search-container .pagefind-ui__search-input {
+  border-width: 3px !important;
+}
+
+@media (max-width: 576px) {
+  .search-overlay {
+    padding: 60px 12px;
+  }
+  .search-container {
+    max-width: 100%;
+  }
+}

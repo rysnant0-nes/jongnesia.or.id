@@ -7,10 +7,11 @@
   },
   "scripts": {
     "dev": "tinacms dev -c \"hugo server -D\"",
-    "build": "tinacms build && hugo"
+    "build": "tinacms build && hugo && npx pagefind --site public"
   },
   "devDependencies": {
     "@tinacms/cli": "^1.5.16",
-    "@types/node": "^22.10.1"
+    "@types/node": "^22.10.1",
+    "pagefind": "^1.5.2"
   }
 }
