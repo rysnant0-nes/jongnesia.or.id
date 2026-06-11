@@ -3,6 +3,8 @@ backend:
   branch: main
   squash_merges: true
 
+logo_url: /favicon.png
+
 media_folder: "static/ilustration"
 public_folder: "/ilustration"
 

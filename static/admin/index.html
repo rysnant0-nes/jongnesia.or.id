@@ -8,6 +8,24 @@
 <body>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
+  <style>
+    .login-logo-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .login-logo-wrapper img {
+      width: 48px;
+      height: 48px;
+    }
+    .login-logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1a2e;
+      letter-spacing: 2px;
+    }
+  </style>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", function(user) {
@@ -18,6 +36,23 @@
         }
       });
     }
+    document.addEventListener("DOMContentLoaded", function() {
+      var observer = new MutationObserver(function() {
+        var logo = document.querySelector('[class*="logo"] img, [class*="Logo"] img');
+        if (logo && !logo.parentElement.querySelector(".login-logo-text")) {
+          var wrapper = document.createElement("div");
+          wrapper.className = "login-logo-wrapper";
+          logo.parentNode.insertBefore(wrapper, logo);
+          wrapper.appendChild(logo);
+          var text = document.createElement("span");
+          text.className = "login-logo-text";
+          text.textContent = "JONGNESIA";
+          wrapper.appendChild(text);
+          observer.disconnect();
+        }
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
   </script>
 </body>
 </html>
