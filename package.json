@@ -1,17 +1,12 @@
 {
-  "dependencies": {
-    "axios": "^1.7.8",
-    "glob": "^10.2.2",
-    "glob-parent": "^6.0.2",
-    "tinacms": "^1.5.3"
-  },
   "scripts": {
-    "dev": "tinacms dev -c \"hugo server -D\"",
-    "build": "tinacms build && hugo && npx pagefind --site public"
+    "dev": "hugo server -D",
+    "build": "hugo && npx pagefind --site public",
+    "start": "hugo server -D",
+    "cms": "decap-server"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.5.16",
-    "@types/node": "^22.10.1",
+    "decap-server": "^3.9.0",
     "pagefind": "^1.5.2"
   }
 }

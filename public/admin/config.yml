@@ -1,0 +1,60 @@
+backend:
+  name: git-gateway
+  branch: main
+  squash_merges: true
+
+media_folder: "static/ilustration"
+public_folder: "/ilustration"
+
+collections:
+  - name: "post"
+    label: "Post"
+    label_singular: "Post"
+    folder: "content/post"
+    create: true
+    delete: true
+    path: "{{slug}}"
+    extension: "md"
+    format: "toml-frontmatter"
+    preview_path: "post/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Penulis", name: "penulis", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Ilustration", name: "ilustration", widget: "image", required: false }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+      - { label: "Youtube ID", name: "youtube_id", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "koding"
+    label: "Koding"
+    label_singular: "Koding"
+    folder: "content/koding"
+    create: true
+    delete: true
+    path: "{{slug}}"
+    extension: "md"
+    format: "toml-frontmatter"
+    preview_path: "koding/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Penulis", name: "penulis", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Ilustration", name: "ilustration", widget: "image", required: false }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    folder: "content"
+    create: true
+    delete: true
+    path: "{{slug}}"
+    extension: "md"
+    format: "toml-frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

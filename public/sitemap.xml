@@ -2,249 +2,249 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jongnesia.or.id/post/</loc>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2025-07-18T17:27:03&#43;07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-07-18T17:27:03&#43;07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/script-bucin-html-css/</loc>
+    <loc>http://localhost:1313/post/script-bucin-html-css/</loc>
     <lastmod>2025-07-18T17:27:03&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/webserver-android-termux-cloudflared/</loc>
+    <loc>http://localhost:1313/post/webserver-android-termux-cloudflared/</loc>
     <lastmod>2025-06-23T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/fix-directory-listing/</loc>
+    <loc>http://localhost:1313/post/fix-directory-listing/</loc>
     <lastmod>2025-06-11T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/non-fast-forward/</loc>
+    <loc>http://localhost:1313/post/non-fast-forward/</loc>
     <lastmod>2025-02-17T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/google-meet-premium/</loc>
+    <loc>http://localhost:1313/post/google-meet-premium/</loc>
     <lastmod>2024-12-01T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/wordpress-atau-blogspot/</loc>
+    <loc>http://localhost:1313/post/wordpress-atau-blogspot/</loc>
     <lastmod>2023-12-30T12:20:59&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/meta-tag-seo/</loc>
+    <loc>http://localhost:1313/post/meta-tag-seo/</loc>
     <lastmod>2023-08-30T11:37:35&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/bot-whatsapp-sticker/</loc>
+    <loc>http://localhost:1313/post/bot-whatsapp-sticker/</loc>
     <lastmod>2023-07-12T04:22:48&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/chat-element-matix/</loc>
+    <loc>http://localhost:1313/post/chat-element-matix/</loc>
     <lastmod>2023-06-27T20:53:02&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/deploy-web-github-ke-hosting/</loc>
+    <loc>http://localhost:1313/post/deploy-web-github-ke-hosting/</loc>
     <lastmod>2023-06-22T13:54:11&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/bikin-artikel-lewat-code-editor/</loc>
+    <loc>http://localhost:1313/post/bikin-artikel-lewat-code-editor/</loc>
     <lastmod>2023-06-10T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/memulihkan-kontak-terhapus/</loc>
+    <loc>http://localhost:1313/post/memulihkan-kontak-terhapus/</loc>
     <lastmod>2023-06-06T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/install-github-cli-termux/</loc>
+    <loc>http://localhost:1313/post/install-github-cli-termux/</loc>
     <lastmod>2023-06-06T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/koding/</loc>
+    <loc>http://localhost:1313/koding/</loc>
     <lastmod>2023-05-31T07:28:28&#43;07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/koding/membuat-tema-hugo-sesi1/</loc>
+    <loc>http://localhost:1313/koding/membuat-tema-hugo-sesi1/</loc>
     <lastmod>2023-05-31T07:28:28&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/koding/front-mater-hugo/</loc>
+    <loc>http://localhost:1313/koding/front-mater-hugo/</loc>
     <lastmod>2023-05-28T01:53:57&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/koding/pengenalan-hugo-2/</loc>
+    <loc>http://localhost:1313/koding/pengenalan-hugo-2/</loc>
     <lastmod>2023-05-26T18:29:17&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/koding/pengenalan-hugo/</loc>
+    <loc>http://localhost:1313/koding/pengenalan-hugo/</loc>
     <lastmod>2023-05-26T18:29:16&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/vps-dan-hosting-gratis/</loc>
+    <loc>http://localhost:1313/post/vps-dan-hosting-gratis/</loc>
     <lastmod>2023-05-21T11:37:35&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/dump-bimble-uhuy/</loc>
+    <loc>http://localhost:1313/dump-bimble-uhuy/</loc>
     <lastmod>2023-05-17T21:10:07&#43;07:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/jailbreak-chatgpt/</loc>
+    <loc>http://localhost:1313/jailbreak-chatgpt/</loc>
     <lastmod>2023-05-17T21:10:07&#43;07:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/jasa/</loc>
+    <loc>http://localhost:1313/jasa/</loc>
     <lastmod>2023-05-17T21:10:07&#43;07:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/fake-restapi/</loc>
+    <loc>http://localhost:1313/post/fake-restapi/</loc>
     <lastmod>2023-05-17T21:10:07&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/koding/form-login-php-mysql-simple/</loc>
+    <loc>http://localhost:1313/koding/form-login-php-mysql-simple/</loc>
     <lastmod>2023-05-13T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/theme-bacotan-people-hugo/</loc>
+    <loc>http://localhost:1313/post/theme-bacotan-people-hugo/</loc>
     <lastmod>2023-05-11T21:55:51&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/hide-profile-getcontact/</loc>
+    <loc>http://localhost:1313/post/hide-profile-getcontact/</loc>
     <lastmod>2023-05-09T20:26:11&#43;07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/implementasi-cache-browser/</loc>
+    <loc>http://localhost:1313/post/implementasi-cache-browser/</loc>
     <lastmod>2023-05-03T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/cara-install-winfetch-windows/</loc>
+    <loc>http://localhost:1313/post/cara-install-winfetch-windows/</loc>
     <lastmod>2023-04-30T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/custome-erorr-page-404/</loc>
+    <loc>http://localhost:1313/post/custome-erorr-page-404/</loc>
     <lastmod>2023-04-29T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/cara-membuat-website-responsif-media-queries-meta-viewport/</loc>
+    <loc>http://localhost:1313/post/cara-membuat-website-responsif-media-queries-meta-viewport/</loc>
     <lastmod>2023-04-27T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/steganografi-sederhana-sembunyikan-pesan-dalam-file/</loc>
+    <loc>http://localhost:1313/post/steganografi-sederhana-sembunyikan-pesan-dalam-file/</loc>
     <lastmod>2023-04-27T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/git-cheatsheet/</loc>
+    <loc>http://localhost:1313/post/git-cheatsheet/</loc>
     <lastmod>2023-04-27T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/menampilkan-jumlah-like-realtime/</loc>
+    <loc>http://localhost:1313/post/menampilkan-jumlah-like-realtime/</loc>
     <lastmod>2023-04-19T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/750-games-java-mediafire/</loc>
+    <loc>http://localhost:1313/post/750-games-java-mediafire/</loc>
     <lastmod>2023-04-18T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/post/scan-malware-di-os-windows-dan-beserta-pencegahan/</loc>
+    <loc>http://localhost:1313/post/scan-malware-di-os-windows-dan-beserta-pencegahan/</loc>
     <lastmod>2023-04-18T17:00:00&#43;00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/bug-smp1kragan/</loc>
+    <loc>http://localhost:1313/bug-smp1kragan/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/disclaimer/</loc>
+    <loc>http://localhost:1313/disclaimer/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/kontak/</loc>
+    <loc>http://localhost:1313/kontak/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/privacy/</loc>
+    <loc>http://localhost:1313/privacy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jongnesia.or.id/tech/</loc>
+    <loc>http://localhost:1313/tech/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
