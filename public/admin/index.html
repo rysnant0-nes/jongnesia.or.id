@@ -8,22 +8,68 @@
 <body>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    body { background: #f9f9f9 !important; }
+    [class*="login"] [class*="card"] {
+      background: #f4d9ae !important;
+      border: 5px dashed #000 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      padding: 2rem !important;
+    }
+    [class*="login"] [class*="logo"] {
+      margin-bottom: 0.5rem !important;
+    }
     .login-logo-wrapper {
-      display: flex;
+      display: flex !important;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 8px;
     }
     .login-logo-wrapper img {
-      width: 48px;
-      height: 48px;
+      width: 28px !important;
+      height: 28px !important;
     }
     .login-logo-text {
-      font-size: 24px;
-      font-weight: 700;
-      color: #1a1a2e;
-      letter-spacing: 2px;
+      font-family: 'Bowlby One', cursive;
+      font-size: 18px;
+      color: #000;
+      letter-spacing: 1px;
+    }
+    [class*="login"] input {
+      border: 3px solid #000 !important;
+      border-radius: 0 !important;
+      font-family: Poppins, sans-serif;
+      background: #fff !important;
+    }
+    [class*="login"] input:focus {
+      border-color: #009f8f !important;
+      box-shadow: none !important;
+    }
+    [class*="login"] button[type="submit"] {
+      background: #009f8f !important;
+      border: 3px solid #000 !important;
+      border-radius: 0 !important;
+      font-family: 'Bowlby One', cursive !important;
+      font-size: 14px !important;
+      color: #fff !important;
+      text-transform: uppercase;
+      padding: 10px 20px !important;
+      transform: rotate(-1deg);
+      transition: 0.3s;
+    }
+    [class*="login"] button[type="submit"]:hover {
+      background: #007a6e !important;
+      transform: rotate(-1deg) scale(1.02);
+    }
+    [class*="login"] a {
+      color: #009f8f !important;
+      font-family: Poppins, sans-serif;
+    }
+    [class*="login"] a:hover {
+      color: #007a6e !important;
     }
   </style>
   <script>
