@@ -2,6 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="theme-color" content="#009f8f" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
 <!-- Preconnect -->
@@ -25,6 +26,7 @@
 <link rel="preload" as="image" href="/static/kon.webp" fetchpriority="high" />
 <link rel="shortcut icon" href="{{ .Site.Params.favicon | absURL }}" type="image/x-icon" />
 <link rel="apple-touch-icon" href="{{ .Site.Params.favicon | absURL }}" />
+<link rel="manifest" href="{{ "/manifest.json" | absURL }}" />
 
 {{- $title := .Title }}
 {{- $siteTitle := .Site.Title }}
