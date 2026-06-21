@@ -1,5 +1,5 @@
 ---
-ilustration: "/ilustration/lv_0_20260621174936.gif
+ilustration: "/ilustration/lv_0_20260621174936.gif"
 title: "Website Nonton Film dan TV Series Gratis Terbaik Tanpa Iklan 2026, FaraFlix Layak Dicoba?"
 date: "2026-06-21T17:57:00.000+07:00"
 penulis: "Rysnanto"
