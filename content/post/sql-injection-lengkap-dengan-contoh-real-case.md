@@ -1,7 +1,7 @@
 +++
 title = "Tutorial SQL Injection Lengkap dengan Contoh Real Case"
-penulis = "Admin"
-ilustration = "/ilustration/sqli.png"
+penulis = "Rysnanto"
+ilustration = "/ilustration/sql-i.png"
 date = 2026-06-29T10:00:00+07:00
 description = "Tutorial SQL Injection lengkap dari manual sampai otomatis dengan SQLMap, studi kasus website smp1kragan.sch.id yang berhasil didapatkan data user dan database."
 slug = "tutorial-sql-injection-lengkap-real-case"
