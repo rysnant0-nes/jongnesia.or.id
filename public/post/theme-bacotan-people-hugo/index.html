@@ -4,6 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="theme-color" content="#009f8f" />
 <link rel="canonical" href="http://localhost:1313/post/theme-bacotan-people-hugo/" />
 
 
@@ -27,6 +28,7 @@
 <link rel="preload" as="image" href="/static/kon.webp" fetchpriority="high" />
 <link rel="shortcut icon" href="http://localhost:1313/favicon.png" type="image/x-icon" />
 <link rel="apple-touch-icon" href="http://localhost:1313/favicon.png" />
+<link rel="manifest" href="http://localhost:1313/manifest.json" />
 
 <title>Bacotan People Theme by Jongnesia | Jongnesia</title>
 <meta name="description" content="Tema Bacotan Peopple adalah tema Hugo yang modern dan menarik yang dirancang untuk membangun situs web atau blog. Tema ini dilengkapi dengan fitur-fitur seperti pagination, sidebar, dan tata letak yang responsif" />
@@ -571,6 +573,8 @@
         <ul>
           
           
+          <li><a href="/post/tutorial-sql-injection-lengkap-real-case/">Tutorial SQL Injection Lengkap dengan Contoh Real Case</a></li>
+          
           <li><a href="/post/script-bucin-html-css/">Script Bucin HTML CSS: Ekspresikan Rasa Sayang Lewat Kode Web</a></li>
           
           <li><a href="/post/webserver-android-termux-cloudflared/">Cara Membuat HP Android Menjadi Web Server Online dengan Termux, Nginx, dan Custom Domain Cloudflare Tunnel</a></li>
@@ -578,8 +582,6 @@
           <li><a href="/post/fix-directory-listing/">🔒Cara Fix Directory Listing Mencegah Kebocoran Data</a></li>
           
           <li><a href="/post/non-fast-forward/">Solusi Ampuh Mengatasi Error Non-Fast-Forward saat Push ke GitHub</a></li>
-          
-          <li><a href="/post/google-meet-premium/">Cara Licik Agar Google Meet Jadi Premium</a></li>
           
         </ul>
       </div>
@@ -984,5 +986,10 @@
     <span class="bottom-nav-label">Login</span>
   </a>
 </nav>
-</body>
+<script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js");
+      }
+    </script>
+  </body>
 </html>

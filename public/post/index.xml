@@ -6,8 +6,15 @@
     <description>Recent content in Coretan Tangan on Jongnesia</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Fri, 18 Jul 2025 17:27:03 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 10:00:00 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial SQL Injection Lengkap dengan Contoh Real Case</title>
+      <link>http://localhost:1313/post/tutorial-sql-injection-lengkap-real-case/</link>
+      <pubDate>Mon, 29 Jun 2026 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/post/tutorial-sql-injection-lengkap-real-case/</guid>
+      <description>&lt;p&gt;SQL Injection (SQLi) masih menjadi salah satu kerentanan paling berbahaya di aplikasi web. Meskipun sudah dikenal puluhan tahun, masih banyak website di Indonesia yang memiliki celah ini. Di artikel ini, kita akan bahas tuntas bagaimana cara menemukan dan mengeksploitasi SQL Injection, lengkap dengan studi kasus &lt;strong&gt;website smp1kragan.sch.id&lt;/strong&gt; yang berhasil kita temukan celahnya.&lt;/p&gt;&#xA;&lt;h2 id=&#34;apa-itu-sql-injection&#34;&gt;Apa Itu SQL Injection?&lt;/h2&gt;&#xA;&lt;p&gt;SQL Injection adalah teknik injeksi kode di mana attacker menyisipkan query SQL berbahaya ke dalam parameter input aplikasi web. Jika aplikasi tidak memfilter input dengan baik, query SQL yang dimodifikasi akan dieksekusi oleh database server.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Script Bucin HTML CSS: Ekspresikan Rasa Sayang Lewat Kode Web</title>
       <link>http://localhost:1313/post/script-bucin-html-css/</link>

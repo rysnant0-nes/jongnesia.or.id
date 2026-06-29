@@ -4,6 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="theme-color" content="#009f8f" />
 <link rel="canonical" href="http://localhost:1313/disclaimer/" />
 
 
@@ -27,6 +28,7 @@
 <link rel="preload" as="image" href="/static/kon.webp" fetchpriority="high" />
 <link rel="shortcut icon" href="http://localhost:1313/favicon.png" type="image/x-icon" />
 <link rel="apple-touch-icon" href="http://localhost:1313/favicon.png" />
+<link rel="manifest" href="http://localhost:1313/manifest.json" />
 
 <title>Disclaimer | Jongnesia</title>
 <meta name="description" content="Pemuda Indonesia Berkarya, tempat sharing mengenai koding" />
@@ -900,5 +902,10 @@
     <span class="bottom-nav-label">Login</span>
   </a>
 </nav>
-</body>
+<script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js");
+      }
+    </script>
+  </body>
 </html>
