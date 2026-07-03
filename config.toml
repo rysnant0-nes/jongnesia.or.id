@@ -39,7 +39,7 @@ weight = 3
 
 [[menus.main]]
 name = "Login"
-url = "/admin"
+url = "/penulis"
 weight = 4
 
 [taxonomies]
