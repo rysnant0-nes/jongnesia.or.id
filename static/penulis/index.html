@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'unsafe-inline' 'self'; script-src 'unsafe-inline' 'self'; frame-src 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'unsafe-inline' 'self'; script-src 'unsafe-inline' 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; base-uri 'none'">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <title>JCMS — Jongnesia CMS</title>
 <style>
 :root {
@@ -225,7 +226,8 @@ label { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: 
             <h2>GitHub Token</h2>
             <p>Token GitHub biar bisa commit</p>
             <input type="password" id="tokenInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off" style="margin-bottom:16px">
-            <button class="btn-primary" onclick="login()" style="margin-bottom:8px">Hubungkan</button>
+            <div id="turnstileWidget" style="margin-bottom:12px;display:flex;justify-content:center"></div>
+            <button class="btn-primary" onclick="login()" style="margin-bottom:8px" id="loginBtn">Hubungkan</button>
             <div><span class="back-link" onclick="showPin()">← Kembali</span></div>
             <p style="font-size:12px;color:var(--text2);margin-top:16px">Belum punya token? <a href="https://github.com/settings/tokens/new?scopes=repo&description=JCMS" target="_blank">Buat dulu</a></p>
           </div>
@@ -430,10 +432,33 @@ function switchTab(tab) {
     else if (tab === 'account') { if (confirm('Logout?')) logout(); }
 }
 
+let turnstilePass = false;
+function onTurnstile() { turnstilePass = true; }
+async function verifyTurnstile() {
+  if (typeof turnstile === 'undefined') return true;
+  const resp = turnstile.getResponse();
+  if (!resp) return false;
+  try {
+    const r = await fetch('/.netlify/functions/verify-turnstile', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token: resp })
+    });
+    const d = await r.json();
+    return d.success;
+  } catch { return false; }
+}
+
 async function login() {
   const t = document.getElementById('tokenInput').value.trim();
   if (!t) return toast('Masukkan token', true);
+  try {
+    if (typeof turnstile !== 'undefined' && !await verifyTurnstile())
+      return toast('Verifikasi Cloudflare gagal, refresh halaman', true);
+  } catch(e) { /* skip verifikasi kalo error */ }
+
   token = t;
+  turnstilePass = false;
   try {
     const user = await api('/user');
     showPage('pageDashboard');
@@ -454,7 +479,7 @@ function logout() {
 }
 
 function showSetPin() { document.getElementById('setPinScreen').classList.remove('hidden'); document.getElementById('pinScreen').classList.add('hidden'); document.getElementById('tokenScreen').classList.add('hidden'); }
-function showPin() { document.getElementById('pinScreen').classList.remove('hidden'); document.getElementById('setPinScreen').classList.add('hidden'); document.getElementById('tokenScreen').classList.add('hidden'); }
+function showPin() { document.getElementById('pinScreen').classList.remove('hidden'); document.getElementById('setPinScreen').classList.add('hidden'); document.getElementById('tokenScreen').classList.add('hidden'); if (typeof turnstile !== 'undefined') turnstile.reset(); }
 function setPin() {
   const pin = document.getElementById('setPinInput').value.trim();
   if (!pin || pin.length < 4) return toast('PIN minimal 4 digit', true);
@@ -463,6 +488,7 @@ function setPin() {
   toast('PIN tersimpan!');
   document.getElementById('setPinScreen').classList.add('hidden');
   document.getElementById('tokenScreen').classList.remove('hidden');
+  if (typeof turnstile !== 'undefined') turnstile.render('#turnstileWidget', { sitekey: '0x4AAAAAADvPSBjZqKPNWg0A', callback: onTurnstile });
 }
 function checkPin() {
   const pin = document.getElementById('pinInput').value.trim();
@@ -470,6 +496,7 @@ function checkPin() {
   pinVerified = true;
   document.getElementById('pinScreen').classList.add('hidden');
   document.getElementById('tokenScreen').classList.remove('hidden');
+  if (typeof turnstile !== 'undefined') turnstile.render('#turnstileWidget', { sitekey: '0x4AAAAAADvPSBjZqKPNWg0A', callback: onTurnstile });
 }
 
 async function init() {
