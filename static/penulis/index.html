@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'unsafe-inline' 'self'; script-src 'unsafe-inline' 'self'; frame-src 'none'; base-uri 'none'">
+<title>JCMS — Jongnesia CMS</title>
+<style>
+:root {
+  --primary: #009f8f;
+  --primary-dark: #007a6e;
+  --primary-light: #009f8f20;
+  --green: #34c759;
+  --orange: #ff9500;
+  --red: #ff3b30;
+  --bg: #f2f2f7;
+  --surface: #ffffff;
+  --text: #1c1c1e;
+  --text2: #6e6e73;
+  --border: #e5e5ea;
+  --radius: 14px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding-bottom: 80px; overflow-x: hidden; }
+.hidden { display: none !important; }
+a { color: var(--primary); text-decoration: none; }
+input, textarea, select { width: 100%; padding: 12px 16px; background: var(--bg); border: 2px solid transparent; border-radius: 12px; color: var(--text); font-size: 15px; font-family: inherit; transition: .2s; outline: none; }
+input:focus, textarea:focus { border-color: var(--primary); background: #fff; }
+textarea { font-family: 'SF Mono', ui-monospace, monospace; min-height: 300px; resize: vertical; line-height: 1.7; font-size: 14px; }
+label { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: uppercase; letter-spacing: 0.8px; display: block; margin-bottom: 4px; }
+::placeholder { color: #aeaeb2; }
+
+/* Bottom Tab Bar */
+.tabbar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: center; gap: 0; padding: 5px 0; padding-bottom: max(5px, env(safe-area-inset-bottom)); }
+.tab-item { display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 10px; cursor: pointer; transition: .2s; -webkit-user-select: none; user-select: none; flex: 1; max-width: 72px; }
+.tab-item .tab-icon { font-size: 18px; line-height: 1; color: var(--text2); }
+.tab-item .tab-icon svg { display: block; }
+.tab-item .tab-label { font-size: 9px; font-weight: 600; color: var(--text2); letter-spacing: 0.1px; }
+.tab-item.active .tab-icon { color: var(--primary); }
+.tab-item.active .tab-label { color: var(--primary); }
+.tab-center { position: relative; top: -8px; }
+.tab-center .tab-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; box-shadow: 0 3px 12px rgba(0,159,143,0.35); transition: .2s; }
+.tab-center .tab-icon.plus svg { stroke: #fff; width: 22px; height: 22px; }
+.tab-item.tab-center.active .tab-icon { color: #fff; }
+.tab-center .tab-icon:active { transform: scale(0.92); }
+
+/* Container */
+.container { max-width: 640px; margin: 0 auto; padding: 16px; }
+
+/* Cards */
+.card { background: var(--surface); border-radius: var(--radius); margin-bottom: 12px; box-shadow: var(--shadow); overflow: hidden; }
+.card-body { padding: 16px 18px; }
+.card-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+
+/* List header */
+.list-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.list-header h2 { font-size: 22px; font-weight: 800; }
+.list-header .count { font-size: 14px; color: var(--text2); font-weight: 500; background: var(--bg); padding: 2px 10px; border-radius: 20px; }
+
+/* Filter pills */
+.filter-row { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0 12px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.filter-row::-webkit-scrollbar { display: none; }
+.pill { flex-shrink: 0; padding: 8px 20px; border-radius: 24px; font-size: 14px; font-weight: 600; cursor: pointer; transition: .2s; border: none; background: var(--bg); color: var(--text2); }
+.pill:hover { background: #e5e5ea; }
+.pill.active { background: var(--primary); color: #fff; box-shadow: 0 2px 8px rgba(0,159,143,0.3); }
+
+/* Search */
+.search-wrap { position: relative; margin-bottom: 12px; }
+.search-wrap input { padding-left: 40px; font-size: 15px; }
+.search-wrap:before { content: '🔍'; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-size: 15px; z-index: 1; opacity: 0.5; }
+
+/* Post Card */
+.post-card { display: block; background: var(--surface); border-radius: var(--radius); margin-bottom: 12px; box-shadow: var(--shadow); overflow: hidden; transition: .2s; }
+.post-card:active { transform: scale(0.98); }
+.post-card .card-img { width: 100%; height: 160px; object-fit: cover; background: linear-gradient(135deg, #e8e8ed, #d2d2d7); display: block; }
+.post-card .card-img-placeholder { width: 100%; height: 120px; background: linear-gradient(135deg, #e8e8ed, #d2d2d7); display: flex; align-items: center; justify-content: center; font-size: 32px; }
+.post-card .card-content { padding: 14px 16px; }
+.post-card .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.post-card .badge { font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+.post-card .badge-post { background: #009f8f15; color: var(--primary); }
+.post-card .badge-koding { background: #34c75915; color: var(--green); }
+.post-card .badge-pages { background: #ff950015; color: var(--orange); }
+.post-card .date { font-size: 12px; color: var(--text2); }
+.post-card .title { font-size: 17px; font-weight: 700; line-height: 1.35; margin-bottom: 4px; color: var(--text); }
+.post-card .desc { font-size: 13px; color: var(--text2); line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.post-card .card-actions { display: flex; gap: 4px; padding: 8px 16px 12px; }
+.post-card .card-actions button { flex: 1; }
+
+/* Login */
+.login-page { display: flex; min-height: 100vh; width: 100vw; margin: -24px calc(-50vw + 50%); overflow: hidden; }
+.login-left { flex: 1.2; background: linear-gradient(135deg, #002b26 0%, #005248 40%, #009f8f 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 40px; position: relative; overflow: hidden; text-align: center; }
+.login-left:before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.login-left .logo-big { font-size: 96px; margin-bottom: 12px; position: relative; filter: drop-shadow(0 8px 32px rgba(0,159,143,0.3)); }
+.login-left h1 { font-size: 42px; font-weight: 800; color: #fff; margin-bottom: 10px; position: relative; letter-spacing: 2px; }
+.login-left .tagline { color: rgba(255,255,255,0.55); font-size: 15px; text-align: center; max-width: 320px; line-height: 1.7; position: relative; }
+.login-left .feature-list { position: relative; margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
+.login-left .feature-item { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.7); font-size: 13px; }
+.login-left .feature-item .fi { width: 28px; height: 28px; border-radius: 8px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+.login-right { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; background: #fff; }
+.login-right-inner { width: 100%; max-width: 380px; }
+.login-right-inner .head-icon { font-size: 40px; margin-bottom: 8px; }
+.login-right-inner h2 { font-size: 24px; font-weight: 800; margin-bottom: 4px; color: var(--text); }
+.login-right-inner p { color: var(--text2); font-size: 14px; margin-bottom: 24px; }
+.login-right-inner input { text-align: center; background: #f5f5f7; }
+.login-right-inner button { width: 100%; padding: 14px; border-radius: 12px; font-size: 16px; font-weight: 700; }
+.login-right-inner .back-link { display: inline-block; margin-top: 12px; font-size: 13px; color: var(--text2); cursor: pointer; }
+.login-right-inner .back-link:hover { color: var(--primary); }
+
+/* Editor */
+.editor-card { padding: 20px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; }
+.form-grid .full { grid-column: 1 / -1; }
+.thumb-row { display: flex; gap: 8px; align-items: center; }
+.thumb-row input { flex: 1; margin: 0; }
+.toolbar { display: flex; gap: 4px; margin-bottom: 10px; flex-wrap: wrap; }
+.toolbar-btn { padding: 6px 14px; background: var(--bg); border: none; border-radius: 10px; color: var(--text); cursor: pointer; font-size: 13px; font-weight: 600; transition: .2s; }
+.toolbar-btn:active { transform: scale(0.95); }
+.img-thumb { max-width: 160px; max-height: 90px; border-radius: 10px; margin-top: 6px; border: 2px solid var(--border); cursor: pointer; transition: .2s; }
+.editor-actions { display: flex; gap: 8px; margin-top: 4px; }
+.editor-actions button { flex: 1; padding: 14px; font-size: 15px; font-weight: 700; border-radius: 12px; }
+
+/* Upload */
+.upload-area { border: 2.5px dashed var(--border); border-radius: 16px; padding: 36px 24px; text-align: center; cursor: pointer; transition: .2s; margin-bottom: 12px; background: var(--bg); }
+.upload-area:active { border-color: var(--primary); background: #009f8f15; }
+.upload-area input { display: none; }
+.upload-area .icon { font-size: 40px; margin-bottom: 8px; }
+.upload-area p { color: var(--text2); font-size: 14px; }
+#uploadPreview img { max-width: 200px; border-radius: 10px; margin: 8px 0; }
+
+/* Buttons */
+.btn-primary { background: var(--primary); color: #fff; border: none; }
+.btn-primary:active { background: var(--primary-dark); }
+.btn-success { background: var(--green); color: #fff; border: none; }
+.btn-success:active { background: #28a745; }
+.btn-danger { background: var(--red); color: #fff; border: none; }
+.btn-danger:active { background: #d63031; }
+.btn-secondary { background: var(--bg); color: var(--text); border: none; }
+.btn-secondary:active { background: #e5e5ea; }
+.btn-sm { padding: 8px 16px; font-size: 13px; font-weight: 600; border-radius: 10px; }
+
+/* Toast */
+.toast { position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); z-index: 999; background: #1c1c1e; color: #fff; padding: 14px 28px; border-radius: 14px; font-weight: 600; font-size: 14px; box-shadow: 0 8px 40px rgba(0,0,0,0.2); animation: popIn .35s cubic-bezier(0.16,1,0.3,1); white-space: nowrap; }
+.toast.error { background: var(--red); }
+@keyframes popIn { from { opacity: 0; transform: translateX(-50%) scale(0.9) translateY(20px); } to { opacity: 1; transform: translateX(-50%) scale(1) translateY(0); } }
+
+/* Lightbox */
+.lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; cursor: pointer; backdrop-filter: blur(8px); }
+.lightbox.active { display: flex; }
+.lightbox img { max-width: 94vw; max-height: 90vh; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); animation: zoomIn .3s; }
+@keyframes zoomIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* Loading */
+.loading { text-align: center; padding: 40px 20px; color: var(--text2); font-size: 14px; }
+.loading .spinner { width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--primary); border-radius: 50%; animation: spin .6s linear infinite; margin: 0 auto 12px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Empty state */
+.empty-state { text-align: center; padding: 48px 24px; color: var(--text2); }
+.empty-state .icon { font-size: 48px; margin-bottom: 12px; }
+.empty-state p { font-size: 14px; }
+
+@media (max-width: 768px) {
+  .login-left { display: none; }
+  .login-page { margin: -24px calc(-50vw + 50%); min-height: 100vh; }
+  .login-right { padding: 40px 24px; }
+}
+@media (min-width: 768px) {
+  body { padding-bottom: 0; }
+  .tabbar { display: none; }
+  .container { max-width: 800px; }
+  .post-card { display: flex; }
+  .post-card .card-img, .post-card .card-img-placeholder { width: 200px; height: auto; min-height: 140px; flex-shrink: 0; }
+  .post-card .card-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .post-card .card-actions { border-top: 1px solid var(--border); }
+}
+
+@media (max-width: 420px) {
+  .post-card .card-img { height: 130px; }
+  .post-card .title { font-size: 15px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .topbar { padding: 10px 14px; }
+  .topbar h1 { font-size: 17px; }
+  .container { padding: 12px; }
+  .editor-card { padding: 14px; }
+}
+</style>
+</head>
+<body>
+
+<div id="app">
+  <!-- Pages -->
+  <div class="container">
+    <!-- LOGIN -->
+    <div id="pageLogin">
+      <div class="login-page">
+        <div class="login-left">
+          <div class="logo-big">📝</div>
+          <h1>JCMS</h1>
+          <p class="tagline">Jongnesia Content Management System — khusus buat ngelola post blog Hugo.</p>
+          <div class="feature-list">
+            <div class="feature-item"><span class="fi">📄</span> Buat & edit post</div>
+            <div class="feature-item"><span class="fi">🖼</span> Upload ilustration</div>
+            <div class="feature-item"><span class="fi">📦</span> Auto push ke GitHub</div>
+            <div class="feature-item"><span class="fi">☁️</span> Hosting via Netlify</div>
+          </div>
+        </div>
+        <div class="login-right">
+          <div class="login-right-inner" id="setPinScreen">
+            <div class="head-icon">🔐</div>
+            <h2>Buat PIN</h2>
+            <p>PIN 4 digit biar aman</p>
+            <input type="password" id="setPinInput" placeholder="● ● ● ●" maxlength="4" inputmode="numeric" style="max-width:160px;font-size:24px;letter-spacing:8px;text-align:center;margin:0 auto 16px">
+            <button class="btn-primary" onclick="setPin()">Simpan PIN</button>
+          </div>
+          <div class="login-right-inner hidden" id="pinScreen">
+            <div class="head-icon">🔐</div>
+            <h2>Masuk</h2>
+            <p>Masukkan PIN akses CMS</p>
+            <input type="password" id="pinInput" placeholder="● ● ● ●" maxlength="4" inputmode="numeric" style="max-width:160px;font-size:24px;letter-spacing:8px;text-align:center;margin:0 auto 16px">
+            <button class="btn-primary" onclick="checkPin()">Masuk</button>
+          </div>
+          <div class="login-right-inner hidden" id="tokenScreen">
+            <div class="head-icon">🔑</div>
+            <h2>GitHub Token</h2>
+            <p>Token GitHub biar bisa commit</p>
+            <input type="password" id="tokenInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off" style="margin-bottom:16px">
+            <button class="btn-primary" onclick="login()" style="margin-bottom:8px">Hubungkan</button>
+            <div><span class="back-link" onclick="showPin()">← Kembali</span></div>
+            <p style="font-size:12px;color:var(--text2);margin-top:16px">Belum punya token? <a href="https://github.com/settings/tokens/new?scopes=repo&description=JCMS" target="_blank">Buat dulu</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="pageDashboard" class="hidden">
+      <div class="list-header" style="justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:12px">
+          <h2>Post</h2>
+          <span class="count" id="postCount">0</span>
+        </div>
+        <span id="userStatus" style="font-size:13px;color:var(--text2);font-weight:500"></span>
+      </div>
+
+      <div class="card" style="padding:12px 16px;margin-bottom:16px;display:flex;align-items:center;gap:12px">
+        <button id="radioBtn" style="width:36px;height:36px;border-radius:50%;border:none;background:var(--primary);color:#fff;font-size:16px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center" onclick="toggleRadio()">▶</button>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:13px;font-weight:600">Denger.in Radio</div>
+          <div style="font-size:11px;color:var(--text2)">Streaming musik santai</div>
+        </div>
+        <div id="radioEqualizer" style="display:none;gap:2px;align-items:end;height:20px;flex-shrink:0">
+          <span class="eq-bar" style="width:3px;background:var(--primary);border-radius:2px;height:8px"></span>
+          <span class="eq-bar" style="width:3px;background:var(--primary);border-radius:2px;height:14px"></span>
+          <span class="eq-bar" style="width:3px;background:var(--primary);border-radius:2px;height:10px"></span>
+          <span class="eq-bar" style="width:3px;background:var(--primary);border-radius:2px;height:18px"></span>
+          <span class="eq-bar" style="width:3px;background:var(--primary);border-radius:2px;height:12px"></span>
+        </div>
+        <audio id="radioPlayer" loop playsinline><source src="https://stream.denger.in" type="audio/mpeg"></audio>
+      </div>
+
+      <div class="filter-row">
+        <button class="pill active" onclick="setFilter('all')">Semua</button>
+        <button class="pill" onclick="setFilter('post')">Post</button>
+        <button class="pill" onclick="setFilter('koding')">Koding</button>
+        <button class="pill" onclick="setFilter('pages')">Pages</button>
+      </div>
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="Cari judul..." oninput="renderPosts()">
+      </div>
+      <div id="postList" style="margin-top:4px"></div>
+    </div>
+
+    <!-- EDITOR -->
+    <div id="pageEditor" class="hidden">
+      <div class="card editor-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+          <h3 id="editorTitle" style="margin-bottom:0;font-size:20px">Buat Post Baru</h3>
+          <button class="btn-sm btn-secondary" onclick="cancelEdit()">Batal</button>
+        </div>
+        <input type="hidden" id="editPath">
+        <input type="hidden" id="editSha">
+        <div class="form-grid">
+          <div class="full">
+            <label>Judul</label>
+            <input type="text" id="fieldTitle" placeholder="Judul artikel">
+          </div>
+          <div>
+            <label>Penulis</label>
+            <input type="text" id="fieldPenulis" placeholder="Nama penulis">
+          </div>
+          <div>
+            <label>Kategori</label>
+            <select id="fieldCategory" style="appearance:none;background:var(--bg) url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236e6e73' stroke-width='2' fill='none'/%3E%3C/svg%3E\") no-repeat right 14px center;padding-right:36px">
+              <option value="post">Post</option>
+              <option value="koding">Koding</option>
+            </select>
+          </div>
+          <div>
+            <label>Slug</label>
+            <input type="text" id="fieldSlug" placeholder="Auto dari judul">
+          </div>
+          <div>
+            <label>Youtube ID</label>
+            <input type="text" id="fieldYoutube" placeholder="YouTube video ID">
+          </div>
+          <div class="full">
+            <label>Deskripsi</label>
+            <textarea id="fieldDescription" rows="2" placeholder="Deskripsi singkat"></textarea>
+          </div>
+          <div class="full">
+            <label>Thumbnail</label>
+            <div class="thumb-row">
+              <input type="text" id="fieldIlustration" placeholder="https://jongnesia.or.id/ilustration/...">
+              <button class="btn-sm btn-secondary" onclick="uploadImage()">Upload</button>
+            </div>
+            <img id="imgPreview" class="img-thumb hidden" onclick="openLightbox(this.src)">
+          </div>
+          <div class="full">
+            <label>Konten</label>
+            <div class="toolbar">
+              <button class="toolbar-btn" onclick="wrapText('**','**')">B</button>
+              <button class="toolbar-btn" onclick="wrapText('*','*')">I</button>
+              <button class="toolbar-btn" onclick="wrapText('[','](url)')">🔗</button>
+              <button class="toolbar-btn" onclick="wrapText('![](',')')">🖼</button>
+              <button class="toolbar-btn" onclick="wrapText('```\n','\n```')">Code</button>
+              <button class="toolbar-btn" onclick="wrapText('## ','')">H2</button>
+              <button class="toolbar-btn" onclick="wrapText('### ','')">H3</button>
+              <button class="toolbar-btn" onclick="wrapText('- ','')">List</button>
+              <button class="toolbar-btn" onclick="wrapText('> ','')">Quote</button>
+            </div>
+            <textarea id="fieldBody" placeholder="Tulis konten markdown..."></textarea>
+          </div>
+        </div>
+        <div class="editor-actions">
+          <button class="btn-success" onclick="savePost()">Simpan & Commit</button>
+          <button class="btn-secondary" onclick="cancelEdit()">Batal</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPLOAD -->
+    <div id="pageUpload" class="hidden">
+      <div class="card editor-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h3 style="margin-bottom:0;font-size:20px">Upload Gambar</h3>
+          <button class="btn-sm btn-secondary" onclick="cancelUpload()">Batal</button>
+        </div>
+        <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+          <div class="icon">🖼</div>
+          <p>Klik untuk pilih gambar</p>
+          <input type="file" id="fileInput" accept="image/*">
+        </div>
+        <div id="uploadPreview"></div>
+        <button class="btn-success" onclick="uploadFile()" style="width:100%;padding:14px;font-size:15px;font-weight:700;border-radius:12px">Upload & Commit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Tab Bar -->
+  <div class="tabbar hidden" id="tabbar">
+    <div class="tab-item active" data-tab="posts" onclick="switchTab('posts')">
+      <span class="tab-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+      <span class="tab-label">Posts</span>
+    </div>
+    <div class="tab-item tab-center" data-tab="new" onclick="switchTab('new')">
+      <span class="tab-icon plus"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      <span class="tab-label" style="color:var(--primary)">Buat</span>
+    </div>
+    <div class="tab-item" data-tab="upload" onclick="switchTab('upload')">
+      <span class="tab-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span>
+      <span class="tab-label">Upload</span>
+    </div>
+    <div class="tab-item" data-tab="account" onclick="switchTab('account')">
+      <span class="tab-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+      <span class="tab-label">Akun</span>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="hidden"></div>
+<div id="lightbox" class="lightbox" onclick="closeLightbox()"><img id="lightboxImg"></div>
+
+<script>
+const REPO = 'rysnant0-nes/jongnesia.or.id';
+const BRANCH = 'main';
+const GITHUB_API = 'https://api.github.com';
+const SITE_URL = 'https://jongnesia.or.id';
+function getPin() { return localStorage.getItem('cms_pin') || ''; }
+let token = '';
+let currentFilter = 'all';
+let allPosts = [];
+let pinVerified = false;
+
+async function api(path, opts = {}) {
+  opts.headers = opts.headers || {};
+  opts.headers['Authorization'] = `Bearer ${token}`;
+  opts.headers['Accept'] = 'application/vnd.github.v3+json';
+  if (!(opts.raw)) opts.headers['User-Agent'] = 'JongnesiaCMS';
+  const res = await fetch(`${GITHUB_API}${path}`, opts);
+  if (opts.raw) return res;
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `HTTP ${res.status}`);
+  }
+  return res.json();
+}
+
+function toast(msg, err) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'toast' + (err ? ' error' : '');
+  el.classList.remove('hidden');
+  setTimeout(() => el.classList.add('hidden'), 3000);
+}
+
+function showPage(id) {
+  if (id !== 'pageLogin' && !pinVerified && !token) return;
+  ['pageLogin','pageDashboard','pageEditor','pageUpload'].forEach(p => {
+    document.getElementById(p).classList.toggle('hidden', p !== id);
+  });
+  document.getElementById('tabbar').classList.toggle('hidden', id === 'pageLogin');
+}
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-item').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+  if (tab === 'posts') { showPage('pageDashboard'); }
+  else if (tab === 'new') { newPost(); }
+  else if (tab === 'upload') { uploadImage(); }
+    else if (tab === 'account') { if (confirm('Logout?')) logout(); }
+}
+
+async function login() {
+  const t = document.getElementById('tokenInput').value.trim();
+  if (!t) return toast('Masukkan token', true);
+  token = t;
+  try {
+    const user = await api('/user');
+    showPage('pageDashboard');
+    document.querySelectorAll('.tab-item').forEach(el => el.classList.toggle('active', el.dataset.tab === 'posts'));
+    document.getElementById('userStatus').textContent = `@${user.login}`;
+    loadPosts();
+  } catch(e) {
+    token = '';
+    toast('Token tidak valid: ' + e.message, true);
+  }
+}
+
+function logout() {
+  token = '';
+  pinVerified = false;
+  showPage('pageLogin');
+  if (!getPin()) { showSetPin(); } else { showPin(); }
+}
+
+function showSetPin() { document.getElementById('setPinScreen').classList.remove('hidden'); document.getElementById('pinScreen').classList.add('hidden'); document.getElementById('tokenScreen').classList.add('hidden'); }
+function showPin() { document.getElementById('pinScreen').classList.remove('hidden'); document.getElementById('setPinScreen').classList.add('hidden'); document.getElementById('tokenScreen').classList.add('hidden'); }
+function setPin() {
+  const pin = document.getElementById('setPinInput').value.trim();
+  if (!pin || pin.length < 4) return toast('PIN minimal 4 digit', true);
+  localStorage.setItem('cms_pin', pin);
+  pinVerified = true;
+  toast('PIN tersimpan!');
+  document.getElementById('setPinScreen').classList.add('hidden');
+  document.getElementById('tokenScreen').classList.remove('hidden');
+}
+function checkPin() {
+  const pin = document.getElementById('pinInput').value.trim();
+  if (pin !== getPin()) return toast('PIN salah', true);
+  pinVerified = true;
+  document.getElementById('pinScreen').classList.add('hidden');
+  document.getElementById('tokenScreen').classList.remove('hidden');
+}
+
+async function init() {
+  showPage('pageLogin');
+  if (!getPin()) { showSetPin(); } else { showPin(); }
+}
+
+async function loadPosts() {
+  document.getElementById('postList').innerHTML = '<div class="loading"><div class="spinner"></div>Memuat daftar post...</div>';
+  allPosts = [];
+  const folders = ['content/post', 'content/koding', 'content'];
+  for (const folder of folders) {
+    try {
+      const items = await api(`/repos/${REPO}/contents/${folder}?ref=${BRANCH}`);
+      if (Array.isArray(items)) {
+        items.filter(i => i.name.endsWith('.md') && i.name !== '_index.md').forEach(i => {
+          const cat = folder === 'content/post' ? 'post' : folder === 'content/koding' ? 'koding' : 'pages';
+          allPosts.push({ ...i, category: cat, folder });
+        });
+      }
+    } catch(e) { /* folder might not exist */ }
+  }
+  renderPosts();
+}
+
+async function fetchPostContent(folder, name) {
+  try {
+    const data = await api(`/repos/${REPO}/contents/${folder}/${name}?ref=${BRANCH}`);
+    const content = atob(data.content.replace(/\n/g, ''));
+    const parts = content.split('+++');
+    if (parts.length >= 3) {
+      const fm = parts[1].trim().split('\n').reduce((acc, line) => {
+        const idx = line.indexOf('=');
+        if (idx > 0) {
+          const key = line.substring(0, idx).trim();
+          let val = line.substring(idx + 1).trim().replace(/^"|"$/g, '');
+          acc[key] = val;
+        }
+        return acc;
+      }, {});
+      const body = parts.slice(2).join('+++').trim();
+      return { frontmatter: fm, body };
+    }
+    return { frontmatter: {}, body: content };
+  } catch(e) {
+    return { frontmatter: {}, body: '' };
+  }
+}
+
+function esc(v) { return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
+function renderPosts() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  let filtered = allPosts;
+  if (currentFilter !== 'all') filtered = filtered.filter(p => p.category === currentFilter);
+  if (q) filtered = filtered.filter(p => p.name.toLowerCase().includes(q));
+
+  const list = document.getElementById('postList');
+  document.getElementById('postCount').textContent = filtered.length;
+
+  if (!filtered.length) {
+    list.innerHTML = '<div class="empty-state"><div class="icon">📬</div><p>Tidak ada post</p></div>';
+    return;
+  }
+  list.innerHTML = filtered.map(p => {
+    const badge = p.category === 'post' ? 'badge-post' : p.category === 'koding' ? 'badge-koding' : 'badge-pages';
+    const label = p.category === 'post' ? 'Post' : p.category === 'koding' ? 'Koding' : 'Page';
+    const name = esc(p.name);
+    const title = esc(p.name.replace('.md','').replace(/-/g, ' '));
+    return `<div class="post-card">
+      <div class="card-img-placeholder">📄</div>
+      <div class="card-content">
+        <div class="card-top">
+          <span class="badge ${badge}">${label}</span>
+          <span class="date">${new Date().toLocaleDateString('id-ID', { day:'numeric', month:'short', year:'numeric' })}</span>
+        </div>
+        <div class="title">${title}</div>
+        <div class="desc">${title}</div>
+        <div class="card-actions">
+          <button class="btn-sm btn-secondary edit-btn" data-folder="${esc(p.folder)}" data-name="${name}" data-sha="${esc(p.sha)}">Edit</button>
+          <button class="btn-sm btn-danger delete-btn" data-folder="${esc(p.folder)}" data-name="${name}" data-sha="${esc(p.sha)}">Hapus</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+document.getElementById('postList').addEventListener('click', function(e) {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+  const folder = btn.dataset.folder;
+  const name = btn.dataset.name;
+  const sha = btn.dataset.sha;
+  if (btn.classList.contains('edit-btn')) editPost(folder, name, sha);
+  if (btn.classList.contains('delete-btn')) deletePost(folder, name, sha);
+});
+
+function setFilter(f) {
+  document.querySelectorAll('.pill').forEach(b => {
+    const txt = b.textContent.trim().toLowerCase();
+    b.classList.toggle('active', txt === f || (f === 'all' && txt === 'semua'));
+  });
+  currentFilter = f;
+  renderPosts();
+}
+
+async function editPost(folder, name, sha) {
+  try {
+    const data = await api(`/repos/${REPO}/contents/${folder}/${name}?ref=${BRANCH}`);
+    const content = atob(data.content.replace(/\n/g, ''));
+    document.getElementById('editPath').value = `${folder}/${name}`;
+    document.getElementById('editSha').value = data.sha;
+    document.getElementById('editorTitle').textContent = 'Edit Post';
+
+    const parts = content.split('+++');
+    if (parts.length >= 3) {
+      const frontmatter = parts[1].trim().split('\n').reduce((acc, line) => {
+        const idx = line.indexOf('=');
+        if (idx > 0) {
+          const key = line.substring(0, idx).trim();
+          let val = line.substring(idx + 1).trim().replace(/^"|"$/g, '');
+          if (val === 'true') val = true;
+          else if (val === 'false') val = false;
+          acc[key] = val;
+        }
+        return acc;
+      }, {});
+      document.getElementById('fieldTitle').value = frontmatter.title || '';
+      document.getElementById('fieldPenulis').value = frontmatter.penulis || '';
+      document.getElementById('fieldSlug').value = frontmatter.slug || '';
+      document.getElementById('fieldYoutube').value = frontmatter.youtube_id || '';
+      document.getElementById('fieldDescription').value = frontmatter.description || '';
+      document.getElementById('fieldIlustration').value = frontmatter.ilustration || '';
+      document.getElementById('fieldBody').value = parts.slice(2).join('+++').trim();
+      const cat = folder.includes('koding') ? 'koding' : 'post';
+      document.getElementById('fieldCategory').value = cat;
+    }
+    updatePreview();
+    showPage('pageEditor');
+  } catch(e) {
+    toast('Gagal load post: ' + e.message, true);
+  }
+}
+
+function newPost() {
+  document.getElementById('editorTitle').textContent = 'Buat Post Baru';
+  document.getElementById('editPath').value = '';
+  document.getElementById('editSha').value = '';
+  document.getElementById('fieldTitle').value = '';
+  document.getElementById('fieldPenulis').value = '';
+  document.getElementById('fieldSlug').value = '';
+  document.getElementById('fieldYoutube').value = '';
+  document.getElementById('fieldDescription').value = '';
+  document.getElementById('fieldIlustration').value = '';
+  document.getElementById('fieldBody').value = '';
+  document.getElementById('fieldCategory').value = 'post';
+  document.getElementById('imgPreview').classList.add('hidden');
+  showPage('pageEditor');
+}
+
+function cancelEdit() { showPage('pageDashboard'); document.querySelectorAll('.tab-item').forEach(t => t.classList.toggle('active', t.dataset.tab === 'posts')); }
+
+function slugify(text) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'untitled';
+}
+
+async function savePost() {
+  const title = document.getElementById('fieldTitle').value.trim();
+  const penulis = document.getElementById('fieldPenulis').value.trim();
+  const desc = document.getElementById('fieldDescription').value.trim();
+  const ilustration = document.getElementById('fieldIlustration').value.trim();
+  const slug = document.getElementById('fieldSlug').value.trim() || slugify(title);
+  const youtube = document.getElementById('fieldYoutube').value.trim();
+  const body = document.getElementById('fieldBody').value.trim();
+  const category = document.getElementById('fieldCategory').value;
+  const editPath = document.getElementById('editPath').value;
+  const editSha = document.getElementById('editSha').value;
+
+  if (!title || !body) return toast('Judul dan konten harus diisi', true);
+
+  const date = new Date().toISOString();
+  const frontmatter = [
+    '+++',
+    `penulis = "${penulis || 'Rysnanto'}"`,
+    ilustration ? `ilustration = "${ilustration}"` : '',
+    `date = ${date}`,
+    `description = "${desc}"`,
+    `title = "${title}"`,
+    youtube ? `youtube_id = "${youtube}"` : '',
+    slug !== slugify(title) ? `slug = "${slug}"` : '',
+    '+++\n'
+  ].filter(Boolean).join('\n');
+
+  const content = frontmatter + body;
+
+  const folder = category === 'koding' ? 'content/koding' : 'content/post';
+  const fileName = `${slug}.md`;
+  const path = editPath || `${folder}/${fileName}`;
+
+  try {
+    const base64 = btoa(unescape(encodeURIComponent(content)));
+    const data = { message: editPath ? `Update ${path}` : `Create ${path}`, content: base64, branch: BRANCH };
+    if (editSha) data.sha = editSha;
+
+    await api(`/repos/${REPO}/contents/${path}`, {
+      method: 'PUT',
+      body: JSON.stringify(data)
+    });
+    toast(editPath ? 'Post diupdate!' : 'Post dibuat!');
+    await loadPosts();
+    showPage('pageDashboard');
+    document.querySelectorAll('.tab-item').forEach(t => t.classList.toggle('active', t.dataset.tab === 'posts'));
+  } catch(e) {
+    toast('Gagal commit: ' + e.message, true);
+  }
+}
+
+async function deletePost(folder, name, sha) {
+  if (!confirm(`Hapus ${name}?`)) return;
+  try {
+    await api(`/repos/${REPO}/contents/${folder}/${name}`, {
+      method: 'DELETE',
+      body: JSON.stringify({ message: `Delete ${name}`, sha, branch: BRANCH })
+    });
+    toast('Post dihapus!');
+    await loadPosts();
+  } catch(e) {
+    toast('Gagal hapus: ' + e.message, true);
+  }
+}
+
+function uploadImage() {
+  document.getElementById('fileInput').value = '';
+  document.getElementById('uploadPreview').innerHTML = '';
+  showPage('pageUpload');
+}
+
+function cancelUpload() { showPage('pageDashboard'); document.querySelectorAll('.tab-item').forEach(t => t.classList.toggle('active', t.dataset.tab === 'posts')); }
+
+document.getElementById('fileInput').addEventListener('change', function() {
+  const preview = document.getElementById('uploadPreview');
+  if (this.files && this.files[0]) {
+    const reader = new FileReader();
+    reader.onload = e => preview.innerHTML = `<img src="${e.target.result}">`;
+    reader.readAsDataURL(this.files[0]);
+  }
+});
+
+async function uploadFile() {
+  const file = document.getElementById('fileInput').files[0];
+  if (!file) return toast('Pilih file dulu', true);
+
+  const ext = file.name.split('.').pop();
+  const fileName = `${Date.now()}-${slugify(file.name.replace(`.${ext}`, ''))}.${ext}`;
+  const path = `static/ilustration/${fileName}`;
+
+  try {
+    const base64 = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result.split(',')[1]);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+
+    await api(`/repos/${REPO}/contents/${path}`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        message: `Upload ${fileName}`,
+        content: base64,
+        branch: BRANCH
+      })
+    });
+    toast('Gambar terupload!');
+    const imgUrl = `/ilustration/${fileName}`;
+    if (!document.getElementById('pageEditor').classList.contains('hidden')) {
+      document.getElementById('fieldIlustration').value = imgUrl;
+      updatePreview();
+    }
+    showPage('pageDashboard');
+    document.querySelectorAll('.tab-item').forEach(t => t.classList.toggle('active', t.dataset.tab === 'posts'));
+  } catch(e) {
+    toast('Gagal upload: ' + e.message, true);
+  }
+}
+
+function imgUrl(p) { return p ? (p.startsWith('http') ? p : SITE_URL + p) : ''; }
+function updatePreview() {
+  const val = document.getElementById('fieldIlustration').value;
+  const img = document.getElementById('imgPreview');
+  if (val) {
+    img.src = imgUrl(val);
+    img.classList.remove('hidden');
+  } else {
+    img.classList.add('hidden');
+  }
+}
+
+function wrapText(before, after) {
+  const ta = document.getElementById('fieldBody');
+  const start = ta.selectionStart;
+  const end = ta.selectionEnd;
+  const text = ta.value;
+  const selected = text.substring(start, end);
+  ta.value = text.substring(0, start) + before + selected + after + text.substring(end);
+  ta.focus();
+  ta.setSelectionRange(start + before.length + selected.length + after.length, start + before.length + selected.length + after.length);
+}
+
+let radioPlaying = false;
+let radioEqInterval;
+function toggleRadio() {
+  const audio = document.getElementById('radioPlayer');
+  const btn = document.getElementById('radioBtn');
+  const eq = document.getElementById('radioEqualizer');
+  if (radioPlaying) {
+    audio.pause();
+    btn.textContent = '▶';
+    eq.style.display = 'none';
+    clearInterval(radioEqInterval);
+    radioPlaying = false;
+  } else {
+    audio.play().catch(() => {});
+    btn.textContent = '⏸';
+    eq.style.display = 'flex';
+    radioPlaying = true;
+    const bars = eq.querySelectorAll('.eq-bar');
+    radioEqInterval = setInterval(() => {
+      bars.forEach(b => {
+        const h = 4 + Math.random() * 16;
+        b.style.height = h + 'px';
+      });
+    }, 200);
+  }
+}
+
+function openLightbox(src) { document.getElementById('lightboxImg').src = src; document.getElementById('lightbox').classList.add('active'); }
+function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+document.getElementById('fieldIlustration').addEventListener('input', updatePreview);
+
+init();
+</script>
+</body>
+</html>
