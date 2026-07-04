@@ -1,6 +1,6 @@
----
++++
 title = "Cloudflare ClixFix: Serangan Social Engineering yang Menyerang Website Kampus"
-date = 2026-07-04
+date = "2026-07-04T07:00:00+07:00"
 penulis = "Rysnanto"
 description = "Kronologi pengalaman saya menemukan serangan Cloudflare ClixFix di website universitas unirow.ac.id, lengkap dengan analisis kode dan cara pencegahannya"
 ilustration = "/ilustration/clickfix.webp"
