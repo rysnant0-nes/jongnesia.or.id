@@ -161,6 +161,33 @@ label { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: 
 .empty-state .icon { font-size: 48px; margin-bottom: 12px; }
 .empty-state p { font-size: 14px; }
 
+/* PIN Boxes */
+.pin-row { display: flex; gap: 10px; justify-content: center; margin: 0 auto 16px; max-width: 220px; }
+.pin-box { width: 48px; height: 54px; text-align: center; font-size: 22px; font-weight: 700; border-radius: 12px; border: 2px solid var(--border); background: var(--bg); color: var(--text); outline: none; transition: .2s; }
+.pin-box:focus { border-color: var(--primary); background: #fff; }
+
+/* Draft / Date row */
+.row-inline { display: flex; gap: 12px; align-items: center; margin: 0 0 12px 0; }
+.row-inline label { margin-bottom: 0; white-space: nowrap; }
+.toggle-wrap { display: flex; align-items: center; gap: 8px; }
+.toggle-switch { width: 40px; height: 24px; background: var(--border); border-radius: 12px; cursor: pointer; position: relative; transition: .2s; flex-shrink: 0; }
+.toggle-switch.active { background: var(--primary); }
+.toggle-switch:after { content: ''; width: 20px; height: 20px; background: #fff; border-radius: 50%; position: absolute; top: 2px; left: 2px; transition: .2s; box-shadow: 0 1px 3px rgba(0,0,0,0.15); }
+.toggle-switch.active:after { left: 18px; }
+
+/* Advanced fields toggle */
+.advanced-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: var(--bg); border: none; border-radius: 10px; color: var(--text2); cursor: pointer; font-size: 13px; font-weight: 600; transition: .2s; margin-bottom: 10px; }
+.advanced-toggle:active { transform: scale(0.95); }
+.advanced-toggle.open { color: var(--primary); background: var(--primary-light); }
+.advanced-fields { padding: 12px; background: var(--bg); border-radius: 12px; margin-bottom: 12px; }
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-top: 8px; }
+.gallery-item { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); cursor: pointer; background: var(--surface); transition: .2s; }
+.gallery-item:active { transform: scale(0.97); }
+.gallery-item img { width: 100%; height: 140px; object-fit: cover; display: block; }
+.gallery-item .gallery-name { padding: 6px 10px; font-size: 11px; color: var(--text2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
 @media (max-width: 768px) {
   .login-left { display: none; }
   .login-page { margin: -24px calc(-50vw + 50%); min-height: 100vh; }
@@ -168,12 +195,17 @@ label { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: 
 }
 @media (min-width: 768px) {
   body { padding-bottom: 0; }
-  .tabbar { display: none; }
+  .tabbar { position: static; background: transparent; backdrop-filter: none; border-top: none; border-bottom: 1px solid var(--border); padding: 0 0 4px; margin-bottom: 16px; }
+  .tab-center { top: 0; }
   .container { max-width: 800px; }
   .post-card { display: flex; }
   .post-card .card-img, .post-card .card-img-placeholder { width: 200px; height: auto; min-height: 140px; flex-shrink: 0; }
   .post-card .card-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
   .post-card .card-actions { border-top: 1px solid var(--border); }
+  .desktop-nav { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .desktop-nav a { padding: 8px 18px; border-radius: 24px; font-size: 14px; font-weight: 600; color: var(--text2); background: var(--bg); transition: .2s; }
+  .desktop-nav a:hover { background: #e5e5ea; }
+  .desktop-nav a.active { background: var(--primary); color: #fff; }
 }
 
 @media (max-width: 420px) {
@@ -207,20 +239,30 @@ label { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: 
           </div>
         </div>
         <div class="login-right">
-          <div class="login-right-inner" id="setPinScreen">
-            <div class="head-icon">🔐</div>
-            <h2>Buat PIN</h2>
-            <p>PIN 4 digit biar aman</p>
-            <input type="password" id="setPinInput" placeholder="● ● ● ●" maxlength="4" inputmode="numeric" style="max-width:160px;font-size:24px;letter-spacing:8px;text-align:center;margin:0 auto 16px">
-            <button class="btn-primary" onclick="setPin()">Simpan PIN</button>
-          </div>
-          <div class="login-right-inner hidden" id="pinScreen">
-            <div class="head-icon">🔐</div>
-            <h2>Masuk</h2>
-            <p>Masukkan PIN akses CMS</p>
-            <input type="password" id="pinInput" placeholder="● ● ● ●" maxlength="4" inputmode="numeric" style="max-width:160px;font-size:24px;letter-spacing:8px;text-align:center;margin:0 auto 16px">
-            <button class="btn-primary" onclick="checkPin()">Masuk</button>
-          </div>
+            <div class="login-right-inner" id="setPinScreen">
+              <div class="head-icon">🔐</div>
+              <h2>Buat PIN</h2>
+              <p>PIN 4 digit biar aman</p>
+              <div class="pin-row">
+                <input class="pin-box" id="sp1" maxlength="1" inputmode="numeric" oninput="pinMove(this,'sp2')" onkeydown="pinBack(this,'sp0')">
+                <input class="pin-box" id="sp2" maxlength="1" inputmode="numeric" oninput="pinMove(this,'sp3')" onkeydown="pinBack(this,'sp1')">
+                <input class="pin-box" id="sp3" maxlength="1" inputmode="numeric" oninput="pinMove(this,'sp4')" onkeydown="pinBack(this,'sp2')">
+                <input class="pin-box" id="sp4" maxlength="1" inputmode="numeric" oninput="pinMove(this,'sp4')" onkeydown="pinBack(this,'sp3')">
+              </div>
+              <button class="btn-primary" onclick="setPin()">Simpan PIN</button>
+            </div>
+            <div class="login-right-inner hidden" id="pinScreen">
+              <div class="head-icon">🔐</div>
+              <h2>Masuk</h2>
+              <p>Masukkan PIN akses CMS</p>
+              <div class="pin-row">
+                <input class="pin-box" id="p1" maxlength="1" inputmode="numeric" oninput="pinMove(this,'p2')" onkeydown="pinBack(this,'p0')">
+                <input class="pin-box" id="p2" maxlength="1" inputmode="numeric" oninput="pinMove(this,'p3')" onkeydown="pinBack(this,'p1')">
+                <input class="pin-box" id="p3" maxlength="1" inputmode="numeric" oninput="pinMove(this,'p4')" onkeydown="pinBack(this,'p2')">
+                <input class="pin-box" id="p4" maxlength="1" inputmode="numeric" oninput="pinMove(this,'p4')" onkeydown="pinBack(this,'p3')">
+              </div>
+              <button class="btn-primary" onclick="checkPin()">Masuk</button>
+            </div>
           <div class="login-right-inner hidden" id="tokenScreen">
             <div class="head-icon">🔑</div>
             <h2>GitHub Token</h2>
@@ -287,36 +329,52 @@ label { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: 
             <label>Judul</label>
             <input type="text" id="fieldTitle" placeholder="Judul artikel">
           </div>
-          <div>
-            <label>Penulis</label>
-            <input type="text" id="fieldPenulis" placeholder="Nama penulis">
-          </div>
-          <div>
-            <label>Kategori</label>
-            <select id="fieldCategory" style="appearance:none;background:var(--bg) url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236e6e73' stroke-width='2' fill='none'/%3E%3C/svg%3E\") no-repeat right 14px center;padding-right:36px">
-              <option value="post">Post</option>
-              <option value="koding">Koding</option>
-            </select>
-          </div>
-          <div>
-            <label>Slug</label>
-            <input type="text" id="fieldSlug" placeholder="Auto dari judul">
-          </div>
-          <div>
-            <label>Youtube ID</label>
-            <input type="text" id="fieldYoutube" placeholder="YouTube video ID">
-          </div>
           <div class="full">
-            <label>Deskripsi</label>
-            <textarea id="fieldDescription" rows="2" placeholder="Deskripsi singkat"></textarea>
-          </div>
-          <div class="full">
-            <label>Thumbnail</label>
-            <div class="thumb-row">
-              <input type="text" id="fieldIlustration" placeholder="https://jongnesia.or.id/ilustration/...">
-              <button class="btn-sm btn-secondary" onclick="uploadImage()">Upload</button>
+            <div class="row-inline">
+              <div class="toggle-wrap">
+                <div id="draftToggle" class="toggle-switch" onclick="this.classList.toggle('active');document.getElementById('draftLabel').textContent=this.classList.contains('active')?'Draft':'Publik'"></div>
+                <span style="font-size:13px;font-weight:600;color:var(--text2)" id="draftLabel">Publik</span>
+              </div>
+              <input type="date" id="fieldDate" style="width:auto;min-width:0;flex:1;padding:6px 12px;font-size:13px">
             </div>
-            <img id="imgPreview" class="img-thumb hidden" onclick="openLightbox(this.src)">
+          </div>
+          <div class="full">
+            <button class="advanced-toggle" id="advToggle" onclick="toggleAdvanced()">⚙ Lanjutan ▾</button>
+            <div id="advancedFields" class="hidden advanced-fields">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 12px">
+                <div>
+                  <label>Penulis</label>
+                  <input type="text" id="fieldPenulis" placeholder="Nama penulis">
+                </div>
+                <div>
+                  <label>Kategori</label>
+                  <select id="fieldCategory" style="appearance:none;background:var(--bg) url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236e6e73' stroke-width='2' fill='none'/%3E%3C/svg%3E\") no-repeat right 14px center;padding-right:36px">
+                    <option value="post">Post</option>
+                    <option value="koding">Koding</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Slug</label>
+                  <input type="text" id="fieldSlug" placeholder="Auto dari judul">
+                </div>
+                <div>
+                  <label>Youtube ID</label>
+                  <input type="text" id="fieldYoutube" placeholder="YouTube video ID">
+                </div>
+                <div class="full" style="grid-column:1/-1">
+                  <label>Deskripsi</label>
+                  <textarea id="fieldDescription" rows="2" placeholder="Deskripsi singkat"></textarea>
+                </div>
+                <div class="full" style="grid-column:1/-1">
+                  <label>Thumbnail</label>
+                  <div class="thumb-row">
+                    <input type="text" id="fieldIlustration" placeholder="https://jongnesia.or.id/ilustration/...">
+                    <button class="btn-sm btn-secondary" onclick="uploadImage()">Upload</button>
+                  </div>
+                  <img id="imgPreview" class="img-thumb hidden" onclick="openLightbox(this.src)">
+                </div>
+              </div>
+            </div>
           </div>
           <div class="full">
             <label>Konten</label>
@@ -357,6 +415,18 @@ label { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: 
         <button class="btn-success" onclick="uploadFile()" style="width:100%;padding:14px;font-size:15px;font-weight:700;border-radius:12px">Upload & Commit</button>
       </div>
     </div>
+
+    <!-- GALLERY -->
+    <div id="pageGallery" class="hidden">
+      <div class="list-header" style="justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:12px">
+          <h2>Galeri</h2>
+          <span class="count" id="galleryCount">0</span>
+        </div>
+        <button class="btn-sm btn-primary" onclick="switchTab('upload')">+ Upload</button>
+      </div>
+      <div id="galleryList" style="margin-top:4px"></div>
+    </div>
   </div>
 
   <!-- Bottom Tab Bar -->
@@ -369,8 +439,12 @@ label { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: 
       <span class="tab-icon plus"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
       <span class="tab-label" style="color:var(--primary)">Buat</span>
     </div>
-    <div class="tab-item" data-tab="upload" onclick="switchTab('upload')">
+    <div class="tab-item" data-tab="gallery" onclick="switchTab('gallery')">
       <span class="tab-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span>
+      <span class="tab-label">Galeri</span>
+    </div>
+    <div class="tab-item" data-tab="upload" onclick="switchTab('upload')">
+      <span class="tab-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span>
       <span class="tab-label">Upload</span>
     </div>
     <div class="tab-item" data-tab="account" onclick="switchTab('account')">
@@ -418,7 +492,7 @@ function toast(msg, err) {
 
 function showPage(id) {
   if (id !== 'pageLogin' && !pinVerified && !token) return;
-  ['pageLogin','pageDashboard','pageEditor','pageUpload'].forEach(p => {
+  ['pageLogin','pageDashboard','pageEditor','pageUpload','pageGallery'].forEach(p => {
     document.getElementById(p).classList.toggle('hidden', p !== id);
   });
   document.getElementById('tabbar').classList.toggle('hidden', id === 'pageLogin');
@@ -428,8 +502,9 @@ function switchTab(tab) {
   document.querySelectorAll('.tab-item').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
   if (tab === 'posts') { showPage('pageDashboard'); }
   else if (tab === 'new') { newPost(); }
+  else if (tab === 'gallery') { showPage('pageGallery'); loadGallery(); }
   else if (tab === 'upload') { uploadImage(); }
-    else if (tab === 'account') { if (confirm('Logout?')) logout(); }
+  else if (tab === 'account') { if (confirm('Logout?')) logout(); }
 }
 
 let turnstilePass = false;
@@ -475,13 +550,29 @@ function logout() {
   token = '';
   pinVerified = false;
   showPage('pageLogin');
-  if (!getPin()) { showSetPin(); } else { showPin(); }
+  if (!getPin()) { showSetPin(); clearPin('sp'); } else { showPin(); }
 }
 
-function showSetPin() { document.getElementById('setPinScreen').classList.remove('hidden'); document.getElementById('pinScreen').classList.add('hidden'); document.getElementById('tokenScreen').classList.add('hidden'); }
-function showPin() { document.getElementById('pinScreen').classList.remove('hidden'); document.getElementById('setPinScreen').classList.add('hidden'); document.getElementById('tokenScreen').classList.add('hidden'); if (typeof turnstile !== 'undefined') turnstile.reset(); }
+function pinMove(el, nextId) {
+  if (el.value) { const n = document.getElementById(nextId); if (n) n.focus(); }
+}
+function pinBack(el, prevId) {
+  if (!el.value && event.key === 'Backspace') { const p = document.getElementById(prevId); if (p) { p.focus(); p.value = ''; } }
+}
+function getPinVal(prefix) {
+  let v = '';
+  for (let i = 1; i <= 4; i++) v += document.getElementById(prefix + i).value || '';
+  return v;
+}
+function clearPin(prefix) {
+  for (let i = 1; i <= 4; i++) document.getElementById(prefix + i).value = '';
+  const f = document.getElementById(prefix + '1'); if (f) f.focus();
+}
+
+function showSetPin() { document.getElementById('setPinScreen').classList.remove('hidden'); document.getElementById('pinScreen').classList.add('hidden'); document.getElementById('tokenScreen').classList.add('hidden'); clearPin('p'); }
+function showPin() { document.getElementById('pinScreen').classList.remove('hidden'); document.getElementById('setPinScreen').classList.add('hidden'); document.getElementById('tokenScreen').classList.add('hidden'); if (typeof turnstile !== 'undefined') turnstile.reset(); clearPin('p'); }
 function setPin() {
-  const pin = document.getElementById('setPinInput').value.trim();
+  const pin = getPinVal('sp');
   if (!pin || pin.length < 4) return toast('PIN minimal 4 digit', true);
   localStorage.setItem('cms_pin', pin);
   pinVerified = true;
@@ -491,7 +582,7 @@ function setPin() {
   if (typeof turnstile !== 'undefined') turnstile.render('#turnstileWidget', { sitekey: '0x4AAAAAADvPSBjZqKPNWg0A', callback: onTurnstile });
 }
 function checkPin() {
-  const pin = document.getElementById('pinInput').value.trim();
+  const pin = getPinVal('p');
   if (pin !== getPin()) return toast('PIN salah', true);
   pinVerified = true;
   document.getElementById('pinScreen').classList.add('hidden');
@@ -584,6 +675,27 @@ function renderPosts() {
   }).join('');
 }
 
+async function loadGallery() {
+  const list = document.getElementById('galleryList');
+  list.innerHTML = '<div class="loading"><div class="spinner"></div>Memuat gambar...</div>';
+  try {
+    const items = await api(`/repos/${REPO}/contents/static/ilustration?ref=${BRANCH}`);
+    if (!Array.isArray(items)) { list.innerHTML = '<div class="empty-state"><div class="icon">📭</div><p>Gak ada gambar</p></div>'; return; }
+    const imgs = items.filter(i => i.name.match(/\.(png|jpe?g|gif|webp|svg)$/i));
+    document.getElementById('galleryCount').textContent = imgs.length;
+    if (!imgs.length) { list.innerHTML = '<div class="empty-state"><div class="icon">📭</div><p>Gak ada gambar</p></div>'; return; }
+    list.innerHTML = '<div class="gallery-grid">' + imgs.map(i => {
+      const url = SITE_URL + '/ilustration/' + encodeURIComponent(i.name);
+      return `<div class="gallery-item" onclick="openLightbox('${url}')">
+        <img src="${url}" alt="${esc(i.name)}" loading="lazy">
+        <div class="gallery-name">${esc(i.name)}</div>
+      </div>`;
+    }).join('') + '</div>';
+  } catch(e) {
+    list.innerHTML = '<div class="empty-state"><div class="icon">❌</div><p>Gagal muat: ' + esc(e.message) + '</p></div>';
+  }
+}
+
 document.getElementById('postList').addEventListener('click', function(e) {
   const btn = e.target.closest('button');
   if (!btn) return;
@@ -633,12 +745,23 @@ async function editPost(folder, name, sha) {
       document.getElementById('fieldBody').value = parts.slice(2).join('+++').trim();
       const cat = folder.includes('koding') ? 'koding' : 'post';
       document.getElementById('fieldCategory').value = cat;
+      const dt = document.getElementById('draftToggle');
+      if (frontmatter.draft === 'true') { dt.classList.add('active'); document.getElementById('draftLabel').textContent = 'Draft'; } else { dt.classList.remove('active'); document.getElementById('draftLabel').textContent = 'Publik'; }
+      document.getElementById('fieldDate').value = frontmatter.date ? frontmatter.date.slice(0,10) : new Date().toISOString().slice(0,10);
     }
     updatePreview();
     showPage('pageEditor');
   } catch(e) {
     toast('Gagal load post: ' + e.message, true);
   }
+}
+
+function toggleAdvanced() {
+  const el = document.getElementById('advancedFields');
+  const btn = document.getElementById('advToggle');
+  el.classList.toggle('hidden');
+  btn.classList.toggle('open');
+  btn.textContent = el.classList.contains('hidden') ? '⚙ Lanjutan ▾' : '⚙ Lanjutan ▴';
 }
 
 function newPost() {
@@ -653,11 +776,19 @@ function newPost() {
   document.getElementById('fieldIlustration').value = '';
   document.getElementById('fieldBody').value = '';
   document.getElementById('fieldCategory').value = 'post';
+  document.getElementById('fieldDate').value = new Date().toISOString().slice(0,10);
+  const dt = document.getElementById('draftToggle');
+  dt.classList.remove('active');
+  document.getElementById('draftLabel').textContent = 'Publik';
+  document.getElementById('advancedFields').classList.add('hidden');
+  document.getElementById('advToggle').classList.remove('open');
+  document.getElementById('advToggle').textContent = '⚙ Lanjutan ▾';
   document.getElementById('imgPreview').classList.add('hidden');
   showPage('pageEditor');
 }
 
 function cancelEdit() { showPage('pageDashboard'); document.querySelectorAll('.tab-item').forEach(t => t.classList.toggle('active', t.dataset.tab === 'posts')); }
+function cancelUpload() { showPage('pageDashboard'); document.querySelectorAll('.tab-item').forEach(t => t.classList.toggle('active', t.dataset.tab === 'posts')); }
 
 function slugify(text) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'untitled';
@@ -674,15 +805,19 @@ async function savePost() {
   const category = document.getElementById('fieldCategory').value;
   const editPath = document.getElementById('editPath').value;
   const editSha = document.getElementById('editSha').value;
+  const isDraft = document.getElementById('draftToggle').classList.contains('active');
+  const dateVal = document.getElementById('fieldDate').value;
 
   if (!title || !body) return toast('Judul dan konten harus diisi', true);
 
-  const date = new Date().toISOString();
+  const date = dateVal ? new Date(dateVal).toISOString() : new Date().toISOString();
+  const draftLine = isDraft ? 'draft = true' : '';
   const frontmatter = [
     '+++',
     `penulis = "${penulis || 'Rysnanto'}"`,
     ilustration ? `ilustration = "${ilustration}"` : '',
     `date = ${date}`,
+    draftLine,
     `description = "${desc}"`,
     `title = "${title}"`,
     youtube ? `youtube_id = "${youtube}"` : '',
@@ -733,8 +868,6 @@ function uploadImage() {
   document.getElementById('uploadPreview').innerHTML = '';
   showPage('pageUpload');
 }
-
-function cancelUpload() { showPage('pageDashboard'); document.querySelectorAll('.tab-item').forEach(t => t.classList.toggle('active', t.dataset.tab === 'posts')); }
 
 document.getElementById('fileInput').addEventListener('change', function() {
   const preview = document.getElementById('uploadPreview');
