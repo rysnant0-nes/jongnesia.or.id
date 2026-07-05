@@ -369,6 +369,7 @@ label { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: 
                   <label>Thumbnail</label>
                   <div class="thumb-row">
                     <input type="text" id="fieldIlustration" placeholder="https://jongnesia.or.id/ilustration/...">
+                    <button class="btn-sm btn-secondary" onclick="openImagePicker()">Pilih</button>
                     <button class="btn-sm btn-secondary" onclick="uploadImage()">Upload</button>
                   </div>
                   <img id="imgPreview" class="img-thumb hidden" onclick="openLightbox(this.src)">
@@ -456,6 +457,20 @@ label { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: 
 
 <div id="toast" class="hidden"></div>
 <div id="lightbox" class="lightbox" onclick="closeLightbox()"><img id="lightboxImg"></div>
+
+<!-- Image Picker Modal -->
+<div id="imagePickerModal" class="lightbox" onclick="closeImagePicker(event)">
+  <div style="background:var(--surface);border-radius:16px;width:90vw;max-width:700px;max-height:80vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,0.3)" onclick="event.stopPropagation()">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--border)">
+      <h3 style="margin:0;font-size:17px;font-weight:700">Pilih Gambar</h3>
+      <button class="btn-sm btn-secondary" onclick="closeImagePicker()">Tutup</button>
+    </div>
+    <div id="imagePickerSearch" style="padding:12px 20px 0">
+      <input type="text" id="imagePickerSearchInput" placeholder="Cari gambar..." oninput="filterImagePicker()" style="margin:0">
+    </div>
+    <div id="imagePickerGrid" style="padding:12px 20px 20px;overflow-y:auto;flex:1"></div>
+  </div>
+</div>
 
 <script>
 const REPO = 'rysnant0-nes/jongnesia.or.id';
@@ -702,6 +717,49 @@ async function loadGallery() {
   } catch(e) {
     list.innerHTML = '<div class="empty-state"><div class="icon">❌</div><p>Gagal muat: ' + esc(e.message) + '</p></div>';
   }
+}
+
+let pickerImages = [];
+async function openImagePicker() {
+  const modal = document.getElementById('imagePickerModal');
+  const grid = document.getElementById('imagePickerGrid');
+  modal.classList.add('active');
+  grid.innerHTML = '<div class="loading"><div class="spinner"></div>Memuat gambar...</div>';
+  document.getElementById('imagePickerSearchInput').value = '';
+  try {
+    const items = await api(`/repos/${REPO}/contents/static/ilustration?ref=${BRANCH}`);
+    pickerImages = Array.isArray(items) ? items.filter(i => i.name.match(/\.(png|jpe?g|gif|webp|svg)$/i)) : [];
+    renderImagePicker(pickerImages);
+  } catch(e) {
+    grid.innerHTML = '<div class="empty-state"><div class="icon">❌</div><p>Gagal muat</p></div>';
+  }
+}
+function renderImagePicker(imgs) {
+  const grid = document.getElementById('imagePickerGrid');
+  if (!imgs.length) { grid.innerHTML = '<div class="empty-state"><div class="icon">📭</div><p>Gak ada gambar</p></div>'; return; }
+  grid.innerHTML = '<div class="gallery-grid">' + imgs.map(i => {
+    const url = '/ilustration/' + encodeURIComponent(i.name);
+    const fullUrl = SITE_URL + url;
+    return `<div class="gallery-item" onclick="pickImage('${url}','${fullUrl}')" style="border:2px solid transparent;transition:.2s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='transparent'">
+      <img src="${fullUrl}" alt="${esc(i.name)}" loading="lazy">
+      <div class="gallery-name">${esc(i.name)}</div>
+    </div>`;
+  }).join('') + '</div>';
+}
+function filterImagePicker() {
+  const q = document.getElementById('imagePickerSearchInput').value.toLowerCase();
+  const filtered = pickerImages.filter(i => i.name.toLowerCase().includes(q));
+  renderImagePicker(filtered);
+}
+function pickImage(path, fullUrl) {
+  document.getElementById('fieldIlustration').value = path;
+  document.getElementById('imgPreview').src = fullUrl;
+  document.getElementById('imgPreview').classList.remove('hidden');
+  closeImagePicker();
+}
+function closeImagePicker(e) {
+  if (e && e.target !== e.currentTarget) return;
+  document.getElementById('imagePickerModal').classList.remove('active');
 }
 
 document.getElementById('postList').addEventListener('click', function(e) {
