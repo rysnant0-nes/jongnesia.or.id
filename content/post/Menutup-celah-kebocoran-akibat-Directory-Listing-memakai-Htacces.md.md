@@ -1,9 +1,9 @@
 +++
 penulis = "N4nt0x"
 ilustration = "/ilustration/Group 375 (2).png"
-date = 2026-07-03T23:57:52.913Z
+date = 2026-07-03T00:00:00.000Z
 description = "Directory Listing adalah kondisi ketika server web menampilkan daftar isi folder (file dan subfolder) kepada pengunjung, jika tidak ada file index (seperti index.html atau index.php) di dalam folder tersebut."
-title = "ðCara Fix Directory Listing Mencegah Kebocoran Data"
+title = "Cara Fix Directory Listing Mencegah Kebocoran Data"
 slug = "fix-directory-listing"
 +++
 ## Apa itu Directory Listing?
@@ -18,9 +18,9 @@ Jika hal ini terjadi, pengunjung (termasuk hacker) bisa melihat struktur folder 
 
 Kenapa Harus Dimatikan?
 
-1. Melindungi File Sensitif â File konfigurasi, backup, atau skrip bisa terlihat oleh siapa saja.
-2. Mencegah Informasi Bocor â Struktur folder bisa dimanfaatkan untuk menemukan celah keamanan.
-3. Meningkatkan Profesionalisme â Directory listing terlihat seperti situs belum selesai dikembangkan.
+1. Melindungi File Sensitif Ã¢ÂÂ File konfigurasi, backup, atau skrip bisa terlihat oleh siapa saja.
+2. Mencegah Informasi Bocor Struktur folder bisa dimanfaatkan untuk menemukan celah keamanan.
+3. Meningkatkan Profesionalisme Directory listing terlihat seperti situs belum selesai dikembangkan.
 
 Tapi bukan berarti harus dimatikan , saya juga membuat website untuk keperluan download OS untuk kebutuhan sekolah , sengaja tidak saya matikan karena mempermudah untuk download yang hanya tinggal klick saja. Jadi intinya ketika dirasa tidak penting folder tanpa index.html/php tidak ada masalah. namun ketika folder-folder tersebut di rasa penting alangkah baiknya harus di perhitungkan untuk di tutup.
 
@@ -43,9 +43,9 @@ Options -Indexes
 
 ### 4. Simpan Perubahan
 
-Simpan file .htaccess, lalu coba akses salah satu folder tanpa file index di browser (contoh: domain.com/folder). Jika berhasil, Anda akan melihat pesan 403 Forbidden atau halaman kosong â bukan daftar isi folder lagi.
+Simpan file .htaccess, lalu coba akses salah satu folder tanpa file index di browser (contoh: domain.com/folder). Jika berhasil, Anda akan melihat pesan 403 Forbidden atau halaman kosong Ã¢ÂÂ bukan daftar isi folder lagi.
 
-## ð¡ï¸ Tips Tambahan
+## Ã°ÂÂÂ¡Ã¯Â¸Â Tips Tambahan
 
 * Selalu backup file .htaccess sebelum mengedit.
 * Jangan simpan file penting (seperti backup database) di folder publik.
@@ -54,7 +54,7 @@ Simpan file .htaccess, lalu coba akses salah satu folder tanpa file index di bro
   * Password protection pada direktori via .htpasswd
   * Plugin keamanan jika menggunakan CMS (WordPress, Joomla, dsb)
 
-## ð§© Penutup
+## Penutup
 
 Dengan menonaktifkan Directory Listing, Anda sudah melakukan langkah penting dalam meningkatkan keamanan website. File .htaccess adalah alat sederhana namun sangat kuat untuk mengontrol perilaku server Apache.
 
