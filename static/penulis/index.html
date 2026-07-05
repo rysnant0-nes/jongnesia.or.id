@@ -605,11 +605,19 @@ async function loadPosts() {
       if (Array.isArray(items)) {
         items.filter(i => i.name.endsWith('.md') && i.name !== '_index.md').forEach(i => {
           const cat = folder === 'content/post' ? 'post' : folder === 'content/koding' ? 'koding' : 'pages';
-          allPosts.push({ ...i, category: cat, folder });
+          allPosts.push({ ...i, category: cat, folder, date: '' });
         });
       }
     } catch(e) { /* folder might not exist */ }
   }
+  const fetches = allPosts.map(async p => {
+    try {
+      const { frontmatter } = await fetchPostContent(p.folder, p.name);
+      p.date = frontmatter.date || '';
+    } catch(e) {}
+  });
+  await Promise.allSettled(fetches);
+  allPosts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
   renderPosts();
 }
 
@@ -662,7 +670,7 @@ function renderPosts() {
       <div class="card-content">
         <div class="card-top">
           <span class="badge ${badge}">${label}</span>
-          <span class="date">${new Date().toLocaleDateString('id-ID', { day:'numeric', month:'short', year:'numeric' })}</span>
+          <span class="date">${p.date ? new Date(p.date).toLocaleDateString('id-ID', { day:'numeric', month:'short', year:'numeric' }) : '-'}</span>
         </div>
         <div class="title">${title}</div>
         <div class="desc">${title}</div>
