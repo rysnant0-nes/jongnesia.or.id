@@ -1,15 +1,13 @@
 +++
-title = "Cara Menggabung Banyak File Word Menjadi Satu Dokumen dengan Fitur Object"
-date = "2026-07-04T10:00:00+07:00"
 penulis = "Rysnanto"
+ilustration = "/ilustration/1783218390356-group-719.png"
+date = 2026-07-04T00:00:00.000Z
 description = "Panduan lengkap cara menggabungkan banyak file Word (.docx) menjadi satu dokumen menggunakan fitur Insert Object di Microsoft Word, cepat dan praktis tanpa copy paste"
-ilustration = "/ilustration/merge-word.webp"
-draft = false
+title = "Cara Menggabung Banyak File Word Menjadi Satu Dokumen dengan Fitur Object"
 +++
-
 Menggabungkan banyak file Word menjadi satu dokumen adalah salah satu kebutuhan paling umum di dunia perkuliahan dan pekerjaan kantoran. Bayangkan kamu punya 10, 20, atau bahkan 50 file Word dari berbagai dosen atau divisi, dan diminta untuk menggabungkannya menjadi satu file tunggal untuk dijadikan laporan akhir atau arsip perusahaan.
 
-Jika dilakukan secara manual dengan cara copy-paste satu per satu, proses ini bisa memakan waktu berjam-jam dan rentan terhadap kesalahan. Formatting bisa berantakan, nomor halaman kacau, dan yang paling menyebalkan — kamu harus mengulang dari awal karena ada yang terlewat.
+Jika dilakukan secara manual dengan cara copy-paste satu per satu, proses ini bisa memakan waktu berjam-jam dan rentan terhadap kesalahan. Formatting bisa berantakan, nomor halaman kacau, dan yang paling menyebalkan â kamu harus mengulang dari awal karena ada yang terlewat.
 
 Untungnya, Microsoft Word sudah menyediakan fitur bawaan yang sangat powerful untuk menyelesaikan masalah ini: **Insert Object > Text from File**. Fitur ini memungkinkan kamu menggabungkan puluhan file Word sekaligus dalam hitungan detik, tanpa harus membuka satu per satu file.
 
@@ -65,8 +63,8 @@ Jika kamu ingin menambahkan page break antar file, letakkan kursor di posisi yan
 
 Di ribbon Microsoft Word, klik tab **Insert**. Kemudian cari dan klik tombol **Object** yang terletak di bagian **Text** (biasanya di sebelah kanan). Akan muncul dua opsi:
 
-- **Object...** — untuk menyisipkan objek dari program lain
-- **Text from File...** — untuk menyisipkan isi dari file teks atau dokumen lain
+- **Object...** â untuk menyisipkan objek dari program lain
+- **Text from File...** â untuk menyisipkan isi dari file teks atau dokumen lain
 
 Klik **Text from File...**. Ini adalah opsi yang akan kita gunakan.
 
@@ -98,11 +96,11 @@ Jangan menekan tombol apapun atau melakukan aktivitas lain selama proses berlang
 
 Setelah semua file berhasil digabung, lakukan review menyeluruh terhadap dokumen hasil gabungan. Periksa:
 
-- **Nomor halaman** — Word mungkin tidak otomatis memberi nomor halaman yang berurutan. Kamu perlu menambahkan page numbering secara manual setelah penggabungan.
-- **Daftar isi** — Jika sebelumnya ada daftar otomatis, kamu perlu memperbaruinya. Klik kanan pada daftar isi → **Update Field** → **Update entire table**.
-- **Header dan Footer** — Pastikan header dan footer konsisten di seluruh dokumen.
-- **Format judul dan heading** — Periksa apakah style heading (Heading 1, Heading 2, dll) masih konsisten.
-- **Spasi dan jarak** — Kadang ada spasi tambahan yang tidak diinginkan antar file yang digabung.
+- **Nomor halaman** â Word mungkin tidak otomatis memberi nomor halaman yang berurutan. Kamu perlu menambahkan page numbering secara manual setelah penggabungan.
+- **Daftar isi** â Jika sebelumnya ada daftar otomatis, kamu perlu memperbaruinya. Klik kanan pada daftar isi â **Update Field** â **Update entire table**.
+- **Header dan Footer** â Pastikan header dan footer konsisten di seluruh dokumen.
+- **Format judul dan heading** â Periksa apakah style heading (Heading 1, Heading 2, dll) masih konsisten.
+- **Spasi dan jarak** â Kadang ada spasi tambahan yang tidak diinginkan antar file yang digabung.
 
 ### Langkah 7: Simpan Dokumen Hasil Gabungan
 
@@ -120,7 +118,7 @@ Pastikan setiap file menggunakan style heading yang sama (misalnya Heading 1 unt
 
 **Hapus Halaman Kosong**
 
-Kadang setelah penggabungan muncul halaman kosong yang tidak diinginkan. Untuk menghapusnya, aktifkan fitur **Show/Hide ¶** (tanda paragraph) di tab Home agar kamu bisa melihat karakter tersembunyi. Hapus tanda paragraph berlebih yang menyebabkan halaman kosong.
+Kadang setelah penggabungan muncul halaman kosong yang tidak diinginkan. Untuk menghapusnya, aktifkan fitur **Show/Hide Â¶** (tanda paragraph) di tab Home agar kamu bisa melihat karakter tersembunyi. Hapus tanda paragraph berlebih yang menyebabkan halaman kosong.
 
 **Gunakan Fitur Compare untuk Verifikasi**
 
