@@ -8,7 +8,7 @@ youtube_id = "10pqon7yKj4"
 +++
 Menggabungkan banyak file Word menjadi satu dokumen adalah salah satu kebutuhan paling umum di dunia perkuliahan dan pekerjaan kantoran. Bayangkan kamu punya 10, 20, atau bahkan 50 file Word dari berbagai dosen atau divisi, dan diminta untuk menggabungkannya menjadi satu file tunggal untuk dijadikan laporan akhir atau arsip perusahaan.
 
-Jika dilakukan secara manual dengan cara copy-paste satu per satu, proses ini bisa memakan waktu berjam-jam dan rentan terhadap kesalahan. Formatting bisa berantakan, nomor halaman kacau, dan yang paling menyebalkan Ã¢ÂÂ kamu harus mengulang dari awal karena ada yang terlewat.
+Jika dilakukan secara manual dengan cara copy-paste satu per satu, proses ini bisa memakan waktu berjam-jam dan rentan terhadap kesalahan. Formatting bisa berantakan, nomor halaman kacau, dan yang paling menyebalkan kamu harus mengulang dari awal karena ada yang terlewat.
 
 Untungnya, Microsoft Word sudah menyediakan fitur bawaan yang sangat powerful untuk menyelesaikan masalah ini: **Insert Object > Text from File**. Fitur ini memungkinkan kamu menggabungkan puluhan file Word sekaligus dalam hitungan detik, tanpa harus membuka satu per satu file.
 
@@ -64,8 +64,8 @@ Jika kamu ingin menambahkan page break antar file, letakkan kursor di posisi yan
 
 Di ribbon Microsoft Word, klik tab **Insert**. Kemudian cari dan klik tombol **Object** yang terletak di bagian **Text** (biasanya di sebelah kanan). Akan muncul dua opsi:
 
-- **Object...** Ã¢ÂÂ untuk menyisipkan objek dari program lain
-- **Text from File...** Ã¢ÂÂ untuk menyisipkan isi dari file teks atau dokumen lain
+- **Object...** untuk menyisipkan objek dari program lain
+- **Text from File...** untuk menyisipkan isi dari file teks atau dokumen lain
 
 Klik **Text from File...**. Ini adalah opsi yang akan kita gunakan.
 
@@ -97,11 +97,11 @@ Jangan menekan tombol apapun atau melakukan aktivitas lain selama proses berlang
 
 Setelah semua file berhasil digabung, lakukan review menyeluruh terhadap dokumen hasil gabungan. Periksa:
 
-- **Nomor halaman** Ã¢ÂÂ Word mungkin tidak otomatis memberi nomor halaman yang berurutan. Kamu perlu menambahkan page numbering secara manual setelah penggabungan.
-- **Daftar isi** Ã¢ÂÂ Jika sebelumnya ada daftar otomatis, kamu perlu memperbaruinya. Klik kanan pada daftar isi Ã¢ÂÂ **Update Field** Ã¢ÂÂ **Update entire table**.
-- **Header dan Footer** Ã¢ÂÂ Pastikan header dan footer konsisten di seluruh dokumen.
-- **Format judul dan heading** Ã¢ÂÂ Periksa apakah style heading (Heading 1, Heading 2, dll) masih konsisten.
-- **Spasi dan jarak** Ã¢ÂÂ Kadang ada spasi tambahan yang tidak diinginkan antar file yang digabung.
+- **Nomor halaman** Word mungkin tidak otomatis memberi nomor halaman yang berurutan. Kamu perlu menambahkan page numbering secara manual setelah penggabungan.
+- **Daftar isi** Jika sebelumnya ada daftar otomatis, kamu perlu memperbaruinya. Klik kanan pada daftar isi **Update Field** **Update entire table**.
+- **Header dan Footer**Pastikan header dan footer konsisten di seluruh dokumen.
+- **Format judul dan heading** Periksa apakah style heading (Heading 1, Heading 2, dll) masih konsisten.
+- **Spasi dan jarak** Kadang ada spasi tambahan yang tidak diinginkan antar file yang digabung.
 
 ### Langkah 7: Simpan Dokumen Hasil Gabungan
 
@@ -119,7 +119,7 @@ Pastikan setiap file menggunakan style heading yang sama (misalnya Heading 1 unt
 
 **Hapus Halaman Kosong**
 
-Kadang setelah penggabungan muncul halaman kosong yang tidak diinginkan. Untuk menghapusnya, aktifkan fitur **Show/Hide ÃÂ¶** (tanda paragraph) di tab Home agar kamu bisa melihat karakter tersembunyi. Hapus tanda paragraph berlebih yang menyebabkan halaman kosong.
+Kadang setelah penggabungan muncul halaman kosong yang tidak diinginkan. Untuk menghapusnya, aktifkan fitur **Show/Hide ÃÂÃÂ¶** (tanda paragraph) di tab Home agar kamu bisa melihat karakter tersembunyi. Hapus tanda paragraph berlebih yang menyebabkan halaman kosong.
 
 **Gunakan Fitur Compare untuk Verifikasi**
 
