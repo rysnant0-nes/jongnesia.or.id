@@ -1,12 +1,11 @@
 +++
-penulis = "admin"
-date = 2026-07-11T01:45:00.000Z
+penulis = "Rysnanto"
+ilustration = "/ilustration/1783765739316-group-722.png"
+date = 2026-07-11T00:00:00.000Z
 description = "Tutorial lengkap cara merubah suara Device Connect dan Device Disconnect di Windows agar lebih personal dan tidak membosankan."
-slug = "cara-merubah-suara-device-connect-disconnect-windows"
 title = "Cara Merubah Suara Device Connect dan Device Disconnect di Windows"
-ilustration = "/ilustration/sound-settings.webp"
+slug = "cara-merubah-suara-device-connect-disconnect-windows"
 +++
-
 Pernah nggak sih kamu ngerasa bosan sama suara default Windows setiap kali colok atau cabut USB? Suara "ding-dong" bawaan sistem memang sudah jadi identik banget sama Windows, tapi ternyata kamu bisa lho menggantinya dengan suara yang lebih kekinian atau bahkan suara buatan sendiri. Pada artikel ini, teman-teman akan belajar cara merubah suara Device Connect dan Device Disconnect di Windows dengan mudah dan cepat.
 
 ## Apa Itu Device Connect dan Device Disconnect?
@@ -19,10 +18,10 @@ Suara ini sebenarnya merupakan bagian dari **Sound Scheme** yang sudah diatur ol
 
 Beberapa alasan kenapa banyak orang ingin mengganti suara device connect dan disconnect ini antara lain:
 
-- **Bosan dengan suara default** — ini alasan paling umum, suara bawaan Windows sudah terlalu sering didengar sehingga terasa monoton.
-- **Ingin suasana baru** — mengganti suara bisa memberikan nuansa fresh saat menggunakan komputer, meskipun hanya sekadar colok USB.
-- **Personalisasi** — sama seperti wallpaper dan theme, mengganti suara juga bisa menjadi bentuk ekspresi diri agar komputer terasa lebih "milik kita".
-- **Alasan hiburan** — beberapa orang suka menggunakan suara lucu atau unik agar aktivitas sehari-hari di depan komputer jadi lebih menyenangkan.
+- **Bosan dengan suara default** â ini alasan paling umum, suara bawaan Windows sudah terlalu sering didengar sehingga terasa monoton.
+- **Ingin suasana baru** â mengganti suara bisa memberikan nuansa fresh saat menggunakan komputer, meskipun hanya sekadar colok USB.
+- **Personalisasi** â sama seperti wallpaper dan theme, mengganti suara juga bisa menjadi bentuk ekspresi diri agar komputer terasa lebih "milik kita".
+- **Alasan hiburan** â beberapa orang suka menggunakan suara lucu atau unik agar aktivitas sehari-hari di depan komputer jadi lebih menyenangkan.
 
 ## Persiapan Sebelum Memulai
 
@@ -56,8 +55,8 @@ Di dalam popup Sound yang sudah muncul tadi, kamu akan melihat beberapa tab sepe
 
 Gulir ke bawah pada kolom **Program Events** sampai kamu menemukan dua event berikut:
 
-- **Device Connect** — suara yang diputar saat perangkat terhubung ke komputer.
-- **Device Disconnect** — suara yang diputar saat perangkat dilepas dari komputer.
+- **Device Connect** â suara yang diputar saat perangkat terhubung ke komputer.
+- **Device Disconnect** â suara yang diputar saat perangkat dilepas dari komputer.
 
 Klik salah satu event yang ingin kamu ubah suaranya, misalnya kamu ingin mengubah suara Device Connect terlebih dahulu, maka klik pada event Device Connect.
 
@@ -77,10 +76,10 @@ Setelah semua perubahan sudah sesuai keinginan kamu, jangan lupa untuk klik tomb
 
 Beberapa tips yang bisa kamu coba saat mengganti suara device connect dan disconnect:
 
-- **Gunakan suara yang tidak terlalu panjang** — hindari menggunakan file suara yang durasinya terlalu lama karena akan terasa mengganggu saat kamu sering colok-cabut perangkat. Usahakan durasi suara antara 1 hingga 3 detik saja.
-- **Volume yang sesuai** — pastikan volume file suara yang kamu gunakan tidak terlalu keras agar tidak kaget atau mengganggu orang di sekitar.
-- **Backup suara default** — sebelum mengubah suara, ada baiknya kamu mencatat atau mengingat suara default yang digunakan agar bisa dikembalikan jika suatu saat ingin menggunakan suara asli Windows kembali.
-- **Coba beberapa suara** — jangan ragu untuk bereksperimen dengan berbagai jenis suara, mulai dari suara lucu, suara notifikasi modern, hingga suara custom buatan kamu sendiri.
+- **Gunakan suara yang tidak terlalu panjang** â hindari menggunakan file suara yang durasinya terlalu lama karena akan terasa mengganggu saat kamu sering colok-cabut perangkat. Usahakan durasi suara antara 1 hingga 3 detik saja.
+- **Volume yang sesuai** â pastikan volume file suara yang kamu gunakan tidak terlalu keras agar tidak kaget atau mengganggu orang di sekitar.
+- **Backup suara default** â sebelum mengubah suara, ada baiknya kamu mencatat atau mengingat suara default yang digunakan agar bisa dikembalikan jika suatu saat ingin menggunakan suara asli Windows kembali.
+- **Coba beberapa suara** â jangan ragu untuk bereksperimen dengan berbagai jenis suara, mulai dari suara lucu, suara notifikasi modern, hingga suara custom buatan kamu sendiri.
 
 ## Cara Mengembalikan ke Suara Default
 
