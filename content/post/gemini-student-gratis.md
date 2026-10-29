@@ -18,4 +18,6 @@ slug = "gemini-student-gratis"
 **Cara Claim**
 1. Klick lini berikut ini : [one.google.com/ai-studen](one.google.com/ai-studen) Pastikan kamu sudah masuk menggunakan akun Gmail pribadi.
 2.Pilih Penawaran Siswa Klik tombol penawaran yang tersedia (misalnya Get Offer atau Verify Eligibility). System akan mengarahkan kamu ke layanan verifikasi pihak ketiga, yaitu SheerID.
-3. Verifikasi Status Mahasiswa (SheerID) , Masukkan nama perguruan tinggi, nama lengkap, tanggal lahir, dan alamat email kampus. setelah itu upload KRS atau KTM atau identitas lain , kalau saya menggunakan KRS 
+3. Verifikasi Status Mahasiswa (SheerID) , Masukkan nama perguruan tinggi, nama lengkap, tanggal lahir, dan alamat email kampus. setelah itu upload KRS atau KTM atau identitas lain , kalau saya menggunakan KRS
+4. Tunggu Verifikasi berhasil , jika sudah maka kamu akan dikirim via email bahwa kamu berhasil di verifikasi
+5. Selanjutnya tinggal pilih method pembayaran ( Saya pakai shopepay ) , method ini hanya untuk verifikasi saja , bisa memakai apapun , ketika sudah melebihi 12 Bulan maka akan di tarik langsung dari pembayaran ini , maka dari itu sebelum 12 Bulan batalkan langganan.
