@@ -16,7 +16,7 @@ slug = "gemini-student-gratis"
 3. Identitas seperti KTM , KRS
 
 **Cara Claim**
-1. Klick lini berikut ini : [https://one.google.com/ai-studen](https://one.google.com/ai-studen) Pastikan kamu sudah masuk menggunakan akun Gmail pribadi.
+1. Klick lini berikut ini : [https://gemini.google/students/](https://gemini.google/students/) Pastikan kamu sudah masuk menggunakan akun Gmail pribadi.
 2.Pilih Penawaran Siswa Klik tombol penawaran yang tersedia (misalnya Get Offer atau Verify Eligibility). System akan mengarahkan kamu ke layanan verifikasi pihak ketiga, yaitu SheerID.
 3. Verifikasi Status Mahasiswa (SheerID) , Masukkan nama perguruan tinggi, nama lengkap, tanggal lahir, dan alamat email kampus. setelah itu upload KRS atau KTM atau identitas lain , kalau saya menggunakan KRS
 4. Tunggu Verifikasi berhasil , jika sudah maka kamu akan dikirim via email bahwa kamu berhasil di verifikasi
